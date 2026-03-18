@@ -33,6 +33,7 @@ type ObjectTheme = {
 }
 
 const DEFAULT_PATH_COLOR = '#F9DC5C'
+const REFERENCE_SELECTOR = 'path, circle, rect, polygon, polyline, ellipse, line'
 
 function parseViewBox(value: string): Box {
   const [x, y, width, height] = value.split(/\s+/).map(Number)
@@ -141,6 +142,10 @@ function collectTargets(option: MapFilterOption): string[] {
   return Array.from(targets)
 }
 
+function resolveFocusedObjectIds(option: MapFilterOption | null): string[] {
+  return option && option.children.length === 0 ? collectTargets(option) : []
+}
+
 function resolveActiveObjectIds(block: MapBlock, path: string[]): string[] {
   if (path.length === 0) {
     return block.defaultTargets
@@ -172,15 +177,83 @@ function findTopLevelOption(options: MapFilterOption[], id: string | null): MapF
   return options.find((option) => option.id === id) ?? null
 }
 
-function resolveObjectFromTarget(objects: MapObject[], target: EventTarget | null): MapObject | null {
+function parseObjectIds(value: string | null): string[] {
+  return (value ?? '')
+    .split(/\s+/)
+    .map((token) => token.trim())
+    .filter(Boolean)
+}
+
+function getReferenceElements(svg: SVGSVGElement): SVGElement[] {
+  const rectElements = Array.from(svg.querySelectorAll('rect'))
+    .filter((element) => !element.closest('defs'))
+    .map((element) => element as SVGElement)
+
+  if (rectElements.length > 0) {
+    return rectElements
+  }
+
+  return Array.from(svg.querySelectorAll(REFERENCE_SELECTOR)).filter(
+    (element): element is SVGElement => element instanceof SVGElement && !element.closest('defs'),
+  )
+}
+
+function resolveElementsForObject(
+  svg: SVGSVGElement,
+  object: MapObject,
+  referenceElements: SVGElement[],
+): SVGElement[] {
+  const elements: SVGElement[] = []
+  const seen = new Set<SVGElement>()
+
+  object.svgIds.forEach((svgId) => {
+    const element = svg.querySelector(`[id="${svgId}"]`)
+
+    if (element instanceof SVGElement && !seen.has(element)) {
+      seen.add(element)
+      elements.push(element)
+    }
+  })
+
+  object.rectIndices.forEach((index) => {
+    const element = referenceElements[index]
+
+    if (element && !seen.has(element)) {
+      seen.add(element)
+      elements.push(element)
+    }
+  })
+
+  return elements
+}
+
+function resolveObjectFromTarget(
+  objects: MapObject[],
+  target: EventTarget | null,
+  preferredObjectIds: string[] = [],
+): MapObject | null {
   if (!(target instanceof Element)) {
     return null
   }
 
-  const source = target.closest('[data-monumap-object-id]')
-  const objectId = source?.getAttribute('data-monumap-object-id') ?? null
+  const source = target.closest('[data-monumap-object-ids]')
+  const objectIds = parseObjectIds(source?.getAttribute('data-monumap-object-ids') ?? null)
 
-  return findObjectById(objects, objectId)
+  for (const preferredObjectId of preferredObjectIds) {
+    if (objectIds.includes(preferredObjectId)) {
+      return findObjectById(objects, preferredObjectId)
+    }
+  }
+
+  for (const objectId of objectIds) {
+    const object = findObjectById(objects, objectId)
+
+    if (object) {
+      return object
+    }
+  }
+
+  return null
 }
 
 function applyObjectBindings(
@@ -194,7 +267,7 @@ function applyObjectBindings(
   const focusedSet = new Set(focusedObjectIds)
   const hasFocusedObjects = focusedSet.size > 0
 
-  svg.querySelectorAll('[data-monumap-object-id]').forEach((node) => {
+  svg.querySelectorAll('[data-monumap-object-ids]').forEach((node) => {
     if (!(node instanceof SVGElement)) {
       return
     }
@@ -207,48 +280,56 @@ function applyObjectBindings(
       node.setAttribute('style', originalStyle)
     }
 
-    node.removeAttribute('data-monumap-object-id')
+    node.removeAttribute('data-monumap-object-ids')
     node.removeAttribute('data-monumap-original-style')
     node.removeAttribute('tabindex')
     node.removeAttribute('role')
     node.removeAttribute('aria-label')
   })
 
+  const referenceElements = getReferenceElements(svg)
+  const elementBindings = new Map<SVGElement, string[]>()
+
   block.objects.forEach((object) => {
-    const isActive = activeSet.has(object.id)
-    const theme = objectThemes[object.id]
+    resolveElementsForObject(svg, object, referenceElements).forEach((element) => {
+      const objectIds = elementBindings.get(element) ?? []
+      objectIds.push(object.id)
+      elementBindings.set(element, objectIds)
+    })
+  })
+
+  elementBindings.forEach((boundObjectIds, element) => {
+    const objectIds = Array.from(new Set(boundObjectIds))
+    const activeIds = objectIds.filter((objectId) => activeSet.has(objectId))
+    const focusedIds = objectIds.filter((objectId) => focusedSet.has(objectId))
+    const themeObjectId = focusedIds[0] ?? activeIds[0]
+    const theme = themeObjectId ? objectThemes[themeObjectId] : null
     const color = theme?.pathColor ?? DEFAULT_PATH_COLOR
-    const isFocused = hasFocusedObjects ? focusedSet.has(object.id) : true
-
-    object.svgIds.forEach((svgId) => {
-      const element = svg.querySelector(`[id="${svgId}"]`)
-
-      if (!(element instanceof SVGElement)) {
-        return
-      }
-
-      const originalStyle = element.getAttribute('style') ?? ''
-
-      element.setAttribute('data-monumap-object-id', object.id)
-      element.setAttribute('data-monumap-original-style', originalStyle)
-
-      const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
-      const runtimeStyle = isActive
-        ? `${originalStyle}${separator}pointer-events:auto;cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${color});stroke:${color};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
+    const isFocused = hasFocusedObjects ? focusedIds.length > 0 : true
+    const originalStyle = element.getAttribute('style') ?? ''
+    const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
+    const runtimeStyle =
+      activeIds.length > 0
+        ? `${originalStyle}${separator}pointer-events:all;cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${color});stroke:${color};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
         : `${originalStyle}${separator}pointer-events:none;`
 
-      element.setAttribute('style', runtimeStyle)
+    element.setAttribute('data-monumap-object-ids', activeIds.join(' '))
+    element.setAttribute('data-monumap-original-style', originalStyle)
+    element.setAttribute('style', runtimeStyle)
 
-      if (isActive) {
-        element.setAttribute('tabindex', '0')
-        element.setAttribute('role', 'button')
-        element.setAttribute('aria-label', object.title)
-      } else {
-        element.removeAttribute('tabindex')
-        element.removeAttribute('role')
-        element.removeAttribute('aria-label')
-      }
-    })
+    if (activeIds.length > 0) {
+      const labels = activeIds
+        .map((objectId) => findObjectById(block.objects, objectId)?.title)
+        .filter((label): label is string => Boolean(label))
+
+      element.setAttribute('tabindex', '0')
+      element.setAttribute('role', 'button')
+      element.setAttribute('aria-label', labels.join(', '))
+    } else {
+      element.removeAttribute('tabindex')
+      element.removeAttribute('role')
+      element.removeAttribute('aria-label')
+    }
   })
 }
 
@@ -359,6 +440,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const activePathOption = findTopLevelOption(block.filters.options, selectedPath[0] ?? null)
   const activeSymbolOption =
     selectedPath.length > 1 ? findOptionByPath(block.filters.options, selectedPath) : null
+  const focusedObjectIds = resolveFocusedObjectIds(activeSymbolOption)
   const activePathColor = activePathOption?.color ?? DEFAULT_PATH_COLOR
 
   useLayoutEffect(() => {
@@ -389,16 +471,13 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   useEffect(() => {
     const svg = svgRef.current
     const objectThemes = buildObjectThemes(block.filters.options)
-    const focusedObjectIds =
-      activeSymbolOption && activeSymbolOption.children.length === 0
-        ? collectTargets(activeSymbolOption)
-        : []
+    const focusedIds = resolveFocusedObjectIds(activeSymbolOption)
 
     if (!svg || !svgMarkup) {
       return
     }
 
-    applyObjectBindings(svg, block, activeObjectIds, objectThemes, focusedObjectIds)
+    applyObjectBindings(svg, block, activeObjectIds, objectThemes, focusedIds)
   }, [activeObjectIds, activeSymbolOption, block, svgMarkup])
 
   function updatePath(depth: number, optionId: string) {
@@ -418,7 +497,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    if (resolveObjectFromTarget(block.objects, event.target)) {
+    if (resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)) {
       return
     }
 
@@ -464,7 +543,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    const object = resolveObjectFromTarget(block.objects, event.target)
+    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
 
     if (!object) {
       setTooltip(null)
@@ -496,7 +575,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }
 
   function handleClick(event: ReactPointerEvent<SVGSVGElement>) {
-    const object = resolveObjectFromTarget(block.objects, event.target)
+    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
 
     if (object) {
       setOpenObject(object)
@@ -508,7 +587,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    const object = resolveObjectFromTarget(block.objects, event.target)
+    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
 
     if (!object) {
       return

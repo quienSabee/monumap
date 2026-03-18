@@ -91,6 +91,13 @@ function parseTargets(value: string | undefined): string[] {
     .filter(Boolean)
 }
 
+function parseIndices(value: string | undefined): number[] {
+  return (value ?? '')
+    .split(/\s+/)
+    .map((token) => Number.parseInt(token.trim(), 10))
+    .filter((index) => Number.isInteger(index) && index >= 0)
+}
+
 function parseFilterOption(element: Element): MapFilterOption {
   return {
     id: requiredAttribute(element, 'id'),
@@ -108,6 +115,7 @@ function parseObject(element: Element): MapObject {
     legend: textFromTag(element, 'legend') ?? '',
     summary: textFromTag(element, 'summary') ?? '',
     details: textFromTag(element, 'details') ?? '',
+    rectIndices: parseIndices(optionalAttribute(element, 'rectIndices')),
     svgIds: parseTargets(optionalAttribute(element, 'svgIds')),
   }
 }

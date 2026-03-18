@@ -31,7 +31,7 @@
   <map
     id="planimetria"
     title="Esplora la planimetria"
-    description="Cinque percorsi tematici organizzano i simboli presenti nel cimitero. Ogni selezione attiva direttamente elementi dell'SVG originale referenziati tramite id."
+    description="Cinque percorsi tematici organizzano i simboli presenti nel cimitero. In questa fase preliminare ogni selezione attiva elementi della planimetria tramite riferimenti numerici temporanei, in attesa degli id definitivi nell'SVG."
     svg="/plan.svg"
     viewBox="0 0 3370.39 843.68"
     defaultTargets=""
@@ -86,46 +86,46 @@
     </filters>
 
     <objects>
-      <object id="rosa" svgIds="rosa"><title>Rosa</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="palmetta" svgIds="palmetta"><title>Palmetta</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="margherita" svgIds="margherita"><title>Margherita</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="acanto" svgIds="acanto"><title>Acanto</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="papavero" svgIds="papavero"><title>Papavero</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="vite" svgIds="vite"><title>Vite</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="trifoglio" svgIds="trifoglio"><title>Trifoglio</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="ulivo" svgIds="ulivo"><title>Ulivo</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="ghirlanda" svgIds="ghirlanda"><title>Ghirlanda</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="giglio" svgIds="giglio"><title>Giglio</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="alloro" svgIds="alloro"><title>Alloro</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="crisantemo" svgIds="crisantemo"><title>Crisantemo</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="pigna" svgIds="pigna"><title>Pigna</title><legend>Decorazioni fitomorfe</legend></object>
-      <object id="edera" svgIds="edera"><title>Edera</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="rosa" rectIndices="0 1 2 3 4 5 6 7 8 9"><title>Rosa</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="palmetta" rectIndices="7 8 9 10 11 12 13 14 15 16"><title>Palmetta</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="margherita" rectIndices="14 15 16 17 18 19 20 21 22 23"><title>Margherita</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="acanto" rectIndices="21 22 23 24 25 26 27 28 29 30"><title>Acanto</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="papavero" rectIndices="28 29 30 31 32 33 34 35 36 37"><title>Papavero</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="vite" rectIndices="35 36 37 38 39 40 41 42 43 44"><title>Vite</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="trifoglio" rectIndices="42 43 44 45 46 47 48 49 50 51"><title>Trifoglio</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="ulivo" rectIndices="49 50 51 52 53 54 55 56 57 58"><title>Ulivo</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="ghirlanda" rectIndices="56 57 58 59 60 61 62 63 64 65"><title>Ghirlanda</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="giglio" rectIndices="63 64 65 66 67 68 69 70 71 72"><title>Giglio</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="alloro" rectIndices="70 71 72 73 74 75 76 77 78 79"><title>Alloro</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="crisantemo" rectIndices="77 78 79 80 81 82 83 84 85 86"><title>Crisantemo</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="pigna" rectIndices="84 85 86 87 88 89 90 91 92 93"><title>Pigna</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="edera" rectIndices="91 92 93 94 95 96 97 98 99 100"><title>Edera</title><legend>Decorazioni fitomorfe</legend></object>
 
-      <object id="uroboro" svgIds="uroboro"><title>Uroboro</title><legend>Decorazioni zoomorfe</legend></object>
-      <object id="arpia" svgIds="arpia"><title>Arpia</title><legend>Decorazioni zoomorfe</legend></object>
-      <object id="leone" svgIds="leone"><title>Leone</title><legend>Decorazioni zoomorfe</legend></object>
-      <object id="conchiglia" svgIds="conchiglia"><title>Conchiglia</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="uroboro" rectIndices="140 141 142 143 144 145 146 147 148 149"><title>Uroboro</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="arpia" rectIndices="147 148 149 150 151 152 153 154 155 156"><title>Arpia</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="leone" rectIndices="154 155 156 157 158 159 160 161 162 163"><title>Leone</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="conchiglia" rectIndices="161 162 163 164 165 166 167 168 169 170"><title>Conchiglia</title><legend>Decorazioni zoomorfe</legend></object>
 
-      <object id="caduceo" svgIds="caduceo"><title>Caduceo</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="lanterna" svgIds="lanterna"><title>Lanterna</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="archipendolo" svgIds="archipendolo"><title>Archipendolo</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="torcia" svgIds="torcia"><title>Torcia</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="clessidra_alata" svgIds="clessidra_alata"><title>Clessidra alata</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="stella" svgIds="stella"><title>Stella</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="ruota_della_fortuna" svgIds="ruota_della_fortuna"><title>Ruota della fortuna</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="cero" svgIds="cero"><title>Cero</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="ancora" svgIds="ancora"><title>Ancora</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="corda" svgIds="corda"><title>Corda</title><legend>Decorazioni allegoriche</legend></object>
-      <object id="teschio" svgIds="teschio"><title>Teschio</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="caduceo" rectIndices="220 221 222 223 224 225 226 227 228 229"><title>Caduceo</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="lanterna" rectIndices="227 228 229 230 231 232 233 234 235 236"><title>Lanterna</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="archipendolo" rectIndices="234 235 236 237 238 239 240 241 242 243"><title>Archipendolo</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="torcia" rectIndices="241 242 243 244 245 246 247 248 249 250"><title>Torcia</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="clessidra_alata" rectIndices="248 249 250 251 252 253 254 255 256 257"><title>Clessidra alata</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="stella" rectIndices="255 256 257 258 259 260 261 262 263 264"><title>Stella</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="ruota_della_fortuna" rectIndices="262 263 264 265 266 267 268 269 270 271"><title>Ruota della fortuna</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="cero" rectIndices="269 270 271 272 273 274 275 276 277 278"><title>Cero</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="ancora" rectIndices="276 277 278 279 280 281 282 283 284 285"><title>Ancora</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="corda" rectIndices="283 284 285 286 287 288 289 290 291 292"><title>Corda</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="teschio" rectIndices="290 291 292 293 294 295 296 297 298 299"><title>Teschio</title><legend>Decorazioni allegoriche</legend></object>
 
-      <object id="alpha_omega" svgIds="alpha_omega"><title>Alpha Omega</title><legend>Simboli religiosi</legend></object>
-      <object id="crisma" svgIds="crisma"><title>Crisma</title><legend>Simboli religiosi</legend></object>
-      <object id="croce" svgIds="croce"><title>Croce</title><legend>Simboli religiosi</legend></object>
-      <object id="angelo" svgIds="angelo"><title>Angelo</title><legend>Simboli religiosi</legend></object>
+      <object id="alpha_omega" rectIndices="340 341 342 343 344 345 346 347 348 349"><title>Alpha Omega</title><legend>Simboli religiosi</legend></object>
+      <object id="crisma" rectIndices="347 348 349 350 351 352 353 354 355 356"><title>Crisma</title><legend>Simboli religiosi</legend></object>
+      <object id="croce" rectIndices="354 355 356 357 358 359 360 361 362 363"><title>Croce</title><legend>Simboli religiosi</legend></object>
+      <object id="angelo" rectIndices="361 362 363 364 365 366 367 368 369 370"><title>Angelo</title><legend>Simboli religiosi</legend></object>
 
-      <object id="tromba" svgIds="tromba"><title>Tromba</title><legend>Strumenti musicali</legend></object>
-      <object id="lira" svgIds="lira"><title>Lira</title><legend>Strumenti musicali</legend></object>
-      <object id="liuto" svgIds="liuto"><title>Liuto</title><legend>Strumenti musicali</legend></object>
+      <object id="tromba" rectIndices="420 421 422 423 424 425 426 427 428 429"><title>Tromba</title><legend>Strumenti musicali</legend></object>
+      <object id="lira" rectIndices="427 428 429 430 431 432 433 434 435 436"><title>Lira</title><legend>Strumenti musicali</legend></object>
+      <object id="liuto" rectIndices="434 435 436 437 438 439 440 441 442 443"><title>Liuto</title><legend>Strumenti musicali</legend></object>
     </objects>
   </map>
 </story>

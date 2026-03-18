@@ -115,7 +115,7 @@ button {
 
 .story-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   display: grid;
   align-items: end;
   padding: clamp(2rem, 4vw, 3rem);
@@ -256,6 +256,15 @@ button {
   margin-bottom: 1.8rem;
 }
 
+.story-gallery__intro .story-kicker {
+  color: rgba(249, 220, 92, 0.94);
+}
+
+.story-gallery__intro h2 {
+  color: #f7f4ed;
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
 .story-gallery__stage {
   min-height: 0;
   aspect-ratio: 16 / 10;
@@ -265,6 +274,11 @@ button {
 .story-gallery__aside {
   display: grid;
   gap: 1.15rem;
+}
+
+.story-gallery__intro p {
+  max-width: 44rem;
+  color: rgba(247, 244, 237, 0.82);
 }
 
 .story-gallery__caption h3 {

@@ -72,5 +72,6 @@ export type MapObject = {
   legend: string
   summary: string
   details: string
+  rectIndices: number[]
   svgIds: string[]
 }
