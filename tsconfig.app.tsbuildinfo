@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/interactivemap.tsx","./src/components/storyrenderer.tsx","./src/lib/storyparser.ts","./src/types/story.ts"],"version":"5.9.3"}

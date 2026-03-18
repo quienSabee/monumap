@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story title="Monumap" subtitle="Esplorazione narrativa del Cimitero Monumentale di Perugia">
+  <hero
+    id="hero"
+    kicker="Perugia"
+    title="Cimitero Monumentale"
+    subtitle="Una pagina narrativa generata da XML, pensata per raccontare spazi, memorie e percorsi con un linguaggio vicino agli story map."
+    background="/media/hero-cemetery.jpg"
+  />
+
+  <sidecar id="origini" align="right" image="/media/avenue.jpg" imageAlt="Illustrazione evocativa di un viale alberato del cimitero monumentale.">
+    <eyebrow>Struttura narrativa</eyebrow>
+    <title>Un racconto che alterna paesaggio, testo e orientamento</title>
+    <text>Questa prima versione usa un file XML come sorgente dichiarativa dei contenuti. Ogni sezione della pagina nasce da un blocco: hero, pannello con immagine laterale, galleria e mappa interattiva.</text>
+    <text>In questo modo il racconto può crescere nel tempo senza riscrivere il layout. Chi cura i contenuti interviene soprattutto sul file XML, non sui componenti React.</text>
+  </sidecar>
+
+  <sidecar id="atmosfera" align="left" image="/media/1.jpg" imageAlt="Illustrazione di una cappella con arcate e cipressi.">
+    <eyebrow>Esperienza visiva</eyebrow>
+    <title>Sezioni editoriali per immagini, didascalie e approfondimenti</title>
+    <text>Il layout a scorrimento verticale permette di comporre un racconto continuo: fondale introduttivo, coppie immagine-testo, dettagli architettonici e una mappa finale con punti attivabili.</text>
+    <text>La stessa struttura può ospitare in seguito fotografie reali del cimitero, caroselli, schede biografiche e percorsi tematici per famiglie, architetture o memorie civili.</text>
+  </sidecar>
+
+  <gallery id="galleria" title="Tre inquadrature per costruire il tono della pagina" description="Questa galleria usa asset illustrativi dimostrativi. Le immagini reali potranno essere sostituite senza modificare i componenti.">
+    <slide image="/media/1.jpg" alt="Panorama illustrato del complesso monumentale." title="Ingresso e orizzonte" caption="Una cover ampia, adatta ad aprire il racconto con un tono contemplativo." />
+    <slide image="/media/2.jpg" alt="Viale alberato stilizzato." title="Percorso e profondità" caption="Un’immagine laterale funziona bene quando il testo descrive un tragitto, un asse visivo o una trasformazione storica." />
+    <slide image="/media/3.jpg" alt="Cappella stilizzata." title="Dettaglio monumentale" caption="Per statue, cappelle o sepolture di rilievo conviene affiancare l’immagine a un pannello con testo, datazioni e rimandi." />
+  </gallery>
+
+  <map
+    id="planimetria"
+    title="Esplora la planimetria"
+    description="Cinque percorsi tematici organizzano i simboli presenti nel cimitero. Ogni selezione attiva direttamente elementi dell'SVG originale referenziati tramite id."
+    svg="/plan.svg"
+    viewBox="0 0 3370.39 843.68"
+    defaultTargets=""
+  >
+    <filters title="Percorsi tematici">
+      <option id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#F9DC5C">
+        <option id="rosa" label="Rosa" targets="rosa" />
+        <option id="palmetta" label="Palmetta" targets="palmetta" />
+        <option id="margherita" label="Margherita" targets="margherita" />
+        <option id="acanto" label="Acanto" targets="acanto" />
+        <option id="papavero" label="Papavero" targets="papavero" />
+        <option id="vite" label="Vite" targets="vite" />
+        <option id="trifoglio" label="Trifoglio" targets="trifoglio" />
+        <option id="ulivo" label="Ulivo" targets="ulivo" />
+        <option id="ghirlanda" label="Ghirlanda" targets="ghirlanda" />
+        <option id="giglio" label="Giglio" targets="giglio" />
+        <option id="alloro" label="Alloro" targets="alloro" />
+        <option id="crisantemo" label="Crisantemo" targets="crisantemo" />
+        <option id="pigna" label="Pigna" targets="pigna" />
+        <option id="edera" label="Edera" targets="edera" />
+      </option>
+      <option id="decorazioni_zoomorfe" label="Decorazioni zoomorfe" color="#2C4251">
+        <option id="uroboro" label="Uroboro" targets="uroboro" />
+        <option id="arpia" label="Arpia" targets="arpia" />
+        <option id="leone" label="Leone" targets="leone" />
+        <option id="conchiglia" label="Conchiglia" targets="conchiglia" />
+      </option>
+      <option id="decorazioni_allegoriche" label="Decorazioni allegoriche" color="#6A0136">
+        <option id="caduceo" label="Caduceo" targets="caduceo" />
+        <option id="lanterna" label="Lanterna" targets="lanterna" />
+        <option id="archipendolo" label="Archipendolo" targets="archipendolo" />
+        <option id="torcia" label="Torcia" targets="torcia" />
+        <option id="clessidra_alata" label="Clessidra alata" targets="clessidra_alata" />
+        <option id="stella" label="Stella" targets="stella" />
+        <option id="ruota_della_fortuna" label="Ruota della fortuna" targets="ruota_della_fortuna" />
+        <option id="cero" label="Cero" targets="cero" />
+        <option id="ancora" label="Ancora" targets="ancora" />
+        <option id="corda" label="Corda" targets="corda" />
+        <option id="teschio" label="Teschio" targets="teschio" />
+      </option>
+      <option id="simobli_religiosi" label="Simboli religiosi" color="#0E6B56">
+        <option id="alpha_omega" label="Alpha Omega" targets="alpha_omega" />
+        <option id="crisma" label="Crisma" targets="crisma" />
+        <option id="croce" label="Croce" targets="croce" />
+        <option id="angelo" label="Angelo" targets="angelo" />
+      </option>
+      <option id="strumenti_musicali" label="Strumenti musicali" color="#C99516">
+        <option id="tromba" label="Tromba" targets="tromba" />
+        <option id="lira" label="Lira" targets="lira" />
+        <option id="liuto" label="Liuto" targets="liuto" />
+      </option>
+    </filters>
+
+    <objects>
+      <object id="rosa" svgIds="rosa"><title>Rosa</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="palmetta" svgIds="palmetta"><title>Palmetta</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="margherita" svgIds="margherita"><title>Margherita</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="acanto" svgIds="acanto"><title>Acanto</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="papavero" svgIds="papavero"><title>Papavero</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="vite" svgIds="vite"><title>Vite</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="trifoglio" svgIds="trifoglio"><title>Trifoglio</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="ulivo" svgIds="ulivo"><title>Ulivo</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="ghirlanda" svgIds="ghirlanda"><title>Ghirlanda</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="giglio" svgIds="giglio"><title>Giglio</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="alloro" svgIds="alloro"><title>Alloro</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="crisantemo" svgIds="crisantemo"><title>Crisantemo</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="pigna" svgIds="pigna"><title>Pigna</title><legend>Decorazioni fitomorfe</legend></object>
+      <object id="edera" svgIds="edera"><title>Edera</title><legend>Decorazioni fitomorfe</legend></object>
+
+      <object id="uroboro" svgIds="uroboro"><title>Uroboro</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="arpia" svgIds="arpia"><title>Arpia</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="leone" svgIds="leone"><title>Leone</title><legend>Decorazioni zoomorfe</legend></object>
+      <object id="conchiglia" svgIds="conchiglia"><title>Conchiglia</title><legend>Decorazioni zoomorfe</legend></object>
+
+      <object id="caduceo" svgIds="caduceo"><title>Caduceo</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="lanterna" svgIds="lanterna"><title>Lanterna</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="archipendolo" svgIds="archipendolo"><title>Archipendolo</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="torcia" svgIds="torcia"><title>Torcia</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="clessidra_alata" svgIds="clessidra_alata"><title>Clessidra alata</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="stella" svgIds="stella"><title>Stella</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="ruota_della_fortuna" svgIds="ruota_della_fortuna"><title>Ruota della fortuna</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="cero" svgIds="cero"><title>Cero</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="ancora" svgIds="ancora"><title>Ancora</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="corda" svgIds="corda"><title>Corda</title><legend>Decorazioni allegoriche</legend></object>
+      <object id="teschio" svgIds="teschio"><title>Teschio</title><legend>Decorazioni allegoriche</legend></object>
+
+      <object id="alpha_omega" svgIds="alpha_omega"><title>Alpha Omega</title><legend>Simboli religiosi</legend></object>
+      <object id="crisma" svgIds="crisma"><title>Crisma</title><legend>Simboli religiosi</legend></object>
+      <object id="croce" svgIds="croce"><title>Croce</title><legend>Simboli religiosi</legend></object>
+      <object id="angelo" svgIds="angelo"><title>Angelo</title><legend>Simboli religiosi</legend></object>
+
+      <object id="tromba" svgIds="tromba"><title>Tromba</title><legend>Strumenti musicali</legend></object>
+      <object id="lira" svgIds="lira"><title>Lira</title><legend>Strumenti musicali</legend></object>
+      <object id="liuto" svgIds="liuto"><title>Liuto</title><legend>Strumenti musicali</legend></object>
+    </objects>
+  </map>
+</story>
