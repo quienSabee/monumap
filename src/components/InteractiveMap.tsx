@@ -34,6 +34,7 @@ type ObjectTheme = {
 
 const DEFAULT_PATH_COLOR = '#F9DC5C'
 const REFERENCE_SELECTOR = 'path, circle, rect, polygon, polyline, ellipse, line'
+const ZOOM_EPSILON = 0.0001
 
 function parseViewBox(value: string): Box {
   const [x, y, width, height] = value.split(/\s+/).map(Number)
@@ -59,8 +60,15 @@ function clampBox(box: Box, bounds: Box): Box {
 }
 
 function zoomBox(box: Box, bounds: Box, factor: number, centerX: number, centerY: number): Box {
-  const width = box.width * factor
-  const height = box.height * factor
+  const minWidth = bounds.width * 0.18
+  const minHeight = bounds.height * 0.18
+  const width = clamp(box.width * factor, minWidth, bounds.width)
+  const height = clamp(box.height * factor, minHeight, bounds.height)
+
+  if (Math.abs(width - box.width) < ZOOM_EPSILON && Math.abs(height - box.height) < ZOOM_EPSILON) {
+    return box
+  }
+
   const nextX = centerX - ((centerX - box.x) / box.width) * width
   const nextY = centerY - ((centerY - box.y) / box.height) * height
 
