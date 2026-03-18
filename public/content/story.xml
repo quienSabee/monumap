@@ -5,34 +5,34 @@
     kicker="Perugia"
     title="Cimitero Monumentale"
     subtitle="Una pagina narrativa generata da XML, pensata per raccontare spazi, memorie e percorsi con un linguaggio vicino agli story map."
-    background="/media/hero-cemetery.jpg"
+    background="media/hero-cemetery.jpg"
   />
 
-  <sidecar id="origini" align="right" image="/media/avenue.jpg" imageAlt="Illustrazione evocativa di un viale alberato del cimitero monumentale.">
+  <sidecar id="origini" align="right" image="media/avenue.jpg" imageAlt="Illustrazione evocativa di un viale alberato del cimitero monumentale.">
     <eyebrow>Struttura narrativa</eyebrow>
     <title>Un racconto che alterna paesaggio, testo e orientamento</title>
     <text>Questa prima versione usa un file XML come sorgente dichiarativa dei contenuti. Ogni sezione della pagina nasce da un blocco: hero, pannello con immagine laterale, galleria e mappa interattiva.</text>
-    <text>In questo modo il racconto può crescere nel tempo senza riscrivere il layout. Chi cura i contenuti interviene soprattutto sul file XML, non sui componenti React.</text>
+    <text>In questo modo il racconto puo crescere nel tempo senza riscrivere il layout. Chi cura i contenuti interviene soprattutto sul file XML, non sui componenti React.</text>
   </sidecar>
 
-  <sidecar id="atmosfera" align="left" image="/media/1.jpg" imageAlt="Illustrazione di una cappella con arcate e cipressi.">
+  <sidecar id="atmosfera" align="left" image="media/1.jpg" imageAlt="Illustrazione di una cappella con arcate e cipressi.">
     <eyebrow>Esperienza visiva</eyebrow>
     <title>Sezioni editoriali per immagini, didascalie e approfondimenti</title>
     <text>Il layout a scorrimento verticale permette di comporre un racconto continuo: fondale introduttivo, coppie immagine-testo, dettagli architettonici e una mappa finale con punti attivabili.</text>
-    <text>La stessa struttura può ospitare in seguito fotografie reali del cimitero, caroselli, schede biografiche e percorsi tematici per famiglie, architetture o memorie civili.</text>
+    <text>La stessa struttura puo ospitare in seguito fotografie reali del cimitero, caroselli, schede biografiche e percorsi tematici per famiglie, architetture o memorie civili.</text>
   </sidecar>
 
   <gallery id="galleria" title="Tre inquadrature per costruire il tono della pagina" description="Questa galleria usa asset illustrativi dimostrativi. Le immagini reali potranno essere sostituite senza modificare i componenti.">
-    <slide image="/media/1.jpg" alt="Panorama illustrato del complesso monumentale." title="Ingresso e orizzonte" caption="Una cover ampia, adatta ad aprire il racconto con un tono contemplativo." />
-    <slide image="/media/2.jpg" alt="Viale alberato stilizzato." title="Percorso e profondità" caption="Un’immagine laterale funziona bene quando il testo descrive un tragitto, un asse visivo o una trasformazione storica." />
-    <slide image="/media/3.jpg" alt="Cappella stilizzata." title="Dettaglio monumentale" caption="Per statue, cappelle o sepolture di rilievo conviene affiancare l’immagine a un pannello con testo, datazioni e rimandi." />
+    <slide image="media/1.jpg" alt="Panorama illustrato del complesso monumentale." title="Ingresso e orizzonte" caption="Una cover ampia, adatta ad aprire il racconto con un tono contemplativo." />
+    <slide image="media/2.jpg" alt="Viale alberato stilizzato." title="Percorso e profondita" caption="Un'immagine laterale funziona bene quando il testo descrive un tragitto, un asse visivo o una trasformazione storica." />
+    <slide image="media/3.jpg" alt="Cappella stilizzata." title="Dettaglio monumentale" caption="Per statue, cappelle o sepolture di rilievo conviene affiancare l'immagine a un pannello con testo, datazioni e rimandi." />
   </gallery>
 
   <map
     id="planimetria"
     title="Esplora la planimetria"
     description="Cinque percorsi tematici organizzano i simboli presenti nel cimitero. In questa fase preliminare ogni selezione attiva elementi della planimetria tramite riferimenti numerici temporanei, in attesa degli id definitivi nell'SVG."
-    svg="/plan.svg"
+    svg="plan.svg"
     viewBox="0 0 3370.39 843.68"
     defaultTargets=""
   >
