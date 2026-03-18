@@ -546,12 +546,12 @@ button {
 }
 
 .map-tooltip {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   display: grid;
   gap: 0.15rem;
-  min-width: 12rem;
-  max-width: 16rem;
+  min-width: min(12rem, calc(100vw - 1.5rem));
+  max-width: min(16rem, calc(100vw - 1.5rem));
   padding: 0.85rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 16px;

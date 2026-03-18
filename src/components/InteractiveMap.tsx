@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   type CSSProperties,
@@ -255,6 +256,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const originalBox = parseViewBox(block.viewBox)
   const stageRef = useRef<HTMLDivElement | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
+  const tooltipRef = useRef<HTMLDivElement | null>(null)
   const dragRef = useRef<{
     pointerId: number
     clientX: number
@@ -264,6 +266,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const [selectedPath, setSelectedPath] = useState<string[]>([])
   const [viewBox, setViewBox] = useState<Box>(originalBox)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
+  const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
   const [openObject, setOpenObject] = useState<MapObject | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [svgMarkup, setSvgMarkup] = useState('')
@@ -358,6 +361,31 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     selectedPath.length > 1 ? findOptionByPath(block.filters.options, selectedPath) : null
   const activePathColor = activePathOption?.color ?? DEFAULT_PATH_COLOR
 
+  useLayoutEffect(() => {
+    if (!tooltip || !tooltipRef.current) {
+      return
+    }
+
+    const margin = 12
+    const gap = 18
+    const rect = tooltipRef.current.getBoundingClientRect()
+    let left = tooltip.x + gap
+    let top = tooltip.y + gap
+
+    if (left + rect.width > window.innerWidth - margin) {
+      left = tooltip.x - rect.width - gap
+    }
+
+    if (top + rect.height > window.innerHeight - margin) {
+      top = tooltip.y - rect.height - gap
+    }
+
+    left = clamp(left, margin, Math.max(margin, window.innerWidth - rect.width - margin))
+    top = clamp(top, margin, Math.max(margin, window.innerHeight - rect.height - margin))
+
+    setTooltipPosition({ left, top })
+  }, [tooltip])
+
   useEffect(() => {
     const svg = svgRef.current
     const objectThemes = buildObjectThemes(block.filters.options)
@@ -437,17 +465,16 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     }
 
     const object = resolveObjectFromTarget(block.objects, event.target)
-    const frame = svgRef.current?.getBoundingClientRect()
 
-    if (!object || !frame) {
+    if (!object) {
       setTooltip(null)
       return
     }
 
     setTooltip({
       object,
-      x: event.clientX - frame.left + 18,
-      y: event.clientY - frame.top + 18,
+      x: event.clientX,
+      y: event.clientY,
     })
   }
 
@@ -512,37 +539,6 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             </button>
           </div>
 
-          {activePathOption ? (
-            <div
-              className="filter-status"
-              style={
-                {
-                  '--status-color': activePathColor,
-                } as CSSProperties
-              }
-            >
-              <div className="filter-status__item">
-                <span className="filter-status__swatch" />
-                <div>
-                  <span className="filter-status__label">Percorso attivo</span>
-                  <strong className="filter-status__value">{activePathOption.label}</strong>
-                </div>
-              </div>
-              <div className="filter-status__item">
-                <span className="filter-status__label">
-                  {activeSymbolOption ? 'Simbolo attivo' : 'Simboli selezionabili'}
-                </span>
-                <strong className="filter-status__value">
-                  {activeSymbolOption ? activeSymbolOption.label : `${activeObjectIds.length} simboli del percorso`}
-                </strong>
-              </div>
-            </div>
-          ) : (
-            <div className="filter-status filter-status--idle">
-              Seleziona un percorso per attivare tutti i simboli associati nella planimetria.
-            </div>
-          )}
-
           {levels.map((options, depth) => (
             <div
               className={depth === 0 ? 'filter-group filter-group--primary' : 'filter-group filter-group--secondary'}
@@ -594,14 +590,6 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             } as CSSProperties
           }
         >
-          <span className="legend-dot" />
-          <p>
-            {activePathOption
-              ? activeSymbolOption
-                ? `Il percorso ${activePathOption.label} resta attivo; ${activeSymbolOption.label} e il simbolo in evidenza.`
-                : `Tutti gli elementi del percorso ${activePathOption.label} sono ora selezionabili nella mappa.`
-              : 'Gli oggetti restano inattivi finche non selezioni un percorso tematico.'}
-          </p>
         </div>
       </div>
 
@@ -642,10 +630,11 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
 
         {tooltip && (
           <div
+            ref={tooltipRef}
             className="map-tooltip"
             style={{
-              left: tooltip.x,
-              top: tooltip.y,
+              left: tooltipPosition.left,
+              top: tooltipPosition.top,
             }}
           >
             <strong>{tooltip.object.title}</strong>
