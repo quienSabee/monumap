@@ -10,6 +10,8 @@ import type {
   StoryDocument,
 } from '../types/story'
 
+const DEFAULT_PATH_COLOR = '#F9DC5C'
+
 function requiredAttribute(element: Element, name: string): string {
   const value = element.getAttribute(name)?.trim()
 
@@ -91,42 +93,97 @@ function parseTargets(value: string | undefined): string[] {
     .filter(Boolean)
 }
 
-function parseIndices(value: string | undefined): number[] {
-  return (value ?? '')
-    .split(/\s+/)
-    .map((token) => Number.parseInt(token.trim(), 10))
-    .filter((index) => Number.isInteger(index) && index >= 0)
+function humanizeId(value: string): string {
+  return value
+    .split(/[_-]+/)
+    .map((token) => token.trim())
+    .filter(Boolean)
+    .map((token) => token.charAt(0).toUpperCase() + token.slice(1))
+    .join(' ')
 }
 
-function parseFilterOption(element: Element): MapFilterOption {
+type ParsedMapSymbol = {
+  option: MapFilterOption
+  objects: MapObject[]
+}
+
+type ParsedMapPath = {
+  option: MapFilterOption
+  objects: MapObject[]
+}
+
+function parseMapObject(
+  element: Element,
+  pathOption: Pick<MapFilterOption, 'id' | 'label' | 'color'>,
+  symbolOption: Pick<MapFilterOption, 'id' | 'label'>,
+): MapObject {
+  const tombId = requiredAttribute(element, 'id')
+
   return {
-    id: requiredAttribute(element, 'id'),
-    label: requiredAttribute(element, 'label'),
-    color: optionalAttribute(element, 'color'),
-    targets: parseTargets(optionalAttribute(element, 'targets')),
-    children: childrenByTag(element, 'option').map(parseFilterOption),
+    id: `${pathOption.id}:${symbolOption.id}:${tombId}`,
+    tombId,
+    title: textFromTag(element, 'title') ?? `Tomba ${tombId}`,
+    subtitle: textFromTag(element, 'subtitle'),
+    card: textFromTag(element, 'card'),
+    pathId: pathOption.id,
+    pathLabel: pathOption.label,
+    pathColor: pathOption.color ?? DEFAULT_PATH_COLOR,
+    symbolId: symbolOption.id,
+    symbolLabel: symbolOption.label,
   }
 }
 
-function parseObject(element: Element): MapObject {
+function parseMapSymbol(
+  element: Element,
+  pathOption: Pick<MapFilterOption, 'id' | 'label' | 'color'>,
+): ParsedMapSymbol {
+  const symbolId = requiredAttribute(element, 'id')
+  const symbolLabel = optionalAttribute(element, 'label') ?? humanizeId(symbolId)
+  const symbolOption = {
+    id: symbolId,
+    label: symbolLabel,
+  }
+  const objects = childrenByTag(element, 'object').map((child) => parseMapObject(child, pathOption, symbolOption))
+
   return {
-    id: requiredAttribute(element, 'id'),
-    title: textFromTag(element, 'title') ?? requiredAttribute(element, 'id'),
-    legend: textFromTag(element, 'legend') ?? '',
-    summary: textFromTag(element, 'summary') ?? '',
-    details: textFromTag(element, 'details') ?? '',
-    rectIndices: parseIndices(optionalAttribute(element, 'rectIndices')),
-    svgIds: parseTargets(optionalAttribute(element, 'svgIds')),
+    option: {
+      ...symbolOption,
+      targets: objects.map((object) => object.id),
+      children: [],
+    },
+    objects,
+  }
+}
+
+function parseMapPath(element: Element): ParsedMapPath {
+  const pathId = requiredAttribute(element, 'id')
+  const pathLabel = optionalAttribute(element, 'label') ?? humanizeId(pathId)
+  const pathColor = optionalAttribute(element, 'color')
+  const pathOption = {
+    id: pathId,
+    label: pathLabel,
+    color: pathColor,
+  }
+  const symbols = childrenByTag(element, 'symbol').map((child) => parseMapSymbol(child, pathOption))
+
+  return {
+    option: {
+      ...pathOption,
+      targets: [],
+      children: symbols.map((symbol) => symbol.option),
+    },
+    objects: symbols.flatMap((symbol) => symbol.objects),
   }
 }
 
 function parseMap(element: Element): MapBlock {
-  const filtersElement = childrenByTag(element, 'filters')[0]
-  const objectsElement = childrenByTag(element, 'objects')[0]
+  const pathsElement = childrenByTag(element, 'paths')[0]
 
-  if (!filtersElement || !objectsElement) {
-    throw new Error('Il blocco map richiede elementi <filters> e <objects>.')
+  if (!pathsElement) {
+    throw new Error('Il blocco map richiede un elemento <paths>.')
   }
+
+  const paths = childrenByTag(pathsElement, 'path').map(parseMapPath)
 
   return {
     type: 'map',
@@ -137,10 +194,10 @@ function parseMap(element: Element): MapBlock {
     viewBox: requiredAttribute(element, 'viewBox'),
     defaultTargets: parseTargets(optionalAttribute(element, 'defaultTargets')),
     filters: {
-      title: requiredAttribute(filtersElement, 'title'),
-      options: childrenByTag(filtersElement, 'option').map(parseFilterOption),
+      title: requiredAttribute(pathsElement, 'title'),
+      options: paths.map((path) => path.option),
     },
-    objects: childrenByTag(objectsElement, 'object').map(parseObject),
+    objects: paths.flatMap((path) => path.objects),
   }
 }
 

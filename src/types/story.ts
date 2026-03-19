@@ -68,10 +68,13 @@ export type MapFilterOption = {
 
 export type MapObject = {
   id: string
+  tombId: string
   title: string
-  legend: string
-  summary: string
-  details: string
-  rectIndices: number[]
-  svgIds: string[]
+  subtitle?: string
+  card?: string
+  pathId: string
+  pathLabel: string
+  pathColor: string
+  symbolId: string
+  symbolLabel: string
 }

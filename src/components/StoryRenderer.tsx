@@ -43,11 +43,10 @@ function HeroBlockView({
           : undefined
       }
     >
-      <div className="story-hero__veil" />
       <div className="story-hero__content">
-        {block.kicker && <span className="story-kicker">{block.kicker}</span>}
+        {block.kicker && <span className="story-hero__eyebrow">{block.kicker}</span>}
         <h1>{block.title}</h1>
-        {block.subtitle && <p>{block.subtitle}</p>}
+        {block.subtitle && <p className="story-hero__credit">{block.subtitle}</p>}
       </div>
     </section>
   )

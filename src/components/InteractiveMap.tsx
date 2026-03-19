@@ -21,7 +21,8 @@ type Box = {
 }
 
 type TooltipState = {
-  object: MapObject
+  tombId: string
+  object: MapObject | null
   x: number
   y: number
 }
@@ -33,7 +34,8 @@ type ObjectTheme = {
 }
 
 const DEFAULT_PATH_COLOR = '#F9DC5C'
-const REFERENCE_SELECTOR = 'path, circle, rect, polygon, polyline, ellipse, line'
+const HOVER_TOMB_COLOR = '#FF00A8'
+const MIN_ZOOM_RATIO = 0.08
 const ZOOM_EPSILON = 0.0001
 
 function parseViewBox(value: string): Box {
@@ -46,8 +48,8 @@ function clamp(value: number, min: number, max: number): number {
 }
 
 function clampBox(box: Box, bounds: Box): Box {
-  const width = clamp(box.width, bounds.width * 0.18, bounds.width)
-  const height = clamp(box.height, bounds.height * 0.18, bounds.height)
+  const width = clamp(box.width, bounds.width * MIN_ZOOM_RATIO, bounds.width)
+  const height = clamp(box.height, bounds.height * MIN_ZOOM_RATIO, bounds.height)
   const maxX = bounds.x + bounds.width - width
   const maxY = bounds.y + bounds.height - height
 
@@ -60,8 +62,8 @@ function clampBox(box: Box, bounds: Box): Box {
 }
 
 function zoomBox(box: Box, bounds: Box, factor: number, centerX: number, centerY: number): Box {
-  const minWidth = bounds.width * 0.18
-  const minHeight = bounds.height * 0.18
+  const minWidth = bounds.width * MIN_ZOOM_RATIO
+  const minHeight = bounds.height * MIN_ZOOM_RATIO
   const width = clamp(box.width * factor, minWidth, bounds.width)
   const height = clamp(box.height * factor, minHeight, bounds.height)
 
@@ -192,50 +194,21 @@ function parseObjectIds(value: string | null): string[] {
     .filter(Boolean)
 }
 
-function getReferenceElements(svg: SVGSVGElement): SVGElement[] {
-  const rectElements = Array.from(svg.querySelectorAll('rect'))
-    .filter((element) => !element.closest('defs'))
-    .map((element) => element as SVGElement)
-
-  if (rectElements.length > 0) {
-    return rectElements
+function resolveTombIdFromTarget(target: EventTarget | null): string | null {
+  if (!(target instanceof Element)) {
+    return null
   }
 
-  return Array.from(svg.querySelectorAll(REFERENCE_SELECTOR)).filter(
-    (element): element is SVGElement => element instanceof SVGElement && !element.closest('defs'),
-  )
+  const source = target.closest('.tomb')
+
+  if (!(source instanceof SVGElement)) {
+    return null
+  }
+
+  return source.getAttribute('data-monumap-tomb-id') ?? source.getAttribute('id')
 }
 
-function resolveElementsForObject(
-  svg: SVGSVGElement,
-  object: MapObject,
-  referenceElements: SVGElement[],
-): SVGElement[] {
-  const elements: SVGElement[] = []
-  const seen = new Set<SVGElement>()
-
-  object.svgIds.forEach((svgId) => {
-    const element = svg.querySelector(`[id="${svgId}"]`)
-
-    if (element instanceof SVGElement && !seen.has(element)) {
-      seen.add(element)
-      elements.push(element)
-    }
-  })
-
-  object.rectIndices.forEach((index) => {
-    const element = referenceElements[index]
-
-    if (element && !seen.has(element)) {
-      seen.add(element)
-      elements.push(element)
-    }
-  })
-
-  return elements
-}
-
-function resolveObjectFromTarget(
+function resolveActiveObjectFromTarget(
   objects: MapObject[],
   target: EventTarget | null,
   preferredObjectIds: string[] = [],
@@ -270,73 +243,69 @@ function applyObjectBindings(
   activeObjectIds: string[],
   objectThemes: Record<string, ObjectTheme>,
   focusedObjectIds: string[],
+  hoveredTombId: string | null,
 ) {
   const activeSet = new Set(activeObjectIds)
   const focusedSet = new Set(focusedObjectIds)
   const hasFocusedObjects = focusedSet.size > 0
+  const tombBindings = new Map<string, string[]>()
 
-  svg.querySelectorAll('[data-monumap-object-ids]').forEach((node) => {
-    if (!(node instanceof SVGElement)) {
+  block.objects.forEach((object) => {
+    const boundObjectIds = tombBindings.get(object.tombId) ?? []
+    boundObjectIds.push(object.id)
+    tombBindings.set(object.tombId, boundObjectIds)
+  })
+
+  svg.querySelectorAll('.tomb').forEach((node) => {
+    if (!(node instanceof SVGElement) || node.closest('defs')) {
       return
     }
 
-    const originalStyle = node.getAttribute('data-monumap-original-style')
+    const tombId = node.getAttribute('data-monumap-tomb-id')?.trim() ?? node.getAttribute('id')?.trim()
 
-    if (originalStyle === null || originalStyle === '') {
-      node.removeAttribute('style')
-    } else {
-      node.setAttribute('style', originalStyle)
+    if (!tombId) {
+      return
     }
 
-    node.removeAttribute('data-monumap-object-ids')
-    node.removeAttribute('data-monumap-original-style')
-    node.removeAttribute('tabindex')
-    node.removeAttribute('role')
-    node.removeAttribute('aria-label')
-  })
+    const originalStyle = node.getAttribute('data-monumap-original-style') ?? node.getAttribute('style') ?? ''
 
-  const referenceElements = getReferenceElements(svg)
-  const elementBindings = new Map<SVGElement, string[]>()
+    if (!node.hasAttribute('data-monumap-original-style')) {
+      node.setAttribute('data-monumap-original-style', originalStyle)
+    }
 
-  block.objects.forEach((object) => {
-    resolveElementsForObject(svg, object, referenceElements).forEach((element) => {
-      const objectIds = elementBindings.get(element) ?? []
-      objectIds.push(object.id)
-      elementBindings.set(element, objectIds)
-    })
-  })
-
-  elementBindings.forEach((boundObjectIds, element) => {
-    const objectIds = Array.from(new Set(boundObjectIds))
+    const objectIds = Array.from(new Set(tombBindings.get(tombId) ?? []))
     const activeIds = objectIds.filter((objectId) => activeSet.has(objectId))
     const focusedIds = objectIds.filter((objectId) => focusedSet.has(objectId))
     const themeObjectId = focusedIds[0] ?? activeIds[0]
     const theme = themeObjectId ? objectThemes[themeObjectId] : null
     const color = theme?.pathColor ?? DEFAULT_PATH_COLOR
+    const isHovered = tombId === hoveredTombId
     const isFocused = hasFocusedObjects ? focusedIds.length > 0 : true
-    const originalStyle = element.getAttribute('style') ?? ''
     const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
+    const baseStyle = `${originalStyle}${separator}pointer-events:all;cursor:crosshair;transition:fill 120ms ease, stroke 120ms ease, filter 120ms ease, opacity 120ms ease;`
     const runtimeStyle =
-      activeIds.length > 0
-        ? `${originalStyle}${separator}pointer-events:all;cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${color});stroke:${color};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
-        : `${originalStyle}${separator}pointer-events:none;`
+      isHovered
+        ? `${baseStyle}cursor:${activeIds.length > 0 ? 'pointer' : 'crosshair'};opacity:1;fill:${HOVER_TOMB_COLOR};stroke:${HOVER_TOMB_COLOR};stroke-width:${activeIds.length > 0 ? '5px' : '3px'};filter:drop-shadow(0 0 16px ${HOVER_TOMB_COLOR});vector-effect:non-scaling-stroke;`
+        : activeIds.length > 0
+          ? `${baseStyle}cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${color});stroke:${color};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
+          : baseStyle
 
-    element.setAttribute('data-monumap-object-ids', activeIds.join(' '))
-    element.setAttribute('data-monumap-original-style', originalStyle)
-    element.setAttribute('style', runtimeStyle)
+    node.setAttribute('style', runtimeStyle)
 
     if (activeIds.length > 0) {
       const labels = activeIds
         .map((objectId) => findObjectById(block.objects, objectId)?.title)
         .filter((label): label is string => Boolean(label))
 
-      element.setAttribute('tabindex', '0')
-      element.setAttribute('role', 'button')
-      element.setAttribute('aria-label', labels.join(', '))
+      node.setAttribute('data-monumap-object-ids', activeIds.join(' '))
+      node.setAttribute('tabindex', '0')
+      node.setAttribute('role', 'button')
+      node.setAttribute('aria-label', labels.join(', '))
     } else {
-      element.removeAttribute('tabindex')
-      element.removeAttribute('role')
-      element.removeAttribute('aria-label')
+      node.removeAttribute('data-monumap-object-ids')
+      node.removeAttribute('tabindex')
+      node.removeAttribute('role')
+      node.setAttribute('aria-label', `Tomba ${tombId}`)
     }
   })
 }
@@ -357,6 +326,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
   const [openObject, setOpenObject] = useState<MapObject | null>(null)
+  const [hoveredTombId, setHoveredTombId] = useState<string | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [svgMarkup, setSvgMarkup] = useState('')
   const [svgError, setSvgError] = useState<string | null>(null)
@@ -450,6 +420,11 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     selectedPath.length > 1 ? findOptionByPath(block.filters.options, selectedPath) : null
   const focusedObjectIds = resolveFocusedObjectIds(activeSymbolOption)
   const activePathColor = activePathOption?.color ?? DEFAULT_PATH_COLOR
+  const activeTombCount = new Set(
+    activeObjectIds
+      .map((objectId) => findObjectById(block.objects, objectId)?.tombId)
+      .filter((tombId): tombId is string => Boolean(tombId)),
+  ).size
 
   useLayoutEffect(() => {
     if (!tooltip || !tooltipRef.current) {
@@ -485,8 +460,8 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    applyObjectBindings(svg, block, activeObjectIds, objectThemes, focusedIds)
-  }, [activeObjectIds, activeSymbolOption, block, svgMarkup])
+    applyObjectBindings(svg, block, activeObjectIds, objectThemes, focusedIds, hoveredTombId)
+  }, [activeObjectIds, activeSymbolOption, block, hoveredTombId, svgMarkup])
 
   function updatePath(depth: number, optionId: string) {
     setSelectedPath((current) => [...current.slice(0, depth), optionId])
@@ -505,7 +480,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    if (resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)) {
+    if (resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)) {
       return
     }
 
@@ -548,17 +523,24 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
         ),
       )
 
-      return
-    }
-
-    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
-
-    if (!object) {
+      setHoveredTombId(null)
       setTooltip(null)
       return
     }
 
+    const tombId = resolveTombIdFromTarget(event.target)
+
+    if (!tombId) {
+      setHoveredTombId(null)
+      setTooltip(null)
+      return
+    }
+
+    setHoveredTombId(tombId)
+    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+
     setTooltip({
+      tombId,
       object,
       x: event.clientX,
       y: event.clientY,
@@ -583,7 +565,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }
 
   function handleClick(event: ReactPointerEvent<SVGSVGElement>) {
-    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
 
     if (object) {
       setOpenObject(object)
@@ -595,7 +577,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    const object = resolveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
 
     if (!object) {
       return
@@ -677,6 +659,12 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             } as CSSProperties
           }
         >
+          <span className="legend-dot" aria-hidden="true" />
+          <p>
+            {activePathOption
+              ? `${activePathOption.label}: ${activeTombCount} tombe attive. Passa il cursore su una tomba per leggere il suo id e clicca solo su quelle evidenziate per aprire la scheda.`
+              : "Passa il cursore su una tomba per leggere il suo id. Seleziona un percorso per attivare le schede di catalogazione."}
+          </p>
         </div>
       </div>
 
@@ -707,6 +695,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             onPointerUp={handlePointerUp}
             onPointerLeave={(event) => {
               releaseDrag(event.pointerId, event.currentTarget)
+              setHoveredTombId(null)
               setTooltip(null)
             }}
             onClick={handleClick}
@@ -724,8 +713,8 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
               top: tooltipPosition.top,
             }}
           >
-            <strong>{tooltip.object.title}</strong>
-            <span>{tooltip.object.legend}</span>
+            <strong>Tomba {tooltip.tombId}</strong>
+            {tooltip.object && <span>{tooltip.object.title}</span>}
           </div>
         )}
       </div>
@@ -740,11 +729,11 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             >
               Chiudi
             </button>
-            <span className="story-kicker">Approfondimento</span>
+            <span className="story-kicker">{`${openObject.pathLabel} · ${openObject.symbolLabel}`}</span>
             <h3>{openObject.title}</h3>
-            {openObject.legend && <p className="map-modal__legend">{openObject.legend}</p>}
-            {openObject.summary && <p>{openObject.summary}</p>}
-            {openObject.details && <p>{openObject.details}</p>}
+            <p className="map-modal__legend">Tomba {openObject.tombId}</p>
+            {openObject.subtitle && <p>{openObject.subtitle}</p>}
+            {openObject.card && <p>{openObject.card}</p>}
           </article>
         </div>
       )}
