@@ -695,3 +695,112 @@ button {
     grid-template-columns: 5.5rem 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .story-block {
+    padding: 0.85rem;
+  }
+
+  .story-kicker {
+    gap: 0.45rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .story-kicker::before {
+    width: 2rem;
+  }
+
+  .story-hero {
+    min-height: 42vh;
+    padding: 1rem;
+  }
+
+  .story-hero__content,
+  .story-sidecar__copy,
+  .story-gallery__aside,
+  .story-map__panel,
+  .map-modal__card {
+    padding: 1.1rem;
+    border-radius: 20px;
+  }
+
+  .story-hero h1 {
+    font-size: clamp(2.7rem, 15vw, 3.9rem);
+  }
+
+  .story-hero p,
+  .story-sidecar__copy p,
+  .story-gallery__intro p,
+  .story-gallery__caption p,
+  .story-map__panel p,
+  .map-modal p {
+    font-size: 0.95rem;
+  }
+
+  .story-block h2 {
+    font-size: clamp(2rem, 12vw, 2.8rem);
+  }
+
+  .story-gallery__caption h3 {
+    font-size: clamp(1.75rem, 9vw, 2.35rem);
+  }
+
+  .story-sidecar__media,
+  .story-gallery__stage {
+    aspect-ratio: 1 / 1;
+  }
+
+  .story-gallery__stage,
+  .story-map__stage,
+  .map-canvas {
+    min-height: 18rem;
+  }
+
+  .gallery-thumb {
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.65rem;
+  }
+
+  .gallery-thumb img {
+    min-height: 4.5rem;
+  }
+
+  .story-map__filters-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .story-map__controls {
+    top: auto;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .icon-button {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.65rem 0.7rem;
+  }
+
+  .icon-button--wide {
+    min-width: 0;
+  }
+
+  .filter-chip {
+    padding: 0.66rem 0.86rem;
+    font-size: 0.85rem;
+  }
+
+  .filter-level--secondary .filter-chip {
+    padding: 0.42rem 0.66rem;
+    font-size: 0.74rem;
+  }
+
+  .map-modal {
+    padding: 0.85rem;
+  }
+}
