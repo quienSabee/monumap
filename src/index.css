@@ -551,9 +551,7 @@ button {
 .story-map__stage {
   min-height: 44rem;
   overscroll-behavior: contain;
-  background:
-    linear-gradient(180deg, rgba(1, 74, 56, 0.08), rgba(1, 74, 56, 0.2)),
-    linear-gradient(135deg, rgba(44, 66, 81, 0.6), rgba(1, 74, 56, 0.72));
+  background: var(--evergreen);
 }
 
 .story-map__controls {
