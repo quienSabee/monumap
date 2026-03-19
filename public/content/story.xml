@@ -20,7 +20,7 @@
   </gallery>
   <map id="planimetria" title="Esplora la planimetria" description="Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione." svg="plan.svg" viewBox="0 0 3370.39 843.68" defaultTargets="">
     <paths title="Percorsi tematici">
-      <path id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#F9DC5C">
+      <path id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#42B5E8">
         <symbol id="rosa" label="Rosa">
           <object id="1">
             <title>Tomba 1</title>
@@ -750,7 +750,7 @@
           </object>
         </symbol>
       </path>
-      <path id="decorazioni_zoomorfe" label="Decorazioni zoomorfe" color="#2C4251">
+      <path id="decorazioni_zoomorfe" label="Decorazioni zoomorfe" color="#E96A1D">
         <symbol id="uroboro" label="Uroboro">
           <object id="141">
             <title>Tomba 141</title>
@@ -960,7 +960,7 @@
           </object>
         </symbol>
       </path>
-      <path id="decorazioni_allegoriche" label="Decorazioni allegoriche" color="#6A0136">
+      <path id="decorazioni_allegoriche" label="Decorazioni allegoriche" color="#245E8A">
         <symbol id="caduceo" label="Caduceo">
           <object id="221">
             <title>Tomba 221</title>
@@ -1534,7 +1534,7 @@
           </object>
         </symbol>
       </path>
-      <path id="simboli_religiosi" label="Simboli religiosi" color="#0E6B56">
+      <path id="simboli_religiosi" label="Simboli religiosi" color="#F7C325">
         <symbol id="alpha_omega" label="Alpha Omega">
           <object id="341">
             <title>Tomba 341</title>
@@ -1744,7 +1744,7 @@
           </object>
         </symbol>
       </path>
-      <path id="strumenti_musicali" label="Strumenti musicali" color="#C99516">
+      <path id="strumenti_musicali" label="Strumenti musicali" color="#8E1B52">
         <symbol id="tromba" label="Tromba">
           <object id="421">
             <title>Tomba 421</title>

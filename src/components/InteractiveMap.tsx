@@ -37,6 +37,7 @@ const DEFAULT_PATH_COLOR = '#F9DC5C'
 const HOVER_TOMB_COLOR = '#FF00A8'
 const MIN_ZOOM_RATIO = 0.08
 const ZOOM_EPSILON = 0.0001
+const SYMBOL_ICON_BASE = `${import.meta.env.BASE_URL}media/symbols/`
 
 function parseViewBox(value: string): Box {
   const [x, y, width, height] = value.split(/\s+/).map(Number)
@@ -629,6 +630,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
                     depth === 0
                       ? option.color ?? DEFAULT_PATH_COLOR
                       : activePathOption?.color ?? DEFAULT_PATH_COLOR
+                  const symbolIcon = depth > 0 ? `${SYMBOL_ICON_BASE}${option.id}.svg` : null
 
                   return (
                     <button
@@ -642,7 +644,17 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
                         } as CSSProperties
                       }
                     >
-                      {option.label}
+                      {symbolIcon && (
+                        <img
+                          className="filter-chip__icon"
+                          src={symbolIcon}
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
+                      <span className="filter-chip__label">{option.label}</span>
                     </button>
                   )
                 })}
