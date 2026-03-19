@@ -747,6 +747,21 @@ button {
   .gallery-thumb {
     grid-template-columns: 5.5rem 1fr;
   }
+
+  .filter-level--secondary {
+    gap: 0.95rem;
+  }
+
+  .filter-level--secondary .filter-chip {
+    padding: 0.44rem 0.72rem 0.44rem 2.3rem;
+    font-size: 0.76rem;
+  }
+
+  .filter-level--secondary .filter-chip__icon {
+    left: -0.72rem;
+    width: 2.35rem;
+    height: 2.35rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -855,9 +870,19 @@ button {
     font-size: 0.85rem;
   }
 
+  .filter-level--secondary {
+    gap: 0.85rem;
+  }
+
   .filter-level--secondary .filter-chip {
-    padding: 0.42rem 0.66rem;
+    padding: 0.4rem 0.62rem 0.4rem 2.1rem;
     font-size: 0.74rem;
+  }
+
+  .filter-level--secondary .filter-chip__icon {
+    left: -0.64rem;
+    width: 2.15rem;
+    height: 2.15rem;
   }
 
   .map-modal {
