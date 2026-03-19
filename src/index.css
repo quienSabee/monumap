@@ -585,6 +585,15 @@ button {
   user-select: none;
 }
 
+.map-canvas * {
+  pointer-events: none !important;
+}
+
+.map-canvas .tomb,
+.map-canvas .tomb * {
+  pointer-events: all !important;
+}
+
 .map-canvas.is-dragging {
   cursor: grabbing;
 }
