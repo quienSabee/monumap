@@ -3,13 +3,15 @@
 Post-process an SVG plan so tomb-like elements become individually addressable.
 
 The script performs three steps:
-1. Finds rendered SVG elements outside <defs> whose fill matches the target color.
+1. Finds rendered SVG elements outside <defs> that represent tombs:
+   - any rendered element whose fill matches the target color
+   - any rendered <circle> whose fill is black
 2. Splits every matching <path> that contains multiple subpaths into one <path> per subpath.
 3. Annotates every matching element with:
    - class="<class-name>"
-   - id="<sequential number>"
-   - data-monumap-tomb-id="<sequential number>"
-   - data-legacy-id="<previous id>" when the previous id was non-numeric
+   - preserves existing tomb ids when already present
+   - assigns a new numeric id only to tombs that do not have one yet
+   - data-monumap-tomb-id mirrors the preserved or assigned tomb id
 
 Usage examples:
   python scripts/process_plan_svg.py public/plan.svg
@@ -39,6 +41,7 @@ PARAM_COUNTS = {
     "T": 2,
     "A": 7,
 }
+BLACK_CIRCLE_FILLS = {"#000", "#000000", "#1d1d1b", "black"}
 
 
 @dataclass
@@ -99,15 +102,19 @@ def get_fill_color(element: ET.Element) -> str | None:
         return fill.strip().lower()
 
     style = element.attrib.get("style", "")
-    match = re.search(r"(?i)(?:^|;)\s*fill\s*:\s*(#[0-9a-f]{6})", style)
+    match = re.search(r"(?i)(?:^|;)\s*fill\s*:\s*([^;]+)", style)
     if match:
-        return match.group(1).lower()
+        return match.group(1).strip().lower()
 
     return None
 
 
+def is_black_tomb_circle(element: ET.Element) -> bool:
+    return local_name(element.tag) == "circle" and get_fill_color(element) in BLACK_CIRCLE_FILLS
+
+
 def is_tomb_candidate(element: ET.Element, fill_color: str) -> bool:
-    return get_fill_color(element) == fill_color
+    return get_fill_color(element) == fill_color or is_black_tomb_circle(element)
 
 
 def fmt_number(value: float) -> str:
@@ -330,6 +337,10 @@ def split_matching_paths(parent: ET.Element, fill_color: str) -> tuple[int, int]
                 for part_index, part in enumerate(parts):
                     clone = copy.deepcopy(child)
                     clone.attrib["d"] = part
+                    if part_index > 0:
+                        clone.attrib.pop("id", None)
+                        clone.attrib.pop("data-monumap-tomb-id", None)
+                        clone.attrib.pop("data-legacy-id", None)
                     clone.tail = tail if part_index == len(parts) - 1 else None
                     rebuilt_children.append(clone)
                 continue
@@ -340,27 +351,54 @@ def split_matching_paths(parent: ET.Element, fill_color: str) -> tuple[int, int]
     return split_count, added_count
 
 
+def next_available_numeric_id(used_ids: set[str]) -> str:
+    numeric_ids = [int(value) for value in used_ids if value.isdigit()]
+    next_id = max(numeric_ids, default=0) + 1
+    while str(next_id) in used_ids:
+        next_id += 1
+    return str(next_id)
+
+
 def annotate_tombs(root: ET.Element, fill_color: str, class_name: str) -> int:
-    count = 0
+    annotated_count = 0
+    used_tomb_ids: set[str] = set()
 
     for element in iter_rendered_elements(root):
         if not is_tomb_candidate(element, fill_color):
             continue
 
-        count += 1
-        existing_id = element.attrib.get("id", "").strip()
-        if existing_id and not existing_id.isdigit() and "data-legacy-id" not in element.attrib:
-            element.attrib["data-legacy-id"] = existing_id
+        existing_tomb_id = element.attrib.get("data-monumap-tomb-id", "").strip()
+        existing_dom_id = element.attrib.get("id", "").strip()
+
+        if existing_tomb_id:
+            used_tomb_ids.add(existing_tomb_id)
+        if existing_dom_id:
+            used_tomb_ids.add(existing_dom_id)
+
+    for element in iter_rendered_elements(root):
+        if not is_tomb_candidate(element, fill_color):
+            continue
+
+        annotated_count += 1
+        existing_tomb_id = element.attrib.get("data-monumap-tomb-id", "").strip()
+        existing_dom_id = element.attrib.get("id", "").strip()
+        tomb_id = existing_tomb_id or existing_dom_id
+
+        if not tomb_id:
+            tomb_id = next_available_numeric_id(used_tomb_ids)
+            used_tomb_ids.add(tomb_id)
+
+        if not existing_dom_id:
+            element.attrib["id"] = tomb_id
+
+        element.attrib["data-monumap-tomb-id"] = tomb_id
 
         classes = [token for token in element.attrib.get("class", "").split() if token]
         if class_name not in classes:
             classes.append(class_name)
 
         element.attrib["class"] = " ".join(classes)
-        element.attrib["id"] = str(count)
-        element.attrib["data-monumap-tomb-id"] = str(count)
-
-    return count
+    return annotated_count
 
 
 def count_remaining_multi_subpaths(root: ET.Element, fill_color: str, class_name: str) -> int:
