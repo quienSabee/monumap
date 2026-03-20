@@ -48,6 +48,31 @@ function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value))
 }
 
+function hexToRgb(color: string) {
+  const normalized = color.trim().replace('#', '')
+  const expanded = normalized.length === 3 ? normalized.split('').map((segment) => `${segment}${segment}`).join('') : normalized
+
+  if (!/^[\da-fA-F]{6}$/.test(expanded)) {
+    return null
+  }
+
+  return {
+    r: Number.parseInt(expanded.slice(0, 2), 16),
+    g: Number.parseInt(expanded.slice(2, 4), 16),
+    b: Number.parseInt(expanded.slice(4, 6), 16),
+  }
+}
+
+function withAlpha(color: string, alpha: number) {
+  const rgb = hexToRgb(color)
+
+  if (!rgb) {
+    return color
+  }
+
+  return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})`
+}
+
 function clampBox(box: Box, bounds: Box): Box {
   const width = clamp(box.width, bounds.width * MIN_ZOOM_RATIO, bounds.width)
   const height = clamp(box.height, bounds.height * MIN_ZOOM_RATIO, bounds.height)
@@ -209,6 +234,10 @@ function applyTombBindings(
   const activeSet = new Set(activeTombIds)
   const focusedSet = new Set(focusedTombIds)
   const hasFocusedObjects = focusedSet.size > 0
+  const pathFillColor = withAlpha(activePathColor, 0.18)
+  const pathStrokeColor = withAlpha(activePathColor, 0.46)
+  const focusedFillColor = withAlpha(activePathColor, 0.78)
+  const focusedStrokeColor = activePathColor
 
   svg.querySelectorAll('.tomb').forEach((node) => {
     if (!(node instanceof SVGElement) || node.closest('defs')) {
@@ -230,13 +259,15 @@ function applyTombBindings(
 
     const isActive = activeSet.has(tombId)
     const isHovered = tombId === hoveredTombId
-    const isFocused = hasFocusedObjects ? focusedSet.has(tombId) : true
+    const isFocused = hasFocusedObjects ? focusedSet.has(tombId) : false
     const tomb = findTombById(block.tombs, tombId)
     const runtimeAugment =
       isHovered
         ? `cursor:${isActive ? 'pointer' : 'crosshair'};opacity:1;fill:${HOVER_TOMB_COLOR};stroke:${HOVER_TOMB_COLOR};stroke-width:${isActive ? '5px' : '3px'};filter:drop-shadow(0 0 16px ${HOVER_TOMB_COLOR});vector-effect:non-scaling-stroke;`
-        : isActive
-          ? `cursor:pointer;opacity:${isFocused ? '1' : '0.76'};fill:${activePathColor};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${activePathColor});stroke:${activePathColor};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
+        : isActive && isFocused
+          ? `cursor:pointer;opacity:1;fill:${focusedFillColor};filter:drop-shadow(0 0 16px ${focusedStrokeColor});stroke:${focusedStrokeColor};stroke-width:4px;vector-effect:non-scaling-stroke;`
+          : isActive
+            ? `cursor:pointer;opacity:1;fill:${pathFillColor};filter:none;stroke:${pathStrokeColor};stroke-width:1.6px;vector-effect:non-scaling-stroke;`
           : 'cursor:crosshair;opacity:1;filter:none;'
 
     styledNodes.forEach((styledNode) => {
