@@ -7,7 +7,7 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
   type PointerEvent as ReactPointerEvent,
 } from 'react'
-import type { MapBlock, MapFilterOption, MapObject } from '../types/story'
+import type { MapBlock, MapFilterOption, MapTomb } from '../types/story'
 
 type InteractiveMapProps = {
   block: MapBlock
@@ -22,15 +22,9 @@ type Box = {
 
 type TooltipState = {
   tombId: string
-  object: MapObject | null
+  tomb: MapTomb | null
   x: number
   y: number
-}
-
-type ObjectTheme = {
-  pathId: string
-  pathLabel: string
-  pathColor: string
 }
 
 const DEFAULT_PATH_COLOR = '#F9DC5C'
@@ -38,6 +32,7 @@ const HOVER_TOMB_COLOR = '#FF00A8'
 const MIN_ZOOM_RATIO = 0.08
 const ZOOM_EPSILON = 0.0001
 const SYMBOL_ICON_BASE = `${import.meta.env.BASE_URL}media/symbols/`
+const GRAPHIC_SELECTOR = 'path, polygon, rect, circle, ellipse, line, polyline'
 
 function parseViewBox(value: string): Box {
   const [x, y, width, height] = value.split(/\s+/).map(Number)
@@ -121,28 +116,6 @@ function buildLevels(options: MapFilterOption[], path: string[]): MapFilterOptio
   return levels
 }
 
-function buildObjectThemes(options: MapFilterOption[]): Record<string, ObjectTheme> {
-  const themes: Record<string, ObjectTheme> = {}
-
-  function visit(option: MapFilterOption, topLevel: MapFilterOption) {
-    option.targets.forEach((target) => {
-      themes[target] = {
-        pathId: topLevel.id,
-        pathLabel: topLevel.label,
-        pathColor: topLevel.color ?? DEFAULT_PATH_COLOR,
-      }
-    })
-
-    option.children.forEach((child) => visit(child, topLevel))
-  }
-
-  options.forEach((option) => {
-    visit(option, option)
-  })
-
-  return themes
-}
-
 function collectTargets(option: MapFilterOption): string[] {
   const targets = new Set(option.targets)
 
@@ -153,11 +126,11 @@ function collectTargets(option: MapFilterOption): string[] {
   return Array.from(targets)
 }
 
-function resolveFocusedObjectIds(option: MapFilterOption | null): string[] {
+function resolveFocusedTombIds(option: MapFilterOption | null): string[] {
   return option && option.children.length === 0 ? collectTargets(option) : []
 }
 
-function resolveActiveObjectIds(block: MapBlock, path: string[]): string[] {
+function resolveActiveTombIds(block: MapBlock, path: string[]): string[] {
   if (path.length === 0) {
     return block.defaultTargets
   }
@@ -172,12 +145,16 @@ function resolveActiveObjectIds(block: MapBlock, path: string[]): string[] {
   return targets.length > 0 ? targets : block.defaultTargets
 }
 
-function findObjectById(objects: MapObject[], id: string | null): MapObject | null {
+function findTombById(tombs: MapTomb[], id: string | null): MapTomb | null {
   if (!id) {
     return null
   }
 
-  return objects.find((object) => object.id === id) ?? null
+  return tombs.find((tomb) => tomb.id === id) ?? null
+}
+
+function getTombLabel(tomb: MapTomb | null, tombId: string): string {
+  return tomb?.nome?.trim() || `Tomba ${tombId}`
 }
 
 function findTopLevelOption(options: MapFilterOption[], id: string | null): MapFilterOption | null {
@@ -186,13 +163,6 @@ function findTopLevelOption(options: MapFilterOption[], id: string | null): MapF
   }
 
   return options.find((option) => option.id === id) ?? null
-}
-
-function parseObjectIds(value: string | null): string[] {
-  return (value ?? '')
-    .split(/\s+/)
-    .map((token) => token.trim())
-    .filter(Boolean)
 }
 
 function resolveTombIdFromTarget(target: EventTarget | null): string | null {
@@ -209,53 +179,31 @@ function resolveTombIdFromTarget(target: EventTarget | null): string | null {
   return source.getAttribute('data-monumap-tomb-id') ?? source.getAttribute('id')
 }
 
-function resolveActiveObjectFromTarget(
-  objects: MapObject[],
+function resolveActiveTombFromTarget(
+  tombs: MapTomb[],
+  activeTombIds: string[],
   target: EventTarget | null,
-  preferredObjectIds: string[] = [],
-): MapObject | null {
-  if (!(target instanceof Element)) {
+): MapTomb | null {
+  const tombId = resolveTombIdFromTarget(target)
+
+  if (!tombId || !activeTombIds.includes(tombId)) {
     return null
   }
 
-  const source = target.closest('[data-monumap-object-ids]')
-  const objectIds = parseObjectIds(source?.getAttribute('data-monumap-object-ids') ?? null)
-
-  for (const preferredObjectId of preferredObjectIds) {
-    if (objectIds.includes(preferredObjectId)) {
-      return findObjectById(objects, preferredObjectId)
-    }
-  }
-
-  for (const objectId of objectIds) {
-    const object = findObjectById(objects, objectId)
-
-    if (object) {
-      return object
-    }
-  }
-
-  return null
+  return findTombById(tombs, tombId)
 }
 
-function applyObjectBindings(
+function applyTombBindings(
   svg: SVGSVGElement,
   block: MapBlock,
-  activeObjectIds: string[],
-  objectThemes: Record<string, ObjectTheme>,
-  focusedObjectIds: string[],
+  activeTombIds: string[],
+  focusedTombIds: string[],
   hoveredTombId: string | null,
+  activePathColor: string,
 ) {
-  const activeSet = new Set(activeObjectIds)
-  const focusedSet = new Set(focusedObjectIds)
+  const activeSet = new Set(activeTombIds)
+  const focusedSet = new Set(focusedTombIds)
   const hasFocusedObjects = focusedSet.size > 0
-  const tombBindings = new Map<string, string[]>()
-
-  block.objects.forEach((object) => {
-    const boundObjectIds = tombBindings.get(object.tombId) ?? []
-    boundObjectIds.push(object.id)
-    tombBindings.set(object.tombId, boundObjectIds)
-  })
 
   svg.querySelectorAll('.tomb').forEach((node) => {
     if (!(node instanceof SVGElement) || node.closest('defs')) {
@@ -268,42 +216,43 @@ function applyObjectBindings(
       return
     }
 
-    const originalStyle = node.getAttribute('data-monumap-original-style') ?? node.getAttribute('style') ?? ''
+    const styledNodes =
+      node.tagName.toLowerCase() === 'g'
+        ? Array.from(node.querySelectorAll(GRAPHIC_SELECTOR)).filter(
+            (child): child is SVGElement => child instanceof SVGElement && !child.closest('defs'),
+          )
+        : [node]
 
-    if (!node.hasAttribute('data-monumap-original-style')) {
-      node.setAttribute('data-monumap-original-style', originalStyle)
-    }
-
-    const objectIds = Array.from(new Set(tombBindings.get(tombId) ?? []))
-    const activeIds = objectIds.filter((objectId) => activeSet.has(objectId))
-    const focusedIds = objectIds.filter((objectId) => focusedSet.has(objectId))
-    const themeObjectId = focusedIds[0] ?? activeIds[0]
-    const theme = themeObjectId ? objectThemes[themeObjectId] : null
-    const color = theme?.pathColor ?? DEFAULT_PATH_COLOR
+    const isActive = activeSet.has(tombId)
     const isHovered = tombId === hoveredTombId
-    const isFocused = hasFocusedObjects ? focusedIds.length > 0 : true
-    const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
-    const baseStyle = `${originalStyle}${separator}pointer-events:all;cursor:crosshair;transition:fill 120ms ease, stroke 120ms ease, filter 120ms ease, opacity 120ms ease;`
-    const runtimeStyle =
+    const isFocused = hasFocusedObjects ? focusedSet.has(tombId) : true
+    const tomb = findTombById(block.tombs, tombId)
+    const runtimeAugment =
       isHovered
-        ? `${baseStyle}cursor:${activeIds.length > 0 ? 'pointer' : 'crosshair'};opacity:1;fill:${HOVER_TOMB_COLOR};stroke:${HOVER_TOMB_COLOR};stroke-width:${activeIds.length > 0 ? '5px' : '3px'};filter:drop-shadow(0 0 16px ${HOVER_TOMB_COLOR});vector-effect:non-scaling-stroke;`
-        : activeIds.length > 0
-          ? `${baseStyle}cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${color});stroke:${color};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
-          : baseStyle
+        ? `cursor:${isActive ? 'pointer' : 'crosshair'};opacity:1;fill:${HOVER_TOMB_COLOR};stroke:${HOVER_TOMB_COLOR};stroke-width:${isActive ? '5px' : '3px'};filter:drop-shadow(0 0 16px ${HOVER_TOMB_COLOR});vector-effect:non-scaling-stroke;`
+        : isActive
+          ? `cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${activePathColor});stroke:${activePathColor};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
+          : 'cursor:crosshair;opacity:1;filter:none;'
 
-    node.setAttribute('style', runtimeStyle)
+    styledNodes.forEach((styledNode) => {
+      const originalStyle = styledNode.getAttribute('data-monumap-original-style') ?? styledNode.getAttribute('style') ?? ''
 
-    if (activeIds.length > 0) {
-      const labels = activeIds
-        .map((objectId) => findObjectById(block.objects, objectId)?.title)
-        .filter((label): label is string => Boolean(label))
+      if (!styledNode.hasAttribute('data-monumap-original-style')) {
+        styledNode.setAttribute('data-monumap-original-style', originalStyle)
+      }
 
-      node.setAttribute('data-monumap-object-ids', activeIds.join(' '))
+      const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
+      styledNode.setAttribute(
+        'style',
+        `${originalStyle}${separator}pointer-events:all;transition:fill 120ms ease, stroke 120ms ease, filter 120ms ease, opacity 120ms ease;${runtimeAugment}`,
+      )
+    })
+
+    if (isActive) {
       node.setAttribute('tabindex', '0')
       node.setAttribute('role', 'button')
-      node.setAttribute('aria-label', labels.join(', '))
+      node.setAttribute('aria-label', getTombLabel(tomb, tombId))
     } else {
-      node.removeAttribute('data-monumap-object-ids')
       node.removeAttribute('tabindex')
       node.removeAttribute('role')
       node.setAttribute('aria-label', `Tomba ${tombId}`)
@@ -326,7 +275,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const [viewBox, setViewBox] = useState<Box>(originalBox)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
-  const [openObject, setOpenObject] = useState<MapObject | null>(null)
+  const [openTomb, setOpenTomb] = useState<MapTomb | null>(null)
   const [hoveredTombId, setHoveredTombId] = useState<string | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [svgMarkup, setSvgMarkup] = useState('')
@@ -415,17 +364,31 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }, [block.viewBox])
 
   const levels = buildLevels(block.filters.options, selectedPath)
-  const activeObjectIds = resolveActiveObjectIds(block, selectedPath)
+  const activeTombIds = resolveActiveTombIds(block, selectedPath)
   const activePathOption = findTopLevelOption(block.filters.options, selectedPath[0] ?? null)
   const activeSymbolOption =
     selectedPath.length > 1 ? findOptionByPath(block.filters.options, selectedPath) : null
-  const focusedObjectIds = resolveFocusedObjectIds(activeSymbolOption)
+  const focusedTombIds = resolveFocusedTombIds(activeSymbolOption)
   const activePathColor = activePathOption?.color ?? DEFAULT_PATH_COLOR
-  const activeTombCount = new Set(
-    activeObjectIds
-      .map((objectId) => findObjectById(block.objects, objectId)?.tombId)
-      .filter((tombId): tombId is string => Boolean(tombId)),
-  ).size
+  const activeTombCount = new Set(activeTombIds).size
+  const openTombContextSymbols = openTomb
+    ? openTomb.symbols.filter((symbol) => {
+        if (activeSymbolOption) {
+          return symbol.symbolId === activeSymbolOption.id
+        }
+
+        if (activePathOption) {
+          return symbol.pathId === activePathOption.id
+        }
+
+        return true
+      })
+    : []
+  const openTombVisibleSymbols = openTombContextSymbols.length > 0 ? openTombContextSymbols : openTomb?.symbols ?? []
+  const openTombKicker =
+    activeSymbolOption && activePathOption
+      ? `${activePathOption.label} · ${activeSymbolOption.label}`
+      : activePathOption?.label ?? openTombVisibleSymbols[0]?.pathLabel ?? 'Tomba catalogata'
 
   useLayoutEffect(() => {
     if (!tooltip || !tooltipRef.current) {
@@ -454,15 +417,13 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
 
   useEffect(() => {
     const svg = svgRef.current
-    const objectThemes = buildObjectThemes(block.filters.options)
-    const focusedIds = resolveFocusedObjectIds(activeSymbolOption)
 
     if (!svg || !svgMarkup) {
       return
     }
 
-    applyObjectBindings(svg, block, activeObjectIds, objectThemes, focusedIds, hoveredTombId)
-  }, [activeObjectIds, activeSymbolOption, block, hoveredTombId, svgMarkup])
+    applyTombBindings(svg, block, activeTombIds, focusedTombIds, hoveredTombId, activePathColor)
+  }, [activePathColor, activeTombIds, block, focusedTombIds, hoveredTombId, svgMarkup])
 
   function updatePath(depth: number, optionId: string) {
     setSelectedPath((current) => [...current.slice(0, depth), optionId])
@@ -481,7 +442,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    if (resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)) {
+    if (resolveActiveTombFromTarget(block.tombs, activeTombIds, event.target)) {
       return
     }
 
@@ -538,11 +499,11 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     }
 
     setHoveredTombId(tombId)
-    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+    const tomb = resolveActiveTombFromTarget(block.tombs, activeTombIds, event.target)
 
     setTooltip({
       tombId,
-      object,
+      tomb,
       x: event.clientX,
       y: event.clientY,
     })
@@ -566,10 +527,10 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }
 
   function handleClick(event: ReactPointerEvent<SVGSVGElement>) {
-    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+    const tomb = resolveActiveTombFromTarget(block.tombs, activeTombIds, event.target)
 
-    if (object) {
-      setOpenObject(object)
+    if (tomb) {
+      setOpenTomb(tomb)
     }
   }
 
@@ -578,14 +539,14 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       return
     }
 
-    const object = resolveActiveObjectFromTarget(block.objects, event.target, focusedObjectIds)
+    const tomb = resolveActiveTombFromTarget(block.tombs, activeTombIds, event.target)
 
-    if (!object) {
+    if (!tomb) {
       return
     }
 
     event.preventDefault()
-    setOpenObject(object)
+    setOpenTomb(tomb)
   }
 
   function zoomTo(factor: number) {
@@ -726,26 +687,31 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
             }}
           >
             <strong>Tomba {tooltip.tombId}</strong>
-            {tooltip.object && <span>{tooltip.object.title}</span>}
+            {tooltip.tomb && <span>{getTombLabel(tooltip.tomb, tooltip.tombId)}</span>}
           </div>
         )}
       </div>
 
-      {openObject && (
-        <div className="map-modal" onClick={() => setOpenObject(null)}>
+      {openTomb && (
+        <div className="map-modal" onClick={() => setOpenTomb(null)}>
           <article className="map-modal__card" onClick={(event) => event.stopPropagation()}>
             <button
               type="button"
               className="ghost-button map-modal__close"
-              onClick={() => setOpenObject(null)}
+              onClick={() => setOpenTomb(null)}
             >
               Chiudi
             </button>
-            <span className="story-kicker">{`${openObject.pathLabel} · ${openObject.symbolLabel}`}</span>
-            <h3>{openObject.title}</h3>
-            <p className="map-modal__legend">Tomba {openObject.tombId}</p>
-            {openObject.subtitle && <p>{openObject.subtitle}</p>}
-            {openObject.card && <p>{openObject.card}</p>}
+            <span className="story-kicker">{openTombKicker}</span>
+            <h3>{getTombLabel(openTomb, openTomb.id)}</h3>
+            <p className="map-modal__legend">Tomba {openTomb.id}</p>
+            {openTomb.data && <p>{`Data: ${openTomb.data}`}</p>}
+            {openTomb.nascita && <p>{`Nascita: ${openTomb.nascita}`}</p>}
+            {openTomb.morte && <p>{`Morte: ${openTomb.morte}`}</p>}
+            {openTombVisibleSymbols.length > 0 && (
+              <p>{`Simboli: ${openTombVisibleSymbols.map((symbol) => symbol.symbolLabel).join(', ')}`}</p>
+            )}
+            {openTomb.descrizione && <p>{openTomb.descrizione}</p>}
           </article>
         </div>
       )}

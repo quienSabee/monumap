@@ -50,7 +50,7 @@ export type MapBlock = {
   viewBox: string
   defaultTargets: string[]
   filters: MapFilterPanel
-  objects: MapObject[]
+  tombs: MapTomb[]
 }
 
 export type MapFilterPanel = {
@@ -66,15 +66,20 @@ export type MapFilterOption = {
   children: MapFilterOption[]
 }
 
-export type MapObject = {
+export type MapTomb = {
   id: string
-  tombId: string
-  title: string
-  subtitle?: string
-  card?: string
+  nome?: string
+  data?: string
+  nascita?: string
+  morte?: string
+  descrizione?: string
+  symbols: MapTombSymbolRef[]
+}
+
+export type MapTombSymbolRef = {
+  symbolId: string
+  symbolLabel: string
   pathId: string
   pathLabel: string
   pathColor: string
-  symbolId: string
-  symbolLabel: string
 }

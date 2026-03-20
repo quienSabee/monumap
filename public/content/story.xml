@@ -21,1887 +21,620 @@
   <map id="planimetria" title="Esplora la planimetria" description="Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione." svg="plan.svg" viewBox="0 0 3370.39 843.68" defaultTargets="">
     <paths title="Percorsi tematici">
       <path id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#42B5E8">
-        <symbol id="rosa" label="Rosa">
-          <object id="1">
-            <title>Tomba 1</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 1: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="2">
-            <title>Tomba 2</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 2: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="3">
-            <title>Tomba 3</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 3: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="4">
-            <title>Tomba 4</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 4: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="5">
-            <title>Tomba 5</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 5: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="6">
-            <title>Tomba 6</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 6: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="7">
-            <title>Tomba 7</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 7: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="8">
-            <title>Tomba 8</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 8: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="9">
-            <title>Tomba 9</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 9: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-          <object id="10">
-            <title>Tomba 10</title>
-            <subtitle>Decorazioni fitomorfe - Rosa</subtitle>
-            <card>Catalogazione preliminare della tomba 10: verifica sul campo della presenza del simbolo rosa.</card>
-          </object>
-        </symbol>
-        <symbol id="palmetta" label="Palmetta">
-          <object id="8">
-            <title>Tomba 8</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 8: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="9">
-            <title>Tomba 9</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 9: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="10">
-            <title>Tomba 10</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 10: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="11">
-            <title>Tomba 11</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 11: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="12">
-            <title>Tomba 12</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 12: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="13">
-            <title>Tomba 13</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 13: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="14">
-            <title>Tomba 14</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 14: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="15">
-            <title>Tomba 15</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 15: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="16">
-            <title>Tomba 16</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 16: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-          <object id="17">
-            <title>Tomba 17</title>
-            <subtitle>Decorazioni fitomorfe - Palmetta</subtitle>
-            <card>Catalogazione preliminare della tomba 17: verifica sul campo della presenza del simbolo palmetta.</card>
-          </object>
-        </symbol>
-        <symbol id="margherita" label="Margherita">
-          <object id="15">
-            <title>Tomba 15</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 15: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="16">
-            <title>Tomba 16</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 16: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="17">
-            <title>Tomba 17</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 17: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="18">
-            <title>Tomba 18</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 18: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="19">
-            <title>Tomba 19</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 19: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="20">
-            <title>Tomba 20</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 20: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="21">
-            <title>Tomba 21</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 21: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="22">
-            <title>Tomba 22</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 22: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="23">
-            <title>Tomba 23</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 23: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-          <object id="24">
-            <title>Tomba 24</title>
-            <subtitle>Decorazioni fitomorfe - Margherita</subtitle>
-            <card>Catalogazione preliminare della tomba 24: verifica sul campo della presenza del simbolo margherita.</card>
-          </object>
-        </symbol>
-        <symbol id="acanto" label="Acanto">
-          <object id="22">
-            <title>Tomba 22</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 22: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="23">
-            <title>Tomba 23</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 23: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="24">
-            <title>Tomba 24</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 24: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="25">
-            <title>Tomba 25</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 25: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="26">
-            <title>Tomba 26</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 26: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="27">
-            <title>Tomba 27</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 27: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="28">
-            <title>Tomba 28</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 28: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="29">
-            <title>Tomba 29</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 29: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="30">
-            <title>Tomba 30</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 30: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-          <object id="31">
-            <title>Tomba 31</title>
-            <subtitle>Decorazioni fitomorfe - Acanto</subtitle>
-            <card>Catalogazione preliminare della tomba 31: verifica sul campo della presenza del simbolo acanto.</card>
-          </object>
-        </symbol>
-        <symbol id="papavero" label="Papavero">
-          <object id="29">
-            <title>Tomba 29</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 29: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="30">
-            <title>Tomba 30</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 30: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="31">
-            <title>Tomba 31</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 31: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="32">
-            <title>Tomba 32</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 32: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="33">
-            <title>Tomba 33</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 33: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="34">
-            <title>Tomba 34</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 34: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="35">
-            <title>Tomba 35</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 35: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="36">
-            <title>Tomba 36</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 36: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="37">
-            <title>Tomba 37</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 37: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-          <object id="38">
-            <title>Tomba 38</title>
-            <subtitle>Decorazioni fitomorfe - Papavero</subtitle>
-            <card>Catalogazione preliminare della tomba 38: verifica sul campo della presenza del simbolo papavero.</card>
-          </object>
-        </symbol>
-        <symbol id="vite" label="Vite">
-          <object id="36">
-            <title>Tomba 36</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 36: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="37">
-            <title>Tomba 37</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 37: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="38">
-            <title>Tomba 38</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 38: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="39">
-            <title>Tomba 39</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 39: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="40">
-            <title>Tomba 40</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 40: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="41">
-            <title>Tomba 41</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 41: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="42">
-            <title>Tomba 42</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 42: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="43">
-            <title>Tomba 43</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 43: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="44">
-            <title>Tomba 44</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 44: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-          <object id="45">
-            <title>Tomba 45</title>
-            <subtitle>Decorazioni fitomorfe - Vite</subtitle>
-            <card>Catalogazione preliminare della tomba 45: verifica sul campo della presenza del simbolo vite.</card>
-          </object>
-        </symbol>
-        <symbol id="trifoglio" label="Trifoglio">
-          <object id="43">
-            <title>Tomba 43</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 43: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="44">
-            <title>Tomba 44</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 44: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="45">
-            <title>Tomba 45</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 45: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="46">
-            <title>Tomba 46</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 46: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="47">
-            <title>Tomba 47</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 47: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="48">
-            <title>Tomba 48</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 48: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="49">
-            <title>Tomba 49</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 49: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="50">
-            <title>Tomba 50</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 50: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="51">
-            <title>Tomba 51</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 51: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-          <object id="52">
-            <title>Tomba 52</title>
-            <subtitle>Decorazioni fitomorfe - Trifoglio</subtitle>
-            <card>Catalogazione preliminare della tomba 52: verifica sul campo della presenza del simbolo trifoglio.</card>
-          </object>
-        </symbol>
-        <symbol id="ulivo" label="Ulivo">
-          <object id="50">
-            <title>Tomba 50</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 50: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="51">
-            <title>Tomba 51</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 51: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="52">
-            <title>Tomba 52</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 52: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="53">
-            <title>Tomba 53</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 53: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="54">
-            <title>Tomba 54</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 54: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="55">
-            <title>Tomba 55</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 55: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="56">
-            <title>Tomba 56</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 56: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="57">
-            <title>Tomba 57</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 57: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="58">
-            <title>Tomba 58</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 58: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-          <object id="59">
-            <title>Tomba 59</title>
-            <subtitle>Decorazioni fitomorfe - Ulivo</subtitle>
-            <card>Catalogazione preliminare della tomba 59: verifica sul campo della presenza del simbolo ulivo.</card>
-          </object>
-        </symbol>
-        <symbol id="ghirlanda" label="Ghirlanda">
-          <object id="57">
-            <title>Tomba 57</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 57: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="58">
-            <title>Tomba 58</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 58: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="59">
-            <title>Tomba 59</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 59: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="60">
-            <title>Tomba 60</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 60: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="61">
-            <title>Tomba 61</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 61: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="62">
-            <title>Tomba 62</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 62: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="63">
-            <title>Tomba 63</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 63: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="64">
-            <title>Tomba 64</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 64: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="65">
-            <title>Tomba 65</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 65: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-          <object id="66">
-            <title>Tomba 66</title>
-            <subtitle>Decorazioni fitomorfe - Ghirlanda</subtitle>
-            <card>Catalogazione preliminare della tomba 66: verifica sul campo della presenza del simbolo ghirlanda.</card>
-          </object>
-        </symbol>
-        <symbol id="giglio" label="Giglio">
-          <object id="64">
-            <title>Tomba 64</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 64: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="65">
-            <title>Tomba 65</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 65: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="66">
-            <title>Tomba 66</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 66: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="67">
-            <title>Tomba 67</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 67: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="68">
-            <title>Tomba 68</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 68: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="69">
-            <title>Tomba 69</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 69: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="70">
-            <title>Tomba 70</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 70: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="71">
-            <title>Tomba 71</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 71: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="72">
-            <title>Tomba 72</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 72: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-          <object id="73">
-            <title>Tomba 73</title>
-            <subtitle>Decorazioni fitomorfe - Giglio</subtitle>
-            <card>Catalogazione preliminare della tomba 73: verifica sul campo della presenza del simbolo giglio.</card>
-          </object>
-        </symbol>
-        <symbol id="alloro" label="Alloro">
-          <object id="71">
-            <title>Tomba 71</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 71: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="72">
-            <title>Tomba 72</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 72: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="73">
-            <title>Tomba 73</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 73: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="74">
-            <title>Tomba 74</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 74: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="75">
-            <title>Tomba 75</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 75: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="76">
-            <title>Tomba 76</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 76: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="77">
-            <title>Tomba 77</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 77: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="78">
-            <title>Tomba 78</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 78: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="79">
-            <title>Tomba 79</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 79: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-          <object id="80">
-            <title>Tomba 80</title>
-            <subtitle>Decorazioni fitomorfe - Alloro</subtitle>
-            <card>Catalogazione preliminare della tomba 80: verifica sul campo della presenza del simbolo alloro.</card>
-          </object>
-        </symbol>
-        <symbol id="crisantemo" label="Crisantemo">
-          <object id="78">
-            <title>Tomba 78</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 78: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="79">
-            <title>Tomba 79</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 79: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="80">
-            <title>Tomba 80</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 80: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="81">
-            <title>Tomba 81</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 81: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="82">
-            <title>Tomba 82</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 82: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="83">
-            <title>Tomba 83</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 83: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="84">
-            <title>Tomba 84</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 84: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="85">
-            <title>Tomba 85</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 85: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="86">
-            <title>Tomba 86</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 86: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-          <object id="87">
-            <title>Tomba 87</title>
-            <subtitle>Decorazioni fitomorfe - Crisantemo</subtitle>
-            <card>Catalogazione preliminare della tomba 87: verifica sul campo della presenza del simbolo crisantemo.</card>
-          </object>
-        </symbol>
-        <symbol id="pigna" label="Pigna">
-          <object id="85">
-            <title>Tomba 85</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 85: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="86">
-            <title>Tomba 86</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 86: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="87">
-            <title>Tomba 87</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 87: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="88">
-            <title>Tomba 88</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 88: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="89">
-            <title>Tomba 89</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 89: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="90">
-            <title>Tomba 90</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 90: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="91">
-            <title>Tomba 91</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 91: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="92">
-            <title>Tomba 92</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 92: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="93">
-            <title>Tomba 93</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 93: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-          <object id="94">
-            <title>Tomba 94</title>
-            <subtitle>Decorazioni fitomorfe - Pigna</subtitle>
-            <card>Catalogazione preliminare della tomba 94: verifica sul campo della presenza del simbolo pigna.</card>
-          </object>
-        </symbol>
-        <symbol id="edera" label="Edera">
-          <object id="92">
-            <title>Tomba 92</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 92: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="93">
-            <title>Tomba 93</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 93: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="94">
-            <title>Tomba 94</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 94: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="95">
-            <title>Tomba 95</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 95: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="96">
-            <title>Tomba 96</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 96: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="97">
-            <title>Tomba 97</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 97: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="98">
-            <title>Tomba 98</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 98: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="99">
-            <title>Tomba 99</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 99: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="100">
-            <title>Tomba 100</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 100: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-          <object id="101">
-            <title>Tomba 101</title>
-            <subtitle>Decorazioni fitomorfe - Edera</subtitle>
-            <card>Catalogazione preliminare della tomba 101: verifica sul campo della presenza del simbolo edera.</card>
-          </object>
-        </symbol>
+        <symbol id="rosa" label="Rosa" />
+        <symbol id="palmetta" label="Palmetta" />
+        <symbol id="margherita" label="Margherita" />
+        <symbol id="acanto" label="Acanto" />
+        <symbol id="papavero" label="Papavero" />
+        <symbol id="vite" label="Vite" />
+        <symbol id="trifoglio" label="Trifoglio" />
+        <symbol id="ulivo" label="Ulivo" />
+        <symbol id="ghirlanda" label="Ghirlanda" />
+        <symbol id="giglio" label="Giglio" />
+        <symbol id="alloro" label="Alloro" />
+        <symbol id="crisantemo" label="Crisantemo" />
+        <symbol id="pigna" label="Pigna" />
+        <symbol id="edera" label="Edera" />
       </path>
       <path id="decorazioni_zoomorfe" label="Decorazioni zoomorfe" color="#E96A1D">
-        <symbol id="uroboro" label="Uroboro">
-          <object id="141">
-            <title>Tomba 141</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 141: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="142">
-            <title>Tomba 142</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 142: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="143">
-            <title>Tomba 143</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 143: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="144">
-            <title>Tomba 144</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 144: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="145">
-            <title>Tomba 145</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 145: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="146">
-            <title>Tomba 146</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 146: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="147">
-            <title>Tomba 147</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 147: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="148">
-            <title>Tomba 148</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 148: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="149">
-            <title>Tomba 149</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 149: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-          <object id="150">
-            <title>Tomba 150</title>
-            <subtitle>Decorazioni zoomorfe - Uroboro</subtitle>
-            <card>Catalogazione preliminare della tomba 150: verifica sul campo della presenza del simbolo uroboro.</card>
-          </object>
-        </symbol>
-        <symbol id="arpia" label="Arpia">
-          <object id="148">
-            <title>Tomba 148</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 148: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="149">
-            <title>Tomba 149</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 149: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="150">
-            <title>Tomba 150</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 150: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="151">
-            <title>Tomba 151</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 151: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="152">
-            <title>Tomba 152</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 152: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="153">
-            <title>Tomba 153</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 153: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="154">
-            <title>Tomba 154</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 154: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="155">
-            <title>Tomba 155</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 155: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="156">
-            <title>Tomba 156</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 156: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-          <object id="157">
-            <title>Tomba 157</title>
-            <subtitle>Decorazioni zoomorfe - Arpia</subtitle>
-            <card>Catalogazione preliminare della tomba 157: verifica sul campo della presenza del simbolo arpia.</card>
-          </object>
-        </symbol>
-        <symbol id="leone" label="Leone">
-          <object id="155">
-            <title>Tomba 155</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 155: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="156">
-            <title>Tomba 156</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 156: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="157">
-            <title>Tomba 157</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 157: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="158">
-            <title>Tomba 158</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 158: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="159">
-            <title>Tomba 159</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 159: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="160">
-            <title>Tomba 160</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 160: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="161">
-            <title>Tomba 161</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 161: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="162">
-            <title>Tomba 162</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 162: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="163">
-            <title>Tomba 163</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 163: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-          <object id="164">
-            <title>Tomba 164</title>
-            <subtitle>Decorazioni zoomorfe - Leone</subtitle>
-            <card>Catalogazione preliminare della tomba 164: verifica sul campo della presenza del simbolo leone.</card>
-          </object>
-        </symbol>
-        <symbol id="conchiglia" label="Conchiglia">
-          <object id="162">
-            <title>Tomba 162</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 162: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="163">
-            <title>Tomba 163</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 163: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="164">
-            <title>Tomba 164</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 164: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="165">
-            <title>Tomba 165</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 165: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="166">
-            <title>Tomba 166</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 166: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="167">
-            <title>Tomba 167</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 167: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="168">
-            <title>Tomba 168</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 168: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="169">
-            <title>Tomba 169</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 169: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="170">
-            <title>Tomba 170</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 170: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-          <object id="171">
-            <title>Tomba 171</title>
-            <subtitle>Decorazioni zoomorfe - Conchiglia</subtitle>
-            <card>Catalogazione preliminare della tomba 171: verifica sul campo della presenza del simbolo conchiglia.</card>
-          </object>
-        </symbol>
+        <symbol id="uroboro" label="Uroboro" />
+        <symbol id="arpia" label="Arpia" />
+        <symbol id="leone" label="Leone" />
+        <symbol id="conchiglia" label="Conchiglia" />
       </path>
       <path id="decorazioni_allegoriche" label="Decorazioni allegoriche" color="#245E8A">
-        <symbol id="caduceo" label="Caduceo">
-          <object id="221">
-            <title>Tomba 221</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 221: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="222">
-            <title>Tomba 222</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 222: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="223">
-            <title>Tomba 223</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 223: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="224">
-            <title>Tomba 224</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 224: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="225">
-            <title>Tomba 225</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 225: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="226">
-            <title>Tomba 226</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 226: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="227">
-            <title>Tomba 227</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 227: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="228">
-            <title>Tomba 228</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 228: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="229">
-            <title>Tomba 229</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 229: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-          <object id="230">
-            <title>Tomba 230</title>
-            <subtitle>Decorazioni allegoriche - Caduceo</subtitle>
-            <card>Catalogazione preliminare della tomba 230: verifica sul campo della presenza del simbolo caduceo.</card>
-          </object>
-        </symbol>
-        <symbol id="lanterna" label="Lanterna">
-          <object id="228">
-            <title>Tomba 228</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 228: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="229">
-            <title>Tomba 229</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 229: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="230">
-            <title>Tomba 230</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 230: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="231">
-            <title>Tomba 231</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 231: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="232">
-            <title>Tomba 232</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 232: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="233">
-            <title>Tomba 233</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 233: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="234">
-            <title>Tomba 234</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 234: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="235">
-            <title>Tomba 235</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 235: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="236">
-            <title>Tomba 236</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 236: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-          <object id="237">
-            <title>Tomba 237</title>
-            <subtitle>Decorazioni allegoriche - Lanterna</subtitle>
-            <card>Catalogazione preliminare della tomba 237: verifica sul campo della presenza del simbolo lanterna.</card>
-          </object>
-        </symbol>
-        <symbol id="archipendolo" label="Archipendolo">
-          <object id="235">
-            <title>Tomba 235</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 235: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="236">
-            <title>Tomba 236</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 236: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="237">
-            <title>Tomba 237</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 237: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="238">
-            <title>Tomba 238</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 238: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="239">
-            <title>Tomba 239</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 239: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="240">
-            <title>Tomba 240</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 240: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="241">
-            <title>Tomba 241</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 241: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="242">
-            <title>Tomba 242</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 242: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="243">
-            <title>Tomba 243</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 243: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-          <object id="244">
-            <title>Tomba 244</title>
-            <subtitle>Decorazioni allegoriche - Archipendolo</subtitle>
-            <card>Catalogazione preliminare della tomba 244: verifica sul campo della presenza del simbolo archipendolo.</card>
-          </object>
-        </symbol>
-        <symbol id="torcia" label="Torcia">
-          <object id="242">
-            <title>Tomba 242</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 242: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="243">
-            <title>Tomba 243</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 243: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="244">
-            <title>Tomba 244</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 244: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="245">
-            <title>Tomba 245</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 245: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="246">
-            <title>Tomba 246</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 246: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="247">
-            <title>Tomba 247</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 247: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="248">
-            <title>Tomba 248</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 248: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="249">
-            <title>Tomba 249</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 249: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="250">
-            <title>Tomba 250</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 250: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-          <object id="251">
-            <title>Tomba 251</title>
-            <subtitle>Decorazioni allegoriche - Torcia</subtitle>
-            <card>Catalogazione preliminare della tomba 251: verifica sul campo della presenza del simbolo torcia.</card>
-          </object>
-        </symbol>
-        <symbol id="clessidra_alata" label="Clessidra alata">
-          <object id="249">
-            <title>Tomba 249</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 249: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="250">
-            <title>Tomba 250</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 250: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="251">
-            <title>Tomba 251</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 251: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="252">
-            <title>Tomba 252</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 252: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="253">
-            <title>Tomba 253</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 253: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="254">
-            <title>Tomba 254</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 254: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="255">
-            <title>Tomba 255</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 255: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="256">
-            <title>Tomba 256</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 256: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="257">
-            <title>Tomba 257</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 257: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-          <object id="258">
-            <title>Tomba 258</title>
-            <subtitle>Decorazioni allegoriche - Clessidra alata</subtitle>
-            <card>Catalogazione preliminare della tomba 258: verifica sul campo della presenza del simbolo clessidra alata.</card>
-          </object>
-        </symbol>
-        <symbol id="stella" label="Stella">
-          <object id="256">
-            <title>Tomba 256</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 256: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="257">
-            <title>Tomba 257</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 257: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="258">
-            <title>Tomba 258</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 258: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="259">
-            <title>Tomba 259</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 259: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="260">
-            <title>Tomba 260</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 260: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="261">
-            <title>Tomba 261</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 261: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="262">
-            <title>Tomba 262</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 262: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="263">
-            <title>Tomba 263</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 263: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="264">
-            <title>Tomba 264</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 264: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-          <object id="265">
-            <title>Tomba 265</title>
-            <subtitle>Decorazioni allegoriche - Stella</subtitle>
-            <card>Catalogazione preliminare della tomba 265: verifica sul campo della presenza del simbolo stella.</card>
-          </object>
-        </symbol>
-        <symbol id="ruota_della_fortuna" label="Ruota della fortuna">
-          <object id="263">
-            <title>Tomba 263</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 263: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="264">
-            <title>Tomba 264</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 264: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="265">
-            <title>Tomba 265</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 265: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="266">
-            <title>Tomba 266</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 266: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="267">
-            <title>Tomba 267</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 267: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="268">
-            <title>Tomba 268</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 268: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="269">
-            <title>Tomba 269</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 269: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="270">
-            <title>Tomba 270</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 270: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="271">
-            <title>Tomba 271</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 271: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-          <object id="272">
-            <title>Tomba 272</title>
-            <subtitle>Decorazioni allegoriche - Ruota della fortuna</subtitle>
-            <card>Catalogazione preliminare della tomba 272: verifica sul campo della presenza del simbolo ruota della fortuna.</card>
-          </object>
-        </symbol>
-        <symbol id="cero" label="Cero">
-          <object id="270">
-            <title>Tomba 270</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 270: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="271">
-            <title>Tomba 271</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 271: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="272">
-            <title>Tomba 272</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 272: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="273">
-            <title>Tomba 273</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 273: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="274">
-            <title>Tomba 274</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 274: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="275">
-            <title>Tomba 275</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 275: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="276">
-            <title>Tomba 276</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 276: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="277">
-            <title>Tomba 277</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 277: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="278">
-            <title>Tomba 278</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 278: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-          <object id="279">
-            <title>Tomba 279</title>
-            <subtitle>Decorazioni allegoriche - Cero</subtitle>
-            <card>Catalogazione preliminare della tomba 279: verifica sul campo della presenza del simbolo cero.</card>
-          </object>
-        </symbol>
-        <symbol id="ancora" label="Ancora">
-          <object id="277">
-            <title>Tomba 277</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 277: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="278">
-            <title>Tomba 278</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 278: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="279">
-            <title>Tomba 279</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 279: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="280">
-            <title>Tomba 280</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 280: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="281">
-            <title>Tomba 281</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 281: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="282">
-            <title>Tomba 282</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 282: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="283">
-            <title>Tomba 283</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 283: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="284">
-            <title>Tomba 284</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 284: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="285">
-            <title>Tomba 285</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 285: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-          <object id="286">
-            <title>Tomba 286</title>
-            <subtitle>Decorazioni allegoriche - Ancora</subtitle>
-            <card>Catalogazione preliminare della tomba 286: verifica sul campo della presenza del simbolo ancora.</card>
-          </object>
-        </symbol>
-        <symbol id="corda" label="Corda">
-          <object id="284">
-            <title>Tomba 284</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 284: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="285">
-            <title>Tomba 285</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 285: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="286">
-            <title>Tomba 286</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 286: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="287">
-            <title>Tomba 287</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 287: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="288">
-            <title>Tomba 288</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 288: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="289">
-            <title>Tomba 289</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 289: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="290">
-            <title>Tomba 290</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 290: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="291">
-            <title>Tomba 291</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 291: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="292">
-            <title>Tomba 292</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 292: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-          <object id="293">
-            <title>Tomba 293</title>
-            <subtitle>Decorazioni allegoriche - Corda</subtitle>
-            <card>Catalogazione preliminare della tomba 293: verifica sul campo della presenza del simbolo corda.</card>
-          </object>
-        </symbol>
-        <symbol id="teschio" label="Teschio">
-          <object id="291">
-            <title>Tomba 291</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 291: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="292">
-            <title>Tomba 292</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 292: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="293">
-            <title>Tomba 293</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 293: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="294">
-            <title>Tomba 294</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 294: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="295">
-            <title>Tomba 295</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 295: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="296">
-            <title>Tomba 296</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 296: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="297">
-            <title>Tomba 297</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 297: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="298">
-            <title>Tomba 298</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 298: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="299">
-            <title>Tomba 299</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 299: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-          <object id="300">
-            <title>Tomba 300</title>
-            <subtitle>Decorazioni allegoriche - Teschio</subtitle>
-            <card>Catalogazione preliminare della tomba 300: verifica sul campo della presenza del simbolo teschio.</card>
-          </object>
-        </symbol>
+        <symbol id="caduceo" label="Caduceo" />
+        <symbol id="lanterna" label="Lanterna" />
+        <symbol id="archipendolo" label="Archipendolo" />
+        <symbol id="torcia" label="Torcia" />
+        <symbol id="clessidra_alata" label="Clessidra alata" />
+        <symbol id="stella" label="Stella" />
+        <symbol id="ruota_della_fortuna" label="Ruota della fortuna" />
+        <symbol id="cero" label="Cero" />
+        <symbol id="ancora" label="Ancora" />
+        <symbol id="corda" label="Corda" />
+        <symbol id="teschio" label="Teschio" />
       </path>
       <path id="simboli_religiosi" label="Simboli religiosi" color="#F7C325">
-        <symbol id="alpha_omega" label="Alpha Omega">
-          <object id="341">
-            <title>Tomba 341</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 341: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="342">
-            <title>Tomba 342</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 342: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="343">
-            <title>Tomba 343</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 343: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="344">
-            <title>Tomba 344</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 344: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="345">
-            <title>Tomba 345</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 345: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="346">
-            <title>Tomba 346</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 346: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="347">
-            <title>Tomba 347</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 347: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="348">
-            <title>Tomba 348</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 348: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="349">
-            <title>Tomba 349</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 349: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-          <object id="350">
-            <title>Tomba 350</title>
-            <subtitle>Simboli religiosi - Alpha Omega</subtitle>
-            <card>Catalogazione preliminare della tomba 350: verifica sul campo della presenza del simbolo alpha omega.</card>
-          </object>
-        </symbol>
-        <symbol id="crisma" label="Crisma">
-          <object id="348">
-            <title>Tomba 348</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 348: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="349">
-            <title>Tomba 349</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 349: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="350">
-            <title>Tomba 350</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 350: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="351">
-            <title>Tomba 351</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 351: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="352">
-            <title>Tomba 352</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 352: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="353">
-            <title>Tomba 353</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 353: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="354">
-            <title>Tomba 354</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 354: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="355">
-            <title>Tomba 355</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 355: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="356">
-            <title>Tomba 356</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 356: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-          <object id="357">
-            <title>Tomba 357</title>
-            <subtitle>Simboli religiosi - Crisma</subtitle>
-            <card>Catalogazione preliminare della tomba 357: verifica sul campo della presenza del simbolo crisma.</card>
-          </object>
-        </symbol>
-        <symbol id="croce" label="Croce">
-          <object id="355">
-            <title>Tomba 355</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 355: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="356">
-            <title>Tomba 356</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 356: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="357">
-            <title>Tomba 357</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 357: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="358">
-            <title>Tomba 358</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 358: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="359">
-            <title>Tomba 359</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 359: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="360">
-            <title>Tomba 360</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 360: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="361">
-            <title>Tomba 361</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 361: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="362">
-            <title>Tomba 362</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 362: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="363">
-            <title>Tomba 363</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 363: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-          <object id="364">
-            <title>Tomba 364</title>
-            <subtitle>Simboli religiosi - Croce</subtitle>
-            <card>Catalogazione preliminare della tomba 364: verifica sul campo della presenza del simbolo croce.</card>
-          </object>
-        </symbol>
-        <symbol id="angelo" label="Angelo">
-          <object id="362">
-            <title>Tomba 362</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 362: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="363">
-            <title>Tomba 363</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 363: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="364">
-            <title>Tomba 364</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 364: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="365">
-            <title>Tomba 365</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 365: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="366">
-            <title>Tomba 366</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 366: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="367">
-            <title>Tomba 367</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 367: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="368">
-            <title>Tomba 368</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 368: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="369">
-            <title>Tomba 369</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 369: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="370">
-            <title>Tomba 370</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 370: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-          <object id="371">
-            <title>Tomba 371</title>
-            <subtitle>Simboli religiosi - Angelo</subtitle>
-            <card>Catalogazione preliminare della tomba 371: verifica sul campo della presenza del simbolo angelo.</card>
-          </object>
-        </symbol>
+        <symbol id="alpha_omega" label="Alpha Omega" />
+        <symbol id="crisma" label="Crisma" />
+        <symbol id="croce" label="Croce" />
+        <symbol id="angelo" label="Angelo" />
       </path>
       <path id="strumenti_musicali" label="Strumenti musicali" color="#8E1B52">
-        <symbol id="tromba" label="Tromba">
-          <object id="421">
-            <title>Tomba 421</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 421: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="422">
-            <title>Tomba 422</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 422: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="423">
-            <title>Tomba 423</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 423: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="424">
-            <title>Tomba 424</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 424: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="425">
-            <title>Tomba 425</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 425: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="426">
-            <title>Tomba 426</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 426: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="427">
-            <title>Tomba 427</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 427: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="428">
-            <title>Tomba 428</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 428: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="429">
-            <title>Tomba 429</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 429: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-          <object id="430">
-            <title>Tomba 430</title>
-            <subtitle>Strumenti musicali - Tromba</subtitle>
-            <card>Catalogazione preliminare della tomba 430: verifica sul campo della presenza del simbolo tromba.</card>
-          </object>
-        </symbol>
-        <symbol id="lira" label="Lira">
-          <object id="428">
-            <title>Tomba 428</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 428: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="429">
-            <title>Tomba 429</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 429: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="430">
-            <title>Tomba 430</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 430: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="431">
-            <title>Tomba 431</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 431: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="432">
-            <title>Tomba 432</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 432: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="433">
-            <title>Tomba 433</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 433: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="434">
-            <title>Tomba 434</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 434: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="435">
-            <title>Tomba 435</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 435: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="436">
-            <title>Tomba 436</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 436: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-          <object id="437">
-            <title>Tomba 437</title>
-            <subtitle>Strumenti musicali - Lira</subtitle>
-            <card>Catalogazione preliminare della tomba 437: verifica sul campo della presenza del simbolo lira.</card>
-          </object>
-        </symbol>
-        <symbol id="liuto" label="Liuto">
-          <object id="435">
-            <title>Tomba 435</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 435: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="436">
-            <title>Tomba 436</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 436: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="437">
-            <title>Tomba 437</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 437: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="438">
-            <title>Tomba 438</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 438: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="439">
-            <title>Tomba 439</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 439: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="440">
-            <title>Tomba 440</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 440: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="441">
-            <title>Tomba 441</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 441: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="442">
-            <title>Tomba 442</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 442: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="443">
-            <title>Tomba 443</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 443: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-          <object id="444">
-            <title>Tomba 444</title>
-            <subtitle>Strumenti musicali - Liuto</subtitle>
-            <card>Catalogazione preliminare della tomba 444: verifica sul campo della presenza del simbolo liuto.</card>
-          </object>
-        </symbol>
+        <symbol id="tromba" label="Tromba" />
+        <symbol id="lira" label="Lira" />
+        <symbol id="liuto" label="Liuto" />
       </path>
     </paths>
+    <tombs>
+      <tomb id="2858" mergedIds="2863;2865;2858;2859">
+        <nome>Edicola Bonfanti Casini</nome>
+        <data>1894</data>
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2879">
+        <nome>Annibale Vecchi</nome>
+        <data>1901</data>
+        <nascita>1819</nascita>
+        <morte>1880</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2816">
+        <nome>Passerotti</nome>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="conchiglia" />
+        <symbolRef symbol="lanterna" />
+      </tomb>
+      <tomb id="2811" mergedIds="2818;2811">
+        <nome>Cappella Pagni-Schinardi</nome>
+        <data>1901</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2798" mergedIds="2802;2798">
+        <nome>Cappella Calzoni</nome>
+        <data>1935</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="lanterna" />
+      </tomb>
+      <tomb id="2825">
+        <nome>Massini</nome>
+        <data>1858</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2773" mergedIds="2776;2773">
+        <nome>Pagnotta</nome>
+        <data>1915</data>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="2745" mergedIds="2748;2745">
+        <nome>Cappella Luchetti</nome>
+        <nascita>1823</nascita>
+        <morte>1907</morte>
+        <symbolRef symbol="archipendolo" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2716">
+        <nome>Giuseppe Porta</nome>
+        <morte>1917</morte>
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2664" mergedIds="2670;2664">
+        <nome>Cappella Cesare Agostini</nome>
+        <nascita>1864</nascita>
+        <morte>1942</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="2500">
+        <nome>Famiglia Carboni</nome>
+        <data>1886</data>
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2510">
+        <nome>Famiglia Cecconi e Ranucci</nome>
+        <data>1953</data>
+        <symbolRef symbol="giglio" />
+      </tomb>
+      <tomb id="2476">
+        <nome>Famiglia Maragoni</nome>
+        <data>1984</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="clessidra_alata" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2391">
+        <nome>Famiglia Gambelunghe</nome>
+        <data>1956</data>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="uroboro" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2293">
+        <nome>Monumento Bianchi</nome>
+        <data>1869</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="ulivo" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2328">
+        <nome>Monumento Carattoli</nome>
+        <data>1850</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2235">
+        <nome>Busto del prof. Giovanni Santini</nome>
+        <data>1868</data>
+        <symbolRef symbol="archipendolo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2203" mergedIds="2203;2204">
+        <nome>Monumento Ridolfini</nome>
+        <data>1894</data>
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="2172">
+        <nome>Monumento Buattini</nome>
+        <data>1859</data>
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="2177">
+        <nome>Monumento Zurli</nome>
+        <data>1886</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="caduceo" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="stella" />
+      </tomb>
+      <tomb id="2189">
+        <nome>Monumento Mattioli</nome>
+        <data>1893</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="ancora" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2097">
+        <nome>Mario Grecchi</nome>
+        <nascita>1926</nascita>
+        <morte>1944</morte>
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="leone" />
+      </tomb>
+      <tomb id="2142">
+        <nome>Monumento Vannoni</nome>
+        <data>primi anni del '900</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="teschio" />
+      </tomb>
+      <tomb id="1077" mergedIds="1166;1165;1092;1077;1091;1087;1079">
+        <nome>Cappella della Confraternita della Misericordia</nome>
+        <data>1888</data>
+        <symbolRef symbol="vite" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="1134">
+        <nome>Luigi Bonazzi</nome>
+        <nascita>1811</nascita>
+        <morte>1879</morte>
+        <symbolRef symbol="crisma" />
+      </tomb>
+      <tomb id="1015">
+        <nome>Edicola Carlo Bruschi</nome>
+        <nascita>1820</nascita>
+        <morte>1879</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="961" mergedIds="973;963;961;985">
+        <nome>Cappella Forconi Donati</nome>
+        <data>1937</data>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="1002" mergedIds="1013;1002">
+        <nome>Edicola Rossi Schnabl</nome>
+        <data>1911</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="982" mergedIds="982;983">
+        <nome>Cappella Urbani</nome>
+        <data>1920</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="903" mergedIds="917;903">
+        <nome>Cappella del Buon Tromboni</nome>
+        <data>1926</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ulivo" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="1138">
+        <nome>Monumento Purgotti</nome>
+        <data>1879</data>
+        <symbolRef symbol="alloro" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="934" mergedIds="934;935">
+        <nome>Cappella Biagiotti</nome>
+        <data>1920</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="tromba" />
+      </tomb>
+      <tomb id="819" mergedIds="843;839;833;819;832;821;840;841">
+        <nome>Cappella Fani</nome>
+        <data>1892</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="780">
+        <nome>Monumento Filippi</nome>
+        <data>1914</data>
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="775" mergedIds="775;784">
+        <nome>Cappella Doneddu</nome>
+        <data>1907</data>
+        <symbolRef symbol="angelo" />
+      </tomb>
+      <tomb id="733">
+        <nome>Monumento Cerulli</nome>
+        <data>1894</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="739" mergedIds="739;740">
+        <nome>Cappella Franceschini</nome>
+        <data>1929</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="760">
+        <nome>Famiglia Cesaroni</nome>
+        <data>1892</data>
+        <symbolRef symbol="conchiglia" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2377">
+        <nome>Cappella Radicioni</nome>
+        <data>1909</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="666">
+        <nome>Edicola di Maria Bonaparte Valentini</nome>
+        <data>1847</data>
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="leone" />
+      </tomb>
+      <tomb id="542">
+        <nome>Edicola Biscarini_ Angelo Biscarini</nome>
+        <nascita>1877</nascita>
+        <morte>1951</morte>
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="archipendolo" />
+      </tomb>
+      <tomb id="581" mergedIds="596;581">
+        <nome>Cappella Bournens</nome>
+        <data>1916</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="676" mergedIds="683;676">
+        <nome>Aganoor Pompilj</nome>
+        <nascita>1855</nascita>
+        <morte>1910</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="alloro" />
+      </tomb>
+      <tomb id="574" mergedIds="575;574">
+        <nome>Cappella Taticchi</nome>
+        <data>1884</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="698">
+        <nome>Cappella Bugiardi</nome>
+        <data>1915</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="525">
+        <nome>Monumento ai caduti del XX Giu
+gno</nome>
+        <data>1909</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="608">
+        <nome>Cappella Guardabassi_ Francesco Guardabassi</nome>
+        <nascita>1793</nascita>
+        <morte>1871</morte>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="657">
+        <nome>Monumento Bastianini</nome>
+        <data>1927</data>
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="637">
+        <nome>Tomba della famiglia Penna_ Sandro Penna</nome>
+        <nascita>1906</nascita>
+        <morte>1977</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="alpha_omega" />
+      </tomb>
+      <tomb id="654">
+        <nome>Tomba del Convento di Monte Ripido_ Padre Diego Donati</nome>
+        <nascita>1910</nascita>
+        <morte>2002</morte>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="1" mergedIds="1;2">
+        <nome>Tempio della cremazione</nome>
+        <data>1884</data>
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2939">
+        <nome>Cappella Baldeschi</nome>
+        <data>1902</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2936">
+        <nome>Monumento Tancetti</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="stella" />
+      </tomb>
+      <tomb id="2938">
+        <nome>Monumento Ragnotti</nome>
+        <data>1900</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ulivo" />
+      </tomb>
+      <tomb id="2943">
+        <nome>Monumento Paolo Angeloni</nome>
+        <data>1897</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="giglio" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2941">
+        <nome>Monumento Sereni</nome>
+        <data>1901</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="tromba" />
+      </tomb>
+      <tomb id="2944">
+        <nome>Monumento Masi-Frerejan</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2945">
+        <nome>Cappella Fiorini-Pacioselli</nome>
+        <data>1908</data>
+        <symbolRef symbol="leone" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2946">
+        <nome>Monumento Rizzoli-Ticchioni</nome>
+        <data>1893</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="2947">
+        <nome>Monumento Americo Calderini</nome>
+        <data>1891</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2952">
+        <nome>Monumento Vicarelli</nome>
+        <data>1895</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="lira" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2955">
+        <nome>Monumento Sebastiani già Cosatti</nome>
+        <data>1901</data>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2957">
+        <nome>Cappella Ricciarelli</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="trifoglio" />
+      </tomb>
+      <tomb id="2958">
+        <nome>Monumento Degli Oddi</nome>
+        <data>1892</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2105">
+        <nome>Cippo di Santina Calderini</nome>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2907">
+        <nome>Edicola Biscarini</nome>
+        <symbolRef symbol="lanterna" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2908">
+        <nome>Monumento Moscioni</nome>
+        <data>1892</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="torcia" />
+        <symbolRef symbol="ulivo" />
+      </tomb>
+      <tomb id="2922">
+        <nome>Monumento Milletti</nome>
+        <data>1904</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+      </tomb>
+      <tomb id="2914">
+        <nome>Monumento Benincasa</nome>
+        <data>1906</data>
+        <symbolRef symbol="crisantemo" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2916">
+        <nome>Monumento Pernossi</nome>
+        <data>1909</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2917">
+        <nome>Monumento Rossini</nome>
+        <data>1905</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="liuto" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2918">
+        <nome>Monumento Mammalucchi</nome>
+        <data>1912</data>
+        <symbolRef symbol="cero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2920">
+        <nome>Monumento Pisinicca-Laparelli</nome>
+        <data>1903</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2928">
+        <nome>Monumento Tiriduzi-Bavicchi</nome>
+        <data>1910</data>
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="lanterna" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2911">
+        <nome>Monumento Bonacci Brunamonti</nome>
+        <data>1914</data>
+        <symbolRef symbol="alloro" />
+        <symbolRef symbol="arpia" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="960">
+        <nome>Edicola prof. Giovanni Pennacchi</nome>
+        <nascita>1811</nascita>
+        <morte>1883</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="lira" />
+      </tomb>
+      <tomb id="762">
+        <nome>Famiglia Rufini</nome>
+        <data>1938</data>
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="margherita" />
+      </tomb>
+      <tomb id="2910">
+        <nome>Monumento Marinelli</nome>
+        <data>1922</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="pigna" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2541">
+        <nome>Paolina Burattini</nome>
+        <data>1900</data>
+        <symbolRef symbol="torcia" />
+      </tomb>
+    </tombs>
   </map>
 </story>

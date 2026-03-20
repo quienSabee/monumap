@@ -4,7 +4,8 @@ import type {
   HeroBlock,
   MapBlock,
   MapFilterOption,
-  MapObject,
+  MapTomb,
+  MapTombSymbolRef,
   SidecarBlock,
   StoryBlock,
   StoryDocument,
@@ -102,88 +103,173 @@ function humanizeId(value: string): string {
     .join(' ')
 }
 
-type ParsedMapSymbol = {
-  option: MapFilterOption
-  objects: MapObject[]
+type ParsedSymbolDefinition = {
+  id: string
+  label: string
+  pathId: string
+  pathLabel: string
+  pathColor: string
 }
 
-type ParsedMapPath = {
+type ParsedPathDefinition = {
   option: MapFilterOption
-  objects: MapObject[]
+  symbols: ParsedSymbolDefinition[]
 }
 
-function parseMapObject(
+function parsePathSymbol(
   element: Element,
   pathOption: Pick<MapFilterOption, 'id' | 'label' | 'color'>,
-  symbolOption: Pick<MapFilterOption, 'id' | 'label'>,
-): MapObject {
-  const tombId = requiredAttribute(element, 'id')
+): ParsedSymbolDefinition {
+  const symbolId = requiredAttribute(element, 'id')
 
   return {
-    id: `${pathOption.id}:${symbolOption.id}:${tombId}`,
-    tombId,
-    title: textFromTag(element, 'title') ?? `Tomba ${tombId}`,
-    subtitle: textFromTag(element, 'subtitle'),
-    card: textFromTag(element, 'card'),
+    id: symbolId,
+    label: optionalAttribute(element, 'label') ?? humanizeId(symbolId),
     pathId: pathOption.id,
     pathLabel: pathOption.label,
     pathColor: pathOption.color ?? DEFAULT_PATH_COLOR,
-    symbolId: symbolOption.id,
-    symbolLabel: symbolOption.label,
   }
 }
 
-function parseMapSymbol(
-  element: Element,
-  pathOption: Pick<MapFilterOption, 'id' | 'label' | 'color'>,
-): ParsedMapSymbol {
-  const symbolId = requiredAttribute(element, 'id')
-  const symbolLabel = optionalAttribute(element, 'label') ?? humanizeId(symbolId)
-  const symbolOption = {
-    id: symbolId,
-    label: symbolLabel,
-  }
-  const objects = childrenByTag(element, 'object').map((child) => parseMapObject(child, pathOption, symbolOption))
-
-  return {
-    option: {
-      ...symbolOption,
-      targets: objects.map((object) => object.id),
-      children: [],
-    },
-    objects,
-  }
-}
-
-function parseMapPath(element: Element): ParsedMapPath {
+function parsePathDefinition(element: Element): ParsedPathDefinition {
   const pathId = requiredAttribute(element, 'id')
   const pathLabel = optionalAttribute(element, 'label') ?? humanizeId(pathId)
   const pathColor = optionalAttribute(element, 'color')
-  const pathOption = {
+  const pathOption: MapFilterOption = {
     id: pathId,
     label: pathLabel,
     color: pathColor,
+    targets: [],
+    children: [],
   }
-  const symbols = childrenByTag(element, 'symbol').map((child) => parseMapSymbol(child, pathOption))
+  const symbols = childrenByTag(element, 'symbol').map((child) => parsePathSymbol(child, pathOption))
 
   return {
-    option: {
-      ...pathOption,
-      targets: [],
-      children: symbols.map((symbol) => symbol.option),
-    },
-    objects: symbols.flatMap((symbol) => symbol.objects),
+    option: pathOption,
+    symbols,
   }
+}
+
+function symbolReferenceElements(element: Element): Element[] {
+  return Array.from(element.children).filter(
+    (child) => child.tagName === 'symbolRef' || child.tagName === 'symbol',
+  )
+}
+
+function parseSymbolReferenceId(element: Element): string {
+  const value = optionalAttribute(element, 'symbol') ?? optionalAttribute(element, 'id')
+
+  if (!value) {
+    throw new Error(`Riferimento simbolo non valido in <${element.tagName}>: atteso @symbol oppure @id.`)
+  }
+
+  return value
+}
+
+function parseTomb(
+  element: Element,
+  symbolsById: Map<string, ParsedSymbolDefinition>,
+): MapTomb {
+  const tombId = requiredAttribute(element, 'id')
+  const symbols: MapTombSymbolRef[] = []
+  const seenSymbolIds = new Set<string>()
+
+  symbolReferenceElements(element).forEach((child) => {
+    const symbolId = parseSymbolReferenceId(child)
+    const definition = symbolsById.get(symbolId)
+
+    if (!definition) {
+      throw new Error(`La tomba ${tombId} referenzia un simbolo non definito: ${symbolId}`)
+    }
+
+    if (seenSymbolIds.has(symbolId)) {
+      return
+    }
+
+    seenSymbolIds.add(symbolId)
+    symbols.push({
+      symbolId: definition.id,
+      symbolLabel: definition.label,
+      pathId: definition.pathId,
+      pathLabel: definition.pathLabel,
+      pathColor: definition.pathColor,
+    })
+  })
+
+  return {
+    id: tombId,
+    nome: textFromTag(element, 'nome') ?? textFromTag(element, 'title'),
+    data: textFromTag(element, 'data'),
+    nascita: textFromTag(element, 'nascita') ?? textFromTag(element, 'nato'),
+    morte: textFromTag(element, 'morte') ?? textFromTag(element, 'morto'),
+    descrizione: textFromTag(element, 'descrizione') ?? textFromTag(element, 'card'),
+    symbols,
+  }
+}
+
+function buildTargetSets(tombs: MapTomb[]) {
+  const pathTargets = new Map<string, Set<string>>()
+  const symbolTargets = new Map<string, Set<string>>()
+
+  tombs.forEach((tomb) => {
+    tomb.symbols.forEach((symbol) => {
+      const pathSet = pathTargets.get(symbol.pathId) ?? new Set<string>()
+      pathSet.add(tomb.id)
+      pathTargets.set(symbol.pathId, pathSet)
+
+      const symbolSet = symbolTargets.get(symbol.symbolId) ?? new Set<string>()
+      symbolSet.add(tomb.id)
+      symbolTargets.set(symbol.symbolId, symbolSet)
+    })
+  })
+
+  return { pathTargets, symbolTargets }
+}
+
+function hydrateFilterOptions(
+  paths: ParsedPathDefinition[],
+  tombs: MapTomb[],
+): MapFilterOption[] {
+  const { pathTargets, symbolTargets } = buildTargetSets(tombs)
+
+  return paths.map((path) => ({
+    ...path.option,
+    targets: Array.from(pathTargets.get(path.option.id) ?? []),
+    children: path.symbols.map((symbol) => ({
+      id: symbol.id,
+      label: symbol.label,
+      targets: Array.from(symbolTargets.get(symbol.id) ?? []),
+      children: [],
+    })),
+  }))
 }
 
 function parseMap(element: Element): MapBlock {
   const pathsElement = childrenByTag(element, 'paths')[0]
+  const tombsElement = childrenByTag(element, 'tombs')[0]
 
   if (!pathsElement) {
     throw new Error('Il blocco map richiede un elemento <paths>.')
   }
 
-  const paths = childrenByTag(pathsElement, 'path').map(parseMapPath)
+  if (!tombsElement) {
+    throw new Error('Il blocco map richiede un elemento <tombs>.')
+  }
+
+  const pathDefinitions = childrenByTag(pathsElement, 'path').map(parsePathDefinition)
+  const symbolsById = new Map<string, ParsedSymbolDefinition>()
+
+  pathDefinitions.forEach((path) => {
+    path.symbols.forEach((symbol) => {
+      if (symbolsById.has(symbol.id)) {
+        throw new Error(`Il simbolo ${symbol.id} e definito piu di una volta nei percorsi.`)
+      }
+
+      symbolsById.set(symbol.id, symbol)
+    })
+  })
+
+  const tombs = childrenByTag(tombsElement, 'tomb').map((child) => parseTomb(child, symbolsById))
 
   return {
     type: 'map',
@@ -195,9 +281,9 @@ function parseMap(element: Element): MapBlock {
     defaultTargets: parseTargets(optionalAttribute(element, 'defaultTargets')),
     filters: {
       title: requiredAttribute(pathsElement, 'title'),
-      options: paths.map((path) => path.option),
+      options: hydrateFilterOptions(pathDefinitions, tombs),
     },
-    objects: paths.flatMap((path) => path.objects),
+    tombs,
   }
 }
 
