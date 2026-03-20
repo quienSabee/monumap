@@ -47,7 +47,7 @@ export type MapBlock = {
   title: string
   description?: string
   svg: string
-  viewBox: string
+  viewBox?: string
   defaultTargets: string[]
   filters: MapFilterPanel
   tombs: MapTomb[]

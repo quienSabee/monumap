@@ -8,6 +8,7 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from 'react'
 import type { MapBlock, MapFilterOption, MapTomb } from '../types/story'
+import { AssetImage } from './AssetImage'
 
 type InteractiveMapProps = {
   block: MapBlock
@@ -33,6 +34,10 @@ const MIN_ZOOM_RATIO = 0.08
 const ZOOM_EPSILON = 0.0001
 const SYMBOL_ICON_BASE = `${import.meta.env.BASE_URL}media/symbols/`
 const GRAPHIC_SELECTOR = 'path, polygon, rect, circle, ellipse, line, polyline'
+
+function stripSvgNamespacePrefixes(markup: string): string {
+  return markup.replace(/<(\/?)(?:[A-Za-z_][\w.-]*:)/g, '<$1')
+}
 
 function parseViewBox(value: string): Box {
   const [x, y, width, height] = value.split(/\s+/).map(Number)
@@ -231,7 +236,7 @@ function applyTombBindings(
       isHovered
         ? `cursor:${isActive ? 'pointer' : 'crosshair'};opacity:1;fill:${HOVER_TOMB_COLOR};stroke:${HOVER_TOMB_COLOR};stroke-width:${isActive ? '5px' : '3px'};filter:drop-shadow(0 0 16px ${HOVER_TOMB_COLOR});vector-effect:non-scaling-stroke;`
         : isActive
-          ? `cursor:pointer;opacity:${isFocused ? '1' : '0.76'};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${activePathColor});stroke:${activePathColor};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
+          ? `cursor:pointer;opacity:${isFocused ? '1' : '0.76'};fill:${activePathColor};filter:drop-shadow(0 0 ${isFocused ? '16px' : '9px'} ${activePathColor});stroke:${activePathColor};stroke-width:${isFocused ? '5px' : '3px'};vector-effect:non-scaling-stroke;`
           : 'cursor:crosshair;opacity:1;filter:none;'
 
     styledNodes.forEach((styledNode) => {
@@ -261,7 +266,6 @@ function applyTombBindings(
 }
 
 export function InteractiveMap({ block }: InteractiveMapProps) {
-  const originalBox = parseViewBox(block.viewBox)
   const stageRef = useRef<HTMLDivElement | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
   const tooltipRef = useRef<HTMLDivElement | null>(null)
@@ -272,7 +276,8 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     box: Box
   } | null>(null)
   const [selectedPath, setSelectedPath] = useState<string[]>([])
-  const [viewBox, setViewBox] = useState<Box>(originalBox)
+  const [originalBox, setOriginalBox] = useState<Box | null>(() => (block.viewBox ? parseViewBox(block.viewBox) : null))
+  const [viewBox, setViewBox] = useState<Box | null>(() => (block.viewBox ? parseViewBox(block.viewBox) : null))
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 })
   const [openTomb, setOpenTomb] = useState<MapTomb | null>(null)
@@ -282,9 +287,17 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const [svgError, setSvgError] = useState<string | null>(null)
 
   useEffect(() => {
-    setViewBox(parseViewBox(block.viewBox))
     setSelectedPath([])
-  }, [block.viewBox])
+
+    if (block.viewBox) {
+      const parsedViewBox = parseViewBox(block.viewBox)
+      setOriginalBox(parsedViewBox)
+      setViewBox(parsedViewBox)
+    } else {
+      setOriginalBox(null)
+      setViewBox(null)
+    }
+  }, [block.svg, block.viewBox])
 
   useEffect(() => {
     let cancelled = false
@@ -306,8 +319,18 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
           throw new Error('Il file SVG non e valido.')
         }
 
+        const resolvedViewBox = block.viewBox ?? document.documentElement.getAttribute('viewBox')?.trim()
+
+        if (!resolvedViewBox) {
+          throw new Error("L'SVG non definisce un viewBox e il blocco map non lo sovrascrive nell'XML.")
+        }
+
+        const parsedViewBox = parseViewBox(resolvedViewBox)
+
         if (!cancelled) {
-          setSvgMarkup(document.documentElement.innerHTML)
+          setOriginalBox(parsedViewBox)
+          setViewBox(parsedViewBox)
+          setSvgMarkup(stripSvgNamespacePrefixes(document.documentElement.innerHTML))
           setSvgError(null)
         }
       } catch (error) {
@@ -323,15 +346,17 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     return () => {
       cancelled = true
     }
-  }, [block.svg])
+  }, [block.svg, block.viewBox])
 
   useEffect(() => {
     const stage = stageRef.current
-    const bounds = parseViewBox(block.viewBox)
+    const bounds = originalBox
 
-    if (!stage) {
+    if (!stage || !bounds) {
       return
     }
+
+    const activeBounds = bounds
 
     function handleNativeWheel(event: WheelEvent) {
       const svg = svgRef.current
@@ -349,10 +374,14 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
       const factor = event.deltaY < 0 ? 0.86 : 1.14
 
       setViewBox((current) => {
+        if (!current) {
+          return current
+        }
+
         const centerX = current.x + relativeX * current.width
         const centerY = current.y + relativeY * current.height
 
-        return zoomBox(current, bounds, factor, centerX, centerY)
+        return zoomBox(current, activeBounds, factor, centerX, centerY)
       })
     }
 
@@ -361,7 +390,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     return () => {
       stage.removeEventListener('wheel', handleNativeWheel)
     }
-  }, [block.viewBox])
+  }, [originalBox])
 
   const levels = buildLevels(block.filters.options, selectedPath)
   const activeTombIds = resolveActiveTombIds(block, selectedPath)
@@ -387,7 +416,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   const openTombVisibleSymbols = openTombContextSymbols.length > 0 ? openTombContextSymbols : openTomb?.symbols ?? []
   const openTombKicker =
     activeSymbolOption && activePathOption
-      ? `${activePathOption.label} · ${activeSymbolOption.label}`
+      ? `${activePathOption.label} / ${activeSymbolOption.label}`
       : activePathOption?.label ?? openTombVisibleSymbols[0]?.pathLabel ?? 'Tomba catalogata'
 
   useLayoutEffect(() => {
@@ -434,10 +463,16 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }
 
   function resetZoom() {
-    setViewBox(originalBox)
+    if (originalBox) {
+      setViewBox(originalBox)
+    }
   }
 
   function handlePointerDown(event: ReactPointerEvent<SVGSVGElement>) {
+    if (!viewBox) {
+      return
+    }
+
     if (event.pointerType === 'mouse' && event.button !== 0) {
       return
     }
@@ -465,7 +500,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
     if (drag && drag.pointerId === event.pointerId) {
       const svg = svgRef.current
 
-      if (!svg) {
+      if (!svg || !originalBox) {
         return
       }
 
@@ -550,9 +585,13 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
   }
 
   function zoomTo(factor: number) {
+    if (!originalBox || !viewBox) {
+      return
+    }
+
     const centerX = viewBox.x + viewBox.width / 2
     const centerY = viewBox.y + viewBox.height / 2
-    setViewBox((current) => zoomBox(current, originalBox, factor, centerX, centerY))
+    setViewBox((current) => (current ? zoomBox(current, originalBox, factor, centerX, centerY) : current))
   }
 
   return (
@@ -561,6 +600,22 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
         <span className="story-kicker">Mappa interattiva</span>
         <h2>{block.title}</h2>
         {block.description && <p>{block.description}</p>}
+
+        <div
+          className="story-map__legend"
+          style={
+            {
+              '--legend-color': activePathColor,
+            } as CSSProperties
+          }
+        >
+          <span className="legend-dot" aria-hidden="true" />
+          <p>
+            {activePathOption
+              ? `${activePathOption.label}: ${activeTombCount} tombe attive. Passa il cursore su una tomba per leggere il suo id e clicca solo su quelle evidenziate per aprire la scheda.`
+              : "Passa il cursore su una tomba per leggere il suo id. Seleziona un percorso per attivare le schede di catalogazione."}
+          </p>
+        </div>
 
         <div className="story-map__filters">
           <div className="story-map__filters-header">
@@ -606,12 +661,12 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
                       }
                     >
                       {symbolIcon && (
-                        <img
+                        <AssetImage
                           className="filter-chip__icon"
                           src={symbolIcon}
                           alt=""
                           aria-hidden="true"
-                          loading="lazy"
+                          loading="eager"
                           decoding="async"
                         />
                       )}
@@ -622,22 +677,6 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
               </div>
             </div>
           ))}
-        </div>
-
-        <div
-          className="story-map__legend"
-          style={
-            {
-              '--legend-color': activePathColor,
-            } as CSSProperties
-          }
-        >
-          <span className="legend-dot" aria-hidden="true" />
-          <p>
-            {activePathOption
-              ? `${activePathOption.label}: ${activeTombCount} tombe attive. Passa il cursore su una tomba per leggere il suo id e clicca solo su quelle evidenziate per aprire la scheda.`
-              : "Passa il cursore su una tomba per leggere il suo id. Seleziona un percorso per attivare le schede di catalogazione."}
-          </p>
         </div>
       </div>
 
@@ -656,7 +695,7 @@ export function InteractiveMap({ block }: InteractiveMapProps) {
 
         {svgError ? (
           <div className="map-loading">{svgError}</div>
-        ) : !svgMarkup ? (
+        ) : !svgMarkup || !viewBox ? (
           <div className="map-loading">Caricamento della planimetria in corso.</div>
         ) : (
           <svg

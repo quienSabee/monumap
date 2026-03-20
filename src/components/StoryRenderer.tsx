@@ -1,4 +1,6 @@
 import { useState, type CSSProperties } from 'react'
+import { useImageAsset } from '../lib/imageAssets'
+import { AssetImage } from './AssetImage'
 import { InteractiveMap } from './InteractiveMap'
 import type { GalleryBlock, SidecarBlock, StoryDocument, StoryBlock } from '../types/story'
 
@@ -23,7 +25,7 @@ function SectionImage({
     )
   }
 
-  return <img className={className} src={image} alt={alt ?? ''} loading="lazy" />
+  return <AssetImage className={className} src={image} alt={alt ?? ''} loading="lazy" decoding="async" />
 }
 
 function HeroBlockView({
@@ -31,14 +33,16 @@ function HeroBlockView({
 }: {
   block: Extract<StoryBlock, { type: 'hero' }>
 }) {
+  const { isLoaded } = useImageAsset(block.background)
+
   return (
     <section
-      className="story-block story-hero"
+      className={isLoaded ? 'story-block story-hero is-loaded' : 'story-block story-hero'}
       id={block.id}
       style={
         block.background
           ? ({
-              '--hero-background': `url(${block.background})`,
+              '--hero-background-image': `url(${block.background})`,
             } as CSSProperties)
           : undefined
       }
@@ -88,7 +92,13 @@ function GalleryBlockView({ block }: { block: GalleryBlock }) {
 
       <div className="story-gallery__layout">
         <figure className="story-gallery__stage">
-          <img src={activeSlide.image} alt={activeSlide.alt} loading="lazy" />
+          <AssetImage
+            src={activeSlide.image}
+            alt={activeSlide.alt}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
         </figure>
 
         <div className="story-gallery__aside">
@@ -105,7 +115,7 @@ function GalleryBlockView({ block }: { block: GalleryBlock }) {
                 className={index === activeIndex ? 'gallery-thumb is-active' : 'gallery-thumb'}
                 onClick={() => setActiveIndex(index)}
               >
-                <img src={slide.image} alt={slide.alt} loading="lazy" />
+                <AssetImage src={slide.image} alt={slide.alt} loading="lazy" decoding="async" />
                 <span>{slide.title}</span>
               </button>
             ))}

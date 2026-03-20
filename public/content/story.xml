@@ -18,7 +18,7 @@
     <slide image="media/2.jpg" alt="Viale alberato stilizzato." title="Percorso e profondita" caption="Un'immagine laterale funziona bene quando il testo descrive un tragitto, un asse visivo o una trasformazione storica." />
     <slide image="media/3.jpg" alt="Cappella stilizzata." title="Dettaglio monumentale" caption="Per statue, cappelle o sepolture di rilievo conviene affiancare l'immagine a un pannello con testo, datazioni e rimandi." />
   </gallery>
-  <map id="planimetria" title="Esplora la planimetria" description="Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione." svg="plan.svg" viewBox="0 0 3370.39 843.68" defaultTargets="">
+  <map id="planimetria" title="Esplora la planimetria" description="Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione." svg="plan.svg" defaultTargets="">
     <paths title="Percorsi tematici">
       <path id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#42B5E8">
         <symbol id="rosa" label="Rosa" />
@@ -239,7 +239,7 @@
         <symbolRef symbol="papavero" />
         <symbolRef symbol="teschio" />
       </tomb>
-      <tomb id="1077" mergedIds="1166;1165;1092;1077;1091;1087;1079">
+      <tomb id="1077" mergedIds="1166;1165;1092;1078;1077;1091;1087;1079">
         <nome>Cappella della Confraternita della Misericordia</nome>
         <data>1888</data>
         <symbolRef symbol="vite" />

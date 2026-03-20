@@ -277,7 +277,7 @@ function parseMap(element: Element): MapBlock {
     title: requiredAttribute(element, 'title'),
     description: optionalAttribute(element, 'description'),
     svg: requiredAttribute(element, 'svg'),
-    viewBox: requiredAttribute(element, 'viewBox'),
+    viewBox: optionalAttribute(element, 'viewBox'),
     defaultTargets: parseTargets(optionalAttribute(element, 'defaultTargets')),
     filters: {
       title: requiredAttribute(pathsElement, 'title'),

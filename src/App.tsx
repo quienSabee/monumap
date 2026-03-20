@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react'
 import { StoryRenderer } from './components/StoryRenderer'
+import { preloadImageAssets } from './lib/imageAssets'
 import { parseStoryXml } from './lib/storyParser'
-import type { GalleryBlock, HeroBlock, MapBlock, SidecarBlock, StoryBlock, StoryDocument } from './types/story'
+import type {
+  GalleryBlock,
+  HeroBlock,
+  MapBlock,
+  MapFilterOption,
+  SidecarBlock,
+  StoryBlock,
+  StoryDocument,
+} from './types/story'
 
 function resolveAssetUrl(path: string | undefined, baseUrl: string): string | undefined {
   if (!path) {
@@ -61,6 +70,42 @@ function resolveStoryAssets(story: StoryDocument, baseUrl: string): StoryDocumen
   }
 }
 
+function collectSymbolIconUrls(options: MapFilterOption[], baseUrl: string, depth = 0): string[] {
+  return options.flatMap((option) => {
+    const currentLevelUrls = depth > 0 ? [`${baseUrl}media/symbols/${option.id}.svg`] : []
+    return [...currentLevelUrls, ...collectSymbolIconUrls(option.children, baseUrl, depth + 1)]
+  })
+}
+
+function collectPreloadUrls(story: StoryDocument, baseUrl: string): string[] {
+  const urls = new Set<string>()
+
+  story.blocks.forEach((block) => {
+    switch (block.type) {
+      case 'hero':
+        if (block.background) {
+          urls.add(block.background)
+        }
+        break
+      case 'sidecar':
+        if (block.image) {
+          urls.add(block.image)
+        }
+        break
+      case 'gallery':
+        block.slides.forEach((slide) => urls.add(slide.image))
+        break
+      case 'map':
+        collectSymbolIconUrls(block.filters.options, baseUrl).forEach((url) => urls.add(url))
+        break
+      default:
+        break
+    }
+  })
+
+  return Array.from(urls)
+}
+
 function App() {
   const [story, setStory] = useState<StoryDocument | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -96,6 +141,14 @@ function App() {
       cancelled = true
     }
   }, [])
+
+  useEffect(() => {
+    if (!story) {
+      return
+    }
+
+    void preloadImageAssets(collectPreloadUrls(story, import.meta.env.BASE_URL))
+  }, [story])
 
   if (error) {
     return (
