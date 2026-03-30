@@ -1,132 +1,49 @@
 import { useEffect, useState } from 'react'
 import { StoryRenderer } from './components/StoryRenderer'
+import { getPagePreloadUrls } from './data/pageContent'
 import { preloadImageAssets } from './lib/imageAssets'
-import { parseStoryXml } from './lib/storyParser'
-import type {
-  GalleryBlock,
-  HeroBlock,
-  MapBlock,
-  MapFilterOption,
-  SidecarBlock,
-  StoryBlock,
-  StoryDocument,
-} from './types/story'
+import { collectMapPreloadUrls, normalizeMapData } from './lib/mapData'
+import type { MapDataBundle, MapTaxonomyData, RawMapTomb } from './types/map'
 
-function resolveAssetUrl(path: string | undefined, baseUrl: string): string | undefined {
-  if (!path) {
-    return path
-  }
-
-  if (
-    path.startsWith('http://') ||
-    path.startsWith('https://') ||
-    path.startsWith('//') ||
-    path.startsWith('data:') ||
-    path.startsWith('#')
-  ) {
-    return path
-  }
-
-  const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`
-  const normalizedPath = path.startsWith('/') ? path.slice(1) : path
-
-  return `${normalizedBase}${normalizedPath}`
-}
-
-function resolveBlockAssets(block: StoryBlock, baseUrl: string): StoryBlock {
-  switch (block.type) {
-    case 'hero':
-      return {
-        ...block,
-        background: resolveAssetUrl(block.background, baseUrl),
-      } satisfies HeroBlock
-    case 'sidecar':
-      return {
-        ...block,
-        image: resolveAssetUrl(block.image, baseUrl),
-      } satisfies SidecarBlock
-    case 'gallery':
-      return {
-        ...block,
-        slides: block.slides.map((slide) => ({
-          ...slide,
-          image: resolveAssetUrl(slide.image, baseUrl) ?? slide.image,
-        })),
-      } satisfies GalleryBlock
-    case 'map':
-      return {
-        ...block,
-        svg: resolveAssetUrl(block.svg, baseUrl) ?? block.svg,
-      } satisfies MapBlock
-    default:
-      return block
-  }
-}
-
-function resolveStoryAssets(story: StoryDocument, baseUrl: string): StoryDocument {
-  return {
-    ...story,
-    blocks: story.blocks.map((block) => resolveBlockAssets(block, baseUrl)),
-  }
-}
-
-function collectSymbolIconUrls(options: MapFilterOption[], baseUrl: string, depth = 0): string[] {
-  return options.flatMap((option) => {
-    const currentLevelUrls = depth > 0 ? [`${baseUrl}media/symbols/${option.id}.svg`] : []
-    return [...currentLevelUrls, ...collectSymbolIconUrls(option.children, baseUrl, depth + 1)]
-  })
-}
-
-function collectPreloadUrls(story: StoryDocument, baseUrl: string): string[] {
-  const urls = new Set<string>()
-
-  story.blocks.forEach((block) => {
-    switch (block.type) {
-      case 'hero':
-        if (block.background) {
-          urls.add(block.background)
-        }
-        break
-      case 'sidecar':
-        if (block.image) {
-          urls.add(block.image)
-        }
-        break
-      case 'gallery':
-        block.slides.forEach((slide) => urls.add(slide.image))
-        break
-      case 'map':
-        collectSymbolIconUrls(block.filters.options, baseUrl).forEach((url) => urls.add(url))
-        break
-      default:
-        break
-    }
-  })
-
-  return Array.from(urls)
-}
+const TOMBS_URL = `${import.meta.env.BASE_URL}content/tombs.json`
+const MAP_TAXONOMY_URL = `${import.meta.env.BASE_URL}content/map-taxonomy.json`
 
 function App() {
-  const [story, setStory] = useState<StoryDocument | null>(null)
+  const [mapData, setMapData] = useState<MapDataBundle | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    void preloadImageAssets(getPagePreloadUrls())
+  }, [])
 
   useEffect(() => {
     let cancelled = false
 
-    async function loadStory() {
+    async function loadMapData() {
       try {
-        const response = await fetch(`${import.meta.env.BASE_URL}content/story.xml`)
+        const [taxonomyResponse, tombsResponse] = await Promise.all([fetch(MAP_TAXONOMY_URL), fetch(TOMBS_URL)])
 
-        if (!response.ok) {
-          throw new Error(`Impossibile caricare il contenuto XML (${response.status}).`)
+        if (!taxonomyResponse.ok) {
+          throw new Error(`Impossibile caricare la tassonomia della mappa (${taxonomyResponse.status}).`)
         }
 
-        const xml = await response.text()
-        const parsed = parseStoryXml(xml)
-        const resolved = resolveStoryAssets(parsed, import.meta.env.BASE_URL)
+        if (!tombsResponse.ok) {
+          throw new Error(`Impossibile caricare le tombe (${tombsResponse.status}).`)
+        }
+
+        const [taxonomy, tombs] = await Promise.all([
+          taxonomyResponse.json() as Promise<MapTaxonomyData>,
+          tombsResponse.json() as Promise<RawMapTomb[]>,
+        ])
+
+        if (!Array.isArray(tombs)) {
+          throw new Error('Il file tombs.json non contiene una lista valida di tombe.')
+        }
+
+        const normalized = normalizeMapData(taxonomy, tombs, import.meta.env.BASE_URL)
 
         if (!cancelled) {
-          setStory(resolved)
+          setMapData(normalized)
         }
       } catch (loadError) {
         if (!cancelled) {
@@ -135,7 +52,7 @@ function App() {
       }
     }
 
-    loadStory()
+    void loadMapData()
 
     return () => {
       cancelled = true
@@ -143,12 +60,12 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (!story) {
+    if (!mapData) {
       return
     }
 
-    void preloadImageAssets(collectPreloadUrls(story, import.meta.env.BASE_URL))
-  }, [story])
+    void preloadImageAssets(collectMapPreloadUrls(mapData, import.meta.env.BASE_URL))
+  }, [mapData])
 
   if (error) {
     return (
@@ -159,16 +76,16 @@ function App() {
     )
   }
 
-  if (!story) {
+  if (!mapData) {
     return (
       <div className="app-status">
         <h1>Monumap</h1>
-        <p>Caricamento dei contenuti XML in corso.</p>
+        <p>Caricamento dei contenuti in corso.</p>
       </div>
     )
   }
 
-  return <StoryRenderer story={story} />
+  return <StoryRenderer mapData={mapData} />
 }
 
 export default App

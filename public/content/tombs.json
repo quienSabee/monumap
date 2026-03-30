@@ -1,0 +1,1305 @@
+﻿[
+    {
+        "id":  "2858",
+        "nome":  "Edicola Bonfanti Casini",
+        "data":  "1894",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2863",
+                          "2865",
+                          "2858",
+                          "2859"
+                      ],
+        "symbols":  [
+                        "margherita",
+                        "papavero",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2879",
+        "nome":  "Annibale Vecchi",
+        "data":  "1901",
+        "nascita":  "1819",
+        "morte":  "1880",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "papavero",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2816",
+        "nome":  "Passerotti",
+        "data":  null,
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "conchiglia",
+                        "lampada"
+                    ]
+    },
+    {
+        "id":  "2811",
+        "nome":  "Cappella Pagni-Schinardi",
+        "data":  "1901",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2818",
+                          "2811"
+                      ],
+        "symbols":  [
+                        "alpha_omega",
+                        "croce",
+                        "ghirlanda",
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2798",
+        "nome":  "Cappella Calzoni",
+        "data":  "1935",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2802",
+                          "2798"
+                      ],
+        "symbols":  [
+                        "angelo",
+                        "croce",
+                        "ghirlanda",
+                        "lampada"
+                    ]
+    },
+    {
+        "id":  "2825",
+        "nome":  "Massini",
+        "data":  "1858",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "ghirlanda",
+                        "torcia"
+                    ]
+    },
+    {
+        "id":  "2773",
+        "nome":  "Pagnotta",
+        "data":  "1915",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2776",
+                          "2773"
+                      ],
+        "symbols":  [
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "2745",
+        "nome":  "Cappella Luchetti",
+        "data":  null,
+        "nascita":  "1823",
+        "morte":  "1907",
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2748",
+                          "2745"
+                      ],
+        "symbols":  [
+                        "archipendolo",
+                        "palmetta",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2716",
+        "nome":  "Giuseppe Porta",
+        "data":  null,
+        "nascita":  null,
+        "morte":  "1917",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "crisma",
+                        "ghirlanda",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2664",
+        "nome":  "Cappella Cesare Agostini",
+        "data":  null,
+        "nascita":  "1864",
+        "morte":  "1942",
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2670",
+                          "2664"
+                      ],
+        "symbols":  [
+                        "croce",
+                        "acanto"
+                    ]
+    },
+    {
+        "id":  "2500",
+        "nome":  "Famiglia Carboni",
+        "data":  "1886",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "crisma",
+                        "croce",
+                        "palmetta",
+                        "papavero"
+                    ]
+    },
+    {
+        "id":  "2510",
+        "nome":  "Famiglia Cecconi e Ranucci",
+        "data":  "1953",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "giglio"
+                    ]
+    },
+    {
+        "id":  "2476",
+        "nome":  "Famiglia Maragoni",
+        "data":  "1984",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "clessidra_alata",
+                        "crisma",
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2391",
+        "nome":  "Famiglia Gambelunghe",
+        "data":  "1956",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "croce",
+                        "ghirlanda",
+                        "palmetta",
+                        "uroboro",
+                        "torcia"
+                    ]
+    },
+    {
+        "id":  "2293",
+        "nome":  "Monumento Bianchi",
+        "data":  "1869",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "alpha_omega",
+                        "corda",
+                        "crisma",
+                        "croce",
+                        "ghirlanda",
+                        "papavero",
+                        "stella",
+                        "ulivo",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "2328",
+        "nome":  "Monumento Carattoli",
+        "data":  "1850",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2235",
+        "nome":  "Busto del prof. Giovanni Santini",
+        "data":  "1868",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "archipendolo",
+                        "ghirlanda",
+                        "palmetta",
+                        "papavero"
+                    ]
+    },
+    {
+        "id":  "2203",
+        "nome":  "Monumento Ridolfini",
+        "data":  "1894",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "2203",
+                          "2204"
+                      ],
+        "symbols":  [
+                        "acanto"
+                    ]
+    },
+    {
+        "id":  "2172",
+        "nome":  "Monumento Buattini",
+        "data":  "1859",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "ghirlanda"
+                    ]
+    },
+    {
+        "id":  "2177",
+        "nome":  "Monumento Zurli",
+        "data":  "1886",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "caduceo",
+                        "margherita",
+                        "rosa",
+                        "stella"
+                    ]
+    },
+    {
+        "id":  "2189",
+        "nome":  "Monumento Mattioli",
+        "data":  "1893",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "ancora",
+                        "ghirlanda",
+                        "palmetta",
+                        "papavero"
+                    ]
+    },
+    {
+        "id":  "2097",
+        "nome":  "Mario Grecchi",
+        "data":  null,
+        "nascita":  "1926",
+        "morte":  "1944",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "ghirlanda",
+                        "leone"
+                    ]
+    },
+    {
+        "id":  "2142",
+        "nome":  "Monumento Vannoni",
+        "data":  "primi anni del \u0027900",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "papavero",
+                        "teschio"
+                    ]
+    },
+    {
+        "id":  "1077",
+        "nome":  "Cappella della Confraternita della Misericordia",
+        "data":  "1888",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "1166",
+                          "1165",
+                          "1092",
+                          "1078",
+                          "1077",
+                          "1091",
+                          "1087",
+                          "1079"
+                      ],
+        "symbols":  [
+                        "vite",
+                        "acanto"
+                    ]
+    },
+    {
+        "id":  "1134",
+        "nome":  "Luigi Bonazzi",
+        "data":  null,
+        "nascita":  "1811",
+        "morte":  "1879",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "crisma"
+                    ]
+    },
+    {
+        "id":  "1015",
+        "nome":  "Edicola Carlo Bruschi",
+        "data":  null,
+        "nascita":  "1820",
+        "morte":  "1879",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "961",
+        "nome":  "Cappella Forconi Donati",
+        "data":  "1937",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "973",
+                          "963",
+                          "961",
+                          "985"
+                      ],
+        "symbols":  [
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "1002",
+        "nome":  "Edicola Rossi Schnabl",
+        "data":  "1911",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "1013",
+                          "1002"
+                      ],
+        "symbols":  [
+                        "papavero",
+                        "rosa",
+                        "acanto"
+                    ]
+    },
+    {
+        "id":  "982",
+        "nome":  "Cappella Urbani",
+        "data":  "1920",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "982",
+                          "983"
+                      ],
+        "symbols":  [
+                        "alpha_omega",
+                        "crisma",
+                        "ghirlanda"
+                    ]
+    },
+    {
+        "id":  "903",
+        "nome":  "Cappella del Buon Tromboni",
+        "data":  "1926",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "917",
+                          "903"
+                      ],
+        "symbols":  [
+                        "angelo",
+                        "ulivo",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "1138",
+        "nome":  "Monumento Purgotti",
+        "data":  "1879",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alloro",
+                        "croce",
+                        "ghirlanda"
+                    ]
+    },
+    {
+        "id":  "934",
+        "nome":  "Cappella Biagiotti",
+        "data":  "1920",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "934",
+                          "935"
+                      ],
+        "symbols":  [
+                        "angelo",
+                        "tromba"
+                    ]
+    },
+    {
+        "id":  "819",
+        "nome":  "Cappella Fani",
+        "data":  "1892",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "843",
+                          "839",
+                          "833",
+                          "819",
+                          "832",
+                          "821",
+                          "840",
+                          "841"
+                      ],
+        "symbols":  [
+                        "papavero",
+                        "acanto",
+                        "angelo",
+                        "ghirlanda",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "780",
+        "nome":  "Monumento Filippi",
+        "data":  "1914",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "775",
+        "nome":  "Cappella Doneddu",
+        "data":  "1907",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "775",
+                          "784"
+                      ],
+        "symbols":  [
+                        "angelo"
+                    ]
+    },
+    {
+        "id":  "733",
+        "nome":  "Monumento Cerulli",
+        "data":  "1894",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "crisma",
+                        "ghirlanda"
+                    ]
+    },
+    {
+        "id":  "739",
+        "nome":  "Cappella Franceschini",
+        "data":  "1929",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "739",
+                          "740"
+                      ],
+        "symbols":  [
+                        "alpha_omega",
+                        "crisma",
+                        "ghirlanda"
+                    ]
+    },
+    {
+        "id":  "760",
+        "nome":  "Famiglia Cesaroni",
+        "data":  "1892",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "conchiglia",
+                        "rosa",
+                        "angelo",
+                        "ghirlanda",
+                        "palmetta",
+                        "torcia"
+                    ]
+    },
+    {
+        "id":  "2377",
+        "nome":  "Cappella Radicioni",
+        "data":  "1909",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "stella",
+                        "angelo",
+                        "rosa",
+                        "croce",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "666",
+        "nome":  "Edicola di Maria Bonaparte Valentini",
+        "data":  "1847",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "stella",
+                        "leone"
+                    ]
+    },
+    {
+        "id":  "542",
+        "nome":  "Edicola Biscarini_ Angelo Biscarini",
+        "data":  null,
+        "nascita":  "1877",
+        "morte":  "1951",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "ghirlanda",
+                        "corda",
+                        "archipendolo"
+                    ]
+    },
+    {
+        "id":  "581",
+        "nome":  "Cappella Bournens",
+        "data":  "1916",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "596",
+                          "581"
+                      ],
+        "symbols":  [
+                        "papavero",
+                        "margherita",
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "676",
+        "nome":  "Aganoor Pompilj",
+        "data":  null,
+        "nascita":  "1855",
+        "morte":  "1910",
+        "descrizione":  null,
+        "mergedIds":  [
+                          "683",
+                          "676"
+                      ],
+        "symbols":  [
+                        "acanto",
+                        "alpha_omega",
+                        "alloro"
+                    ]
+    },
+    {
+        "id":  "574",
+        "nome":  "Cappella Taticchi",
+        "data":  "1884",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "575",
+                          "574"
+                      ],
+        "symbols":  [
+                        "papavero",
+                        "acanto",
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "698",
+        "nome":  "Cappella Bugiardi",
+        "data":  "1915",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "ghirlanda",
+                        "papavero",
+                        "croce",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "525",
+        "nome":  "Monumento ai caduti del XX Giu\n          gno",
+        "data":  "1909",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "ghirlanda",
+                        "papavero",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "608",
+        "nome":  "Cappella Guardabassi_ Francesco Guardabassi",
+        "data":  null,
+        "nascita":  "1793",
+        "morte":  "1871",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "crisma",
+                        "croce",
+                        "ghirlanda",
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "657",
+        "nome":  "Monumento Bastianini",
+        "data":  "1927",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "637",
+        "nome":  "Tomba della famiglia Penna_ Sandro Penna",
+        "data":  null,
+        "nascita":  "1906",
+        "morte":  "1977",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "croce",
+                        "alpha_omega"
+                    ]
+    },
+    {
+        "id":  "654",
+        "nome":  "Tomba del Convento di Monte Ripido_ Padre Diego Donati",
+        "data":  null,
+        "nascita":  "1910",
+        "morte":  "2002",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "1",
+        "nome":  "Tempio della cremazione",
+        "data":  "1884",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  [
+                          "1",
+                          "2"
+                      ],
+        "symbols":  [
+                        "torcia"
+                    ]
+    },
+    {
+        "id":  "2939",
+        "nome":  "Cappella Baldeschi",
+        "data":  "1902",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "edera",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "2936",
+        "nome":  "Monumento Tancetti",
+        "data":  "1898",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "corda",
+                        "palmetta",
+                        "stella"
+                    ]
+    },
+    {
+        "id":  "2938",
+        "nome":  "Monumento Ragnotti",
+        "data":  "1900",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "angelo",
+                        "ulivo"
+                    ]
+    },
+    {
+        "id":  "2943",
+        "nome":  "Monumento Paolo Angeloni",
+        "data":  "1897",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "angelo",
+                        "giglio",
+                        "margherita",
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2941",
+        "nome":  "Monumento Sereni",
+        "data":  "1901",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "croce",
+                        "ghirlanda",
+                        "papavero",
+                        "rosa",
+                        "tromba"
+                    ]
+    },
+    {
+        "id":  "2944",
+        "nome":  "Monumento Masi-Frerejan",
+        "data":  "1898",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "palmetta",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2945",
+        "nome":  "Cappella Fiorini-Pacioselli",
+        "data":  "1908",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "leone",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "2946",
+        "nome":  "Monumento Rizzoli-Ticchioni",
+        "data":  "1893",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alpha_omega",
+                        "angelo",
+                        "croce"
+                    ]
+    },
+    {
+        "id":  "2947",
+        "nome":  "Monumento Americo Calderini",
+        "data":  "1891",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "croce",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2952",
+        "nome":  "Monumento Vicarelli",
+        "data":  "1895",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "lira",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "2955",
+        "nome":  "Monumento Sebastiani già Cosatti",
+        "data":  "1901",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "croce",
+                        "edera",
+                        "ghirlanda",
+                        "margherita",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2957",
+        "nome":  "Cappella Ricciarelli",
+        "data":  "1898",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "trifoglio"
+                    ]
+    },
+    {
+        "id":  "2958",
+        "nome":  "Monumento Degli Oddi",
+        "data":  "1892",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2105",
+        "nome":  "Cippo di Santina Calderini",
+        "data":  null,
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "croce",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2907",
+        "nome":  "Edicola Biscarini",
+        "data":  null,
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "lampada",
+                        "vite"
+                    ]
+    },
+    {
+        "id":  "2908",
+        "nome":  "Monumento Moscioni",
+        "data":  "1892",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "crisma",
+                        "croce",
+                        "rosa",
+                        "torcia",
+                        "ulivo"
+                    ]
+    },
+    {
+        "id":  "2922",
+        "nome":  "Monumento Milletti",
+        "data":  "1904",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "acanto",
+                        "angelo"
+                    ]
+    },
+    {
+        "id":  "2914",
+        "nome":  "Monumento Benincasa",
+        "data":  "1906",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "crisantemo",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2916",
+        "nome":  "Monumento Pernossi",
+        "data":  "1909",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "margherita",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2917",
+        "nome":  "Monumento Rossini",
+        "data":  "1905",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "ghirlanda",
+                        "liuto",
+                        "margherita",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2918",
+        "nome":  "Monumento Mammalucchi",
+        "data":  "1912",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "cero",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2920",
+        "nome":  "Monumento Pisinicca-Laparelli",
+        "data":  "1903",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "palmetta"
+                    ]
+    },
+    {
+        "id":  "2928",
+        "nome":  "Monumento Tiriduzi-Bavicchi",
+        "data":  "1910",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "edera",
+                        "lampada",
+                        "torcia"
+                    ]
+    },
+    {
+        "id":  "2911",
+        "nome":  "Monumento Bonacci Brunamonti",
+        "data":  "1914",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "alloro",
+                        "arpia",
+                        "croce",
+                        "papavero"
+                    ]
+    },
+    {
+        "id":  "960",
+        "nome":  "Edicola prof. Giovanni Pennacchi",
+        "data":  null,
+        "nascita":  "1811",
+        "morte":  "1883",
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "croce",
+                        "lira"
+                    ]
+    },
+    {
+        "id":  "762",
+        "nome":  "Famiglia Rufini",
+        "data":  "1938",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "rosa",
+                        "angelo",
+                        "margherita"
+                    ]
+    },
+    {
+        "id":  "2910",
+        "nome":  "Monumento Marinelli",
+        "data":  "1922",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "angelo",
+                        "ghirlanda",
+                        "margherita",
+                        "pigna",
+                        "rosa"
+                    ]
+    },
+    {
+        "id":  "2541",
+        "nome":  "Paolina Burattini",
+        "data":  "1900",
+        "nascita":  null,
+        "morte":  null,
+        "descrizione":  null,
+        "mergedIds":  {
+
+                      },
+        "symbols":  [
+                        "torcia"
+                    ]
+    }
+]

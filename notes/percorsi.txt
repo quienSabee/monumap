@@ -1,0 +1,41 @@
+- decorazioni_fitomorfe
+  - rosa
+  - palmetta
+  - margherita
+  - acanto
+  - papavero
+  - vite
+  - trifoglio
+  - ulivo
+  - ghirlanda
+  - giglio
+  - alloro
+  - crisantemo
+  - pigna
+  - edera
+- decorazioni_zoomorfe
+  - uroboro
+  - arpia
+  - leone
+  - conchiglia
+- decorazioni_allegoriche
+  - caduceo
+  - lampada
+  - archipendolo
+  - torcia
+  - clessidra_alata
+  - stella
+  - ruota_della_fortuna
+  - cero
+  - ancora
+  - corda
+  - teschio
+- simobli_religiosi
+  - alpha_omega
+  - crisma
+  - croce
+  - angelo
+- strumenti_musicali
+  - tromba
+  - lira
+  - liuto
