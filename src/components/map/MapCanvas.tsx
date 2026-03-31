@@ -112,6 +112,10 @@ function getTombLabel(tomb: MapTomb | null, tombId: string) {
   return tomb?.nome?.trim() || `Tomba ${tombId}`
 }
 
+function getTooltipLabel(tomb: MapTomb | null) {
+  return tomb?.nome?.trim() || 'Tomba'
+}
+
 function getStyleDeclarationValue(style: string, property: string) {
   const pattern = new RegExp(`${property}\\s*:\\s*([^;]+)`, 'i')
   return style.match(pattern)?.[1]?.trim() ?? null
@@ -831,8 +835,7 @@ export function MapCanvas({
             top: tooltipPosition.top,
           }}
         >
-          <strong>Tomba {tooltip.tombId}</strong>
-          {tooltip.tomb && <span>{getTombLabel(tooltip.tomb, tooltip.tombId)}</span>}
+          <strong>{getTooltipLabel(tooltip.tomb)}</strong>
         </div>
       )}
     </>
