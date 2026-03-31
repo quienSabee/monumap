@@ -9,7 +9,6 @@ type InteractiveMapProps = {
   data: MapDataBundle
 }
 
-const DEFAULT_PATH_COLOR = '#7A1145'
 const MAP_EDITORIAL_IMAGE = resolveAssetUrl('media/3.jpg', import.meta.env.BASE_URL) ?? 'media/3.jpg'
 
 function findPathOption(paths: MapPathOption[], id: string | null) {
@@ -45,7 +44,6 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
   const activeSymbol = findSymbolOption(activePath, selectedSymbolId)
   const activeTombIds = activeSymbol?.targets ?? activePath?.targets ?? []
   const focusedTombIds = activeSymbol?.targets ?? []
-  const activePathColor = activePath?.color ?? DEFAULT_PATH_COLOR
   const selectedTomb = findTombById(data.tombs, selectedTombId)
   const featuredTomb = findTombById(data.tombs, data.featuredTombId ?? null) ?? data.tombs[0] ?? null
 
@@ -102,7 +100,6 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
             activeTombIds={activeTombIds}
             focusedTombIds={focusedTombIds}
             selectedTombId={selectedTombId}
-            activePathColor={activePathColor}
             onSelectTomb={handleSelectTomb}
           />
         </div>

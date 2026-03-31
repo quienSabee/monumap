@@ -693,6 +693,13 @@ button {
   pointer-events: all !important;
 }
 
+.map-canvas .tomb:focus,
+.map-canvas .tomb:focus-visible,
+.map-canvas .tomb *:focus,
+.map-canvas .tomb *:focus-visible {
+  outline: none;
+}
+
 .map-canvas.is-dragging {
   cursor: grabbing;
 }
