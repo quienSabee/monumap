@@ -1,1305 +1,1348 @@
 ﻿[
     {
-        "id":  "2858",
-        "nome":  "Edicola Bonfanti Casini",
-        "data":  "1894",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2863",
-                          "2865",
-                          "2858",
-                          "2859"
-                      ],
-        "symbols":  [
-                        "margherita",
-                        "papavero",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2879",
-        "nome":  "Annibale Vecchi",
-        "data":  "1901",
-        "nascita":  "1819",
-        "morte":  "1880",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "papavero",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2816",
-        "nome":  "Passerotti",
-        "data":  null,
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "conchiglia",
-                        "lampada"
-                    ]
-    },
-    {
-        "id":  "2811",
-        "nome":  "Cappella Pagni-Schinardi",
-        "data":  "1901",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2818",
-                          "2811"
-                      ],
-        "symbols":  [
-                        "alpha_omega",
-                        "croce",
-                        "ghirlanda",
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2798",
-        "nome":  "Cappella Calzoni",
-        "data":  "1935",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2802",
-                          "2798"
-                      ],
-        "symbols":  [
-                        "angelo",
-                        "croce",
-                        "ghirlanda",
-                        "lampada"
-                    ]
-    },
-    {
-        "id":  "2825",
-        "nome":  "Massini",
-        "data":  "1858",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "ghirlanda",
-                        "torcia"
-                    ]
-    },
-    {
-        "id":  "2773",
-        "nome":  "Pagnotta",
-        "data":  "1915",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2776",
-                          "2773"
-                      ],
-        "symbols":  [
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "2745",
-        "nome":  "Cappella Luchetti",
-        "data":  null,
-        "nascita":  "1823",
-        "morte":  "1907",
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2748",
-                          "2745"
-                      ],
-        "symbols":  [
-                        "archipendolo",
-                        "palmetta",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2716",
-        "nome":  "Giuseppe Porta",
-        "data":  null,
-        "nascita":  null,
-        "morte":  "1917",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "crisma",
-                        "ghirlanda",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2664",
-        "nome":  "Cappella Cesare Agostini",
-        "data":  null,
-        "nascita":  "1864",
-        "morte":  "1942",
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2670",
-                          "2664"
-                      ],
-        "symbols":  [
-                        "croce",
-                        "acanto"
-                    ]
-    },
-    {
-        "id":  "2500",
-        "nome":  "Famiglia Carboni",
-        "data":  "1886",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "crisma",
-                        "croce",
-                        "palmetta",
-                        "papavero"
-                    ]
-    },
-    {
-        "id":  "2510",
-        "nome":  "Famiglia Cecconi e Ranucci",
-        "data":  "1953",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "giglio"
-                    ]
-    },
-    {
-        "id":  "2476",
-        "nome":  "Famiglia Maragoni",
-        "data":  "1984",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "clessidra_alata",
-                        "crisma",
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2391",
-        "nome":  "Famiglia Gambelunghe",
-        "data":  "1956",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "croce",
-                        "ghirlanda",
-                        "palmetta",
-                        "uroboro",
-                        "torcia"
-                    ]
-    },
-    {
-        "id":  "2293",
-        "nome":  "Monumento Bianchi",
-        "data":  "1869",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "alpha_omega",
-                        "corda",
-                        "crisma",
-                        "croce",
-                        "ghirlanda",
-                        "papavero",
-                        "stella",
-                        "ulivo",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "2328",
-        "nome":  "Monumento Carattoli",
-        "data":  "1850",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2235",
-        "nome":  "Busto del prof. Giovanni Santini",
-        "data":  "1868",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "archipendolo",
-                        "ghirlanda",
-                        "palmetta",
-                        "papavero"
-                    ]
-    },
-    {
-        "id":  "2203",
-        "nome":  "Monumento Ridolfini",
-        "data":  "1894",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "2203",
-                          "2204"
-                      ],
-        "symbols":  [
-                        "acanto"
-                    ]
-    },
-    {
-        "id":  "2172",
-        "nome":  "Monumento Buattini",
-        "data":  "1859",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "ghirlanda"
-                    ]
-    },
-    {
-        "id":  "2177",
-        "nome":  "Monumento Zurli",
-        "data":  "1886",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "caduceo",
-                        "margherita",
-                        "rosa",
-                        "stella"
-                    ]
-    },
-    {
-        "id":  "2189",
-        "nome":  "Monumento Mattioli",
-        "data":  "1893",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "ancora",
-                        "ghirlanda",
-                        "palmetta",
-                        "papavero"
-                    ]
-    },
-    {
-        "id":  "2097",
-        "nome":  "Mario Grecchi",
-        "data":  null,
-        "nascita":  "1926",
-        "morte":  "1944",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "ghirlanda",
-                        "leone"
-                    ]
-    },
-    {
-        "id":  "2142",
-        "nome":  "Monumento Vannoni",
-        "data":  "primi anni del \u0027900",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "papavero",
-                        "teschio"
-                    ]
-    },
-    {
-        "id":  "1077",
-        "nome":  "Cappella della Confraternita della Misericordia",
-        "data":  "1888",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "1166",
-                          "1165",
-                          "1092",
-                          "1078",
-                          "1077",
-                          "1091",
-                          "1087",
-                          "1079"
-                      ],
-        "symbols":  [
-                        "vite",
-                        "acanto"
-                    ]
-    },
-    {
-        "id":  "1134",
-        "nome":  "Luigi Bonazzi",
-        "data":  null,
-        "nascita":  "1811",
-        "morte":  "1879",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "crisma"
-                    ]
-    },
-    {
-        "id":  "1015",
-        "nome":  "Edicola Carlo Bruschi",
-        "data":  null,
-        "nascita":  "1820",
-        "morte":  "1879",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "961",
-        "nome":  "Cappella Forconi Donati",
-        "data":  "1937",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "973",
-                          "963",
-                          "961",
-                          "985"
-                      ],
-        "symbols":  [
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "1002",
-        "nome":  "Edicola Rossi Schnabl",
-        "data":  "1911",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "1013",
-                          "1002"
-                      ],
-        "symbols":  [
-                        "papavero",
-                        "rosa",
-                        "acanto"
-                    ]
-    },
-    {
-        "id":  "982",
-        "nome":  "Cappella Urbani",
-        "data":  "1920",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "982",
-                          "983"
-                      ],
-        "symbols":  [
-                        "alpha_omega",
-                        "crisma",
-                        "ghirlanda"
-                    ]
-    },
-    {
-        "id":  "903",
-        "nome":  "Cappella del Buon Tromboni",
-        "data":  "1926",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "917",
-                          "903"
-                      ],
-        "symbols":  [
-                        "angelo",
-                        "ulivo",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "1138",
-        "nome":  "Monumento Purgotti",
-        "data":  "1879",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alloro",
-                        "croce",
-                        "ghirlanda"
-                    ]
-    },
-    {
-        "id":  "934",
-        "nome":  "Cappella Biagiotti",
-        "data":  "1920",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "934",
-                          "935"
-                      ],
-        "symbols":  [
-                        "angelo",
-                        "tromba"
-                    ]
-    },
-    {
-        "id":  "819",
-        "nome":  "Cappella Fani",
-        "data":  "1892",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "843",
-                          "839",
-                          "833",
-                          "819",
-                          "832",
-                          "821",
-                          "840",
-                          "841"
-                      ],
-        "symbols":  [
-                        "papavero",
-                        "acanto",
-                        "angelo",
-                        "ghirlanda",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "780",
-        "nome":  "Monumento Filippi",
-        "data":  "1914",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "775",
-        "nome":  "Cappella Doneddu",
-        "data":  "1907",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "775",
-                          "784"
-                      ],
-        "symbols":  [
-                        "angelo"
-                    ]
-    },
-    {
-        "id":  "733",
-        "nome":  "Monumento Cerulli",
-        "data":  "1894",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "crisma",
-                        "ghirlanda"
-                    ]
-    },
-    {
-        "id":  "739",
-        "nome":  "Cappella Franceschini",
-        "data":  "1929",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "739",
-                          "740"
-                      ],
-        "symbols":  [
-                        "alpha_omega",
-                        "crisma",
-                        "ghirlanda"
-                    ]
-    },
-    {
-        "id":  "760",
-        "nome":  "Famiglia Cesaroni",
-        "data":  "1892",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "conchiglia",
-                        "rosa",
-                        "angelo",
-                        "ghirlanda",
-                        "palmetta",
-                        "torcia"
-                    ]
-    },
-    {
-        "id":  "2377",
-        "nome":  "Cappella Radicioni",
-        "data":  "1909",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "stella",
-                        "angelo",
-                        "rosa",
-                        "croce",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "666",
-        "nome":  "Edicola di Maria Bonaparte Valentini",
-        "data":  "1847",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "stella",
-                        "leone"
-                    ]
-    },
-    {
-        "id":  "542",
-        "nome":  "Edicola Biscarini_ Angelo Biscarini",
-        "data":  null,
-        "nascita":  "1877",
-        "morte":  "1951",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "ghirlanda",
-                        "corda",
-                        "archipendolo"
-                    ]
-    },
-    {
-        "id":  "581",
-        "nome":  "Cappella Bournens",
-        "data":  "1916",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "596",
-                          "581"
-                      ],
-        "symbols":  [
-                        "papavero",
-                        "margherita",
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "676",
-        "nome":  "Aganoor Pompilj",
-        "data":  null,
-        "nascita":  "1855",
-        "morte":  "1910",
-        "descrizione":  null,
-        "mergedIds":  [
-                          "683",
-                          "676"
-                      ],
-        "symbols":  [
-                        "acanto",
-                        "alpha_omega",
-                        "alloro"
-                    ]
-    },
-    {
-        "id":  "574",
-        "nome":  "Cappella Taticchi",
-        "data":  "1884",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "575",
-                          "574"
-                      ],
-        "symbols":  [
-                        "papavero",
-                        "acanto",
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "698",
-        "nome":  "Cappella Bugiardi",
-        "data":  "1915",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "ghirlanda",
-                        "papavero",
-                        "croce",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "525",
-        "nome":  "Monumento ai caduti del XX Giu\n          gno",
-        "data":  "1909",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "ghirlanda",
-                        "papavero",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "608",
-        "nome":  "Cappella Guardabassi_ Francesco Guardabassi",
-        "data":  null,
-        "nascita":  "1793",
-        "morte":  "1871",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "crisma",
-                        "croce",
-                        "ghirlanda",
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "657",
-        "nome":  "Monumento Bastianini",
-        "data":  "1927",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "637",
-        "nome":  "Tomba della famiglia Penna_ Sandro Penna",
-        "data":  null,
-        "nascita":  "1906",
-        "morte":  "1977",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "croce",
-                        "alpha_omega"
-                    ]
-    },
-    {
-        "id":  "654",
-        "nome":  "Tomba del Convento di Monte Ripido_ Padre Diego Donati",
-        "data":  null,
-        "nascita":  "1910",
-        "morte":  "2002",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "1",
-        "nome":  "Tempio della cremazione",
-        "data":  "1884",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  [
-                          "1",
-                          "2"
-                      ],
-        "symbols":  [
-                        "torcia"
-                    ]
-    },
-    {
-        "id":  "2939",
-        "nome":  "Cappella Baldeschi",
-        "data":  "1902",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "edera",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "2936",
-        "nome":  "Monumento Tancetti",
-        "data":  "1898",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "corda",
-                        "palmetta",
-                        "stella"
-                    ]
-    },
-    {
-        "id":  "2938",
-        "nome":  "Monumento Ragnotti",
-        "data":  "1900",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "angelo",
-                        "ulivo"
-                    ]
-    },
-    {
-        "id":  "2943",
-        "nome":  "Monumento Paolo Angeloni",
-        "data":  "1897",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "angelo",
-                        "giglio",
-                        "margherita",
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2941",
-        "nome":  "Monumento Sereni",
-        "data":  "1901",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "croce",
-                        "ghirlanda",
-                        "papavero",
-                        "rosa",
-                        "tromba"
-                    ]
-    },
-    {
-        "id":  "2944",
-        "nome":  "Monumento Masi-Frerejan",
-        "data":  "1898",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "palmetta",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2945",
-        "nome":  "Cappella Fiorini-Pacioselli",
-        "data":  "1908",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "leone",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "2946",
-        "nome":  "Monumento Rizzoli-Ticchioni",
-        "data":  "1893",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alpha_omega",
-                        "angelo",
-                        "croce"
-                    ]
-    },
-    {
-        "id":  "2947",
-        "nome":  "Monumento Americo Calderini",
-        "data":  "1891",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "croce",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2952",
-        "nome":  "Monumento Vicarelli",
-        "data":  "1895",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "lira",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "2955",
-        "nome":  "Monumento Sebastiani già Cosatti",
-        "data":  "1901",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "croce",
-                        "edera",
-                        "ghirlanda",
-                        "margherita",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2957",
-        "nome":  "Cappella Ricciarelli",
-        "data":  "1898",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "trifoglio"
-                    ]
-    },
-    {
-        "id":  "2958",
-        "nome":  "Monumento Degli Oddi",
-        "data":  "1892",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2105",
-        "nome":  "Cippo di Santina Calderini",
-        "data":  null,
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "croce",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2907",
-        "nome":  "Edicola Biscarini",
-        "data":  null,
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "lampada",
-                        "vite"
-                    ]
-    },
-    {
-        "id":  "2908",
-        "nome":  "Monumento Moscioni",
-        "data":  "1892",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "crisma",
-                        "croce",
-                        "rosa",
-                        "torcia",
-                        "ulivo"
-                    ]
-    },
-    {
-        "id":  "2922",
-        "nome":  "Monumento Milletti",
-        "data":  "1904",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "acanto",
-                        "angelo"
-                    ]
-    },
-    {
-        "id":  "2914",
-        "nome":  "Monumento Benincasa",
-        "data":  "1906",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "crisantemo",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2916",
-        "nome":  "Monumento Pernossi",
-        "data":  "1909",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "margherita",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2917",
-        "nome":  "Monumento Rossini",
-        "data":  "1905",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "ghirlanda",
-                        "liuto",
-                        "margherita",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2918",
-        "nome":  "Monumento Mammalucchi",
-        "data":  "1912",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "cero",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2920",
-        "nome":  "Monumento Pisinicca-Laparelli",
-        "data":  "1903",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "palmetta"
-                    ]
-    },
-    {
-        "id":  "2928",
-        "nome":  "Monumento Tiriduzi-Bavicchi",
-        "data":  "1910",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "edera",
-                        "lampada",
-                        "torcia"
-                    ]
-    },
-    {
-        "id":  "2911",
-        "nome":  "Monumento Bonacci Brunamonti",
-        "data":  "1914",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "alloro",
-                        "arpia",
-                        "croce",
-                        "papavero"
-                    ]
-    },
-    {
-        "id":  "960",
-        "nome":  "Edicola prof. Giovanni Pennacchi",
-        "data":  null,
-        "nascita":  "1811",
-        "morte":  "1883",
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "croce",
-                        "lira"
-                    ]
-    },
-    {
-        "id":  "762",
-        "nome":  "Famiglia Rufini",
-        "data":  "1938",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "rosa",
-                        "angelo",
-                        "margherita"
-                    ]
-    },
-    {
-        "id":  "2910",
-        "nome":  "Monumento Marinelli",
-        "data":  "1922",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "angelo",
-                        "ghirlanda",
-                        "margherita",
-                        "pigna",
-                        "rosa"
-                    ]
-    },
-    {
-        "id":  "2541",
-        "nome":  "Paolina Burattini",
-        "data":  "1900",
-        "nascita":  null,
-        "morte":  null,
-        "descrizione":  null,
-        "mergedIds":  {
-
-                      },
-        "symbols":  [
-                        "torcia"
-                    ]
+        "id": "2858",
+        "nome": "Edicola Bonfanti Casini",
+        "data": "1894",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "L'Edicola Bonfatti Casini risale al 1894 e accoglie i visitatori proprio all'inizio del viale centrale del cimitero. La costruzione spicca di una verticalità legata alla struttura architettonica in stile neogotico,realizzata da colonne attorcigliate e piccoli archi a trifoglio. Al centro di questa architettura è posizionata una donna dallo sguardo malinconico e romantico, vestita con abiti della sua epoca. L'unione tra un'impalcatura finta-antica e la veste contemporanea crea un effetto visivo di forte rottura, molto ricercato in quegli anni. Il monumento gioca sulle trasparenze e lascia gli spazi aperti, incorniciando il paesaggio dietro la tomba.",
+        "symbols": [
+            "margherita",
+            "papavero",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2879",
+        "nome": "Annibale Vecchi",
+        "data": "1901",
+        "nascita": "1819",
+        "morte": "1880",
+        "descrizione": "La tomba di Annibale Vecchi ospita un busto in scultura modellato da Raffaele Angeletti nel 1901. Il sepolcro include una frase incisa da Leopoldo Tiberi, pensata per esaltare il defunto come instancabile difensore delle classi popolari. Annibale Vecchi insegna tossicologia all'università e guida la polizia per il governo provvisorio perugino nel giugno del 1859. Un esilio forzato a Torino non spegne affatto le sue battaglie democratiche. Una volta fatta l'Italia, lancia il giornale \"La Sveglia\", arruola volontari per liberare Roma e fa nascere il primo comitato per le case popolari in città. Pochi decenni dopo la sua morte, la città gli intitola in via ufficiale il nuovo Istituto per le case popolari.",
+        "symbols": [
+            "acanto",
+            "papavero",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2816",
+        "nome": "Passerotti",
+        "data": null,
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La tomba Passerotti si innalza come una sobria cappella di famiglia in pietra chiara e accoglie i visitatori dietro un cancello metallico lavorato a motivi circolari. La facciata principale culmina in un frontone triangolare che sovrasta un ingresso ad arco arricchito da una precisa composizione scultorea. Proprio al centro di questa decorazione spicca una piccola lanterna in pietra, dominata subito sopra da una grande conchiglia dai contorni ben definiti. Due figure di angeli si integrano in modo armonico nell'architettura generale del monumento.",
+        "symbols": [
+            "angelo",
+            "conchiglia",
+            "lampada"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2811",
+        "nome": "Cappella Pagni-Schinardi",
+        "data": "1901",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La Cappella Pagni-Schinardi si colloca sul lato sinistro del viale principale. La costruzione mostra uno stile neoclassico, distinguendosi per l’architettura di sobrietà dorica. La decorazione scultorea prevede un medaglione appeso a una parete dentro al quale si ritrovano due coniugi che si guardano faccia a faccia, suggerendo la realizzazione dello stesso di un'epoca più recente rispetto all’intera struttura.",
+        "symbols": [
+            "alpha_omega",
+            "croce",
+            "ghirlanda",
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2798",
+        "nome": "Cappella Calzoni",
+        "data": "1935",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La Cappella Calzoni è un edificio funerario a pianta centrale, interamente costruito in pietra chiara. Esibisce un'estetica neoclassica e monumentale che ricorda un antico tempio circolare. La base presenta un porticato semicircolare sorretto da sei massicce colonne scanalate. Sopra le colonne corre una trabeazione orizzontale liscia. Al di sopra, si eleva un corpo cilindrico sormontato da una cupola bassa e semisferica.",
+        "symbols": [
+            "angelo",
+            "croce",
+            "ghirlanda",
+            "lampada"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2825",
+        "nome": "Massini",
+        "data": "1858",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Il Monumento Massini, realizzato in marmo bianco è opera dello scultore Raffaele Carattoli. Questo monumento mostra la personificazione della Storia attraverso una figura femminile dotata di ali e caratterizzata da un'elaborata acconciatura classica con i capelli raccolti e da una veste drappeggiata. La figura femminile viene rappresentata su un supporto decorato da scanalature verticali e nell'atto di appuntare il nome dell'uomo su un testo. Con la mano destra stringe infatti uno stilo per tracciare le righe di scrittura su una lunga pergamena srotolata, tenuta ferma con la mano sinistra. Nell'angolo inferiore sinistro viene rappresentato il grifo perugino in posa rampante, posizionato sopra uno scudo dal fondo liscio e incorniciato da una ghirlanda vegetale. Proprio accanto allo scudo e alla base della figura si nota un piccolo accumulo di oggetti legati alla scrittura, tra cui altri rotoli di pergamena, che rafforzano il ruolo documentario della Storia. A incorniciare la scena centrale intervengono infine due lampade funerarie votive in bronzo, spente e appese con delle catenelle a staffe metalliche laterali, che inseriscono perfettamente l'opera di stampo neoclassico nel suo contesto cimiteriale.",
+        "symbols": [
+            "angelo",
+            "ghirlanda",
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2773",
+        "nome": "Pagnotta",
+        "data": "1915",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La Cappella Pagnotta, nota in passato anche come Piergiovanni, riceve la concessione per la costruzione nel 1915 e va incontro a un successivo ampliamento nel 1950. La realizzazione delle sculture coinvolge Giuseppe Frenguelli per la figura del bimbo e Bruto Mosci per la statua della bambina. La scelta di inserire dei fanciulli richiama in modo esplicito la tomba Ferrari situata nel cimitero di Staglieno. I due bambini mostrano tratti del viso molto naturali e assumono pose delicate e aggraziate. Questo tipo di rappresentazione riprende un'iconografia molto diffusa nel tardo Romanticismo e nel Simbolismo.",
+        "symbols": [
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2745",
+        "nome": "Cappella Luchetti",
+        "data": null,
+        "nascita": "1823",
+        "morte": "1907",
+        "descrizione": "La Cappella Luchetti si affaccia sul lato sinistro del vialetto centrale. Il sepolcro custodisce le spoglie di Giuseppe Luchetti, un importante scultore nato a Perugia nel 1823 e morto a Napoli nel 1907. Questo artista lavora a lungo nel cimitero perugino e arricchisce il luogo con diverse sue opere come il Monumento Perucchini, datato intorno al 1879; Il Monumento Oddi, realizzato nel 1892; Il Monumento Vicarelli, risalente al 1895 e il Monumento Rossini, completato nel 1905.",
+        "symbols": [
+            "archipendolo",
+            "palmetta",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2716",
+        "nome": "Giuseppe Porta",
+        "data": null,
+        "nascita": null,
+        "morte": "1917",
+        "descrizione": "La struttura risulta priva di complesse decorazioni e affida il suo valore a una significativa iscrizione incisa sulla pietra mostrando il legame tra due generazioni, unendo la figura del giovane Giuseppe Porta, morto in battaglia contro gli austriaci nel 1917, a quella del suo omonimo antenato. Quest'ultimo, di professione medico, viene ricordato per essere caduto vittima dei mercenari svizzeri il 20 giugno 1859, colpito a morte nell'atto di agitare una bandiera di pace. A livello di collocazione spaziale, posizionato proprio a fianco di questa tomba, si trova inoltre il sepolcro di Gaspard Ab-Yberg, un capitano svizzero ucciso dalle ferite riportate durante il medesimo assalto a Perugia del 1859.",
+        "symbols": [
+            "crisma",
+            "ghirlanda",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2664",
+        "nome": "Cappella Cesare Agostini",
+        "data": null,
+        "nascita": "1864",
+        "morte": "1942",
+        "descrizione": "Cesare Agostini è un medico vissuto tra il 1864 e il 1942 che approfondisce i suoi studi in psichiatria prima nel manicomio di Reggio Emilia e in seguito in Germania, ad Heidelberg. Nel 1904 assume la direzione dell'ospedale psichiatrico perugino e sale in cattedra all'università cittadina per insegnare medicina legale, antropologia e psichiatria forense.",
+        "symbols": [
+            "croce",
+            "acanto"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2500",
+        "nome": "Famiglia Carboni",
+        "data": "1886",
+        "nascita": null,
+        "morte": null,
+        "descrizione": null,
+        "symbols": [
+            "crisma",
+            "croce",
+            "palmetta",
+            "papavero"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2510",
+        "nome": "Famiglia Cecconi e Ranucci",
+        "data": "1953",
+        "nascita": null,
+        "morte": null,
+        "descrizione": null,
+        "symbols": [
+            "giglio"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2476",
+        "nome": "Famiglia Maragoni",
+        "data": "1984",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Sulla tomba della famiglia Camilletti-Maragoni si nota subito una clessidra con le ali scolpita proprio al centro dell'arco. Il monumento comunica un'idea molto cara alla filosofia massonica attraverso il simbolo della clessidra, ovvero che la morte non è un punto fermo, ma una trasformazione e un viaggio verso un nuovo stato dell'essere.",
+        "symbols": [
+            "alpha_omega",
+            "clessidra_alata",
+            "crisma",
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2391",
+        "nome": "Famiglia Gambelunghe",
+        "data": "1956",
+        "nascita": null,
+        "morte": null,
+        "descrizione": null,
+        "symbols": [
+            "croce",
+            "ghirlanda",
+            "palmetta",
+            "uroboro",
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2293",
+        "nome": "Monumento Bianchi",
+        "data": "1869",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzato nel 1869 per il cavaliere Giambattista Bianchi, questo monumento ha la forma di un piccolo tempio neorinascimentale la cui struttura poggia su quattro colonne e termina con una cupola decorata da una pigna, che dà al sepolcro un tono solenne e maestoso, ma allo stesso tempo laico.Al centro si trova il busto in marmo di Bianchi, circondato da una raggiera e da ghirlande di fiori che richiamano la sua fama e le sue virtù. Poco più in basso compare lo stemma di famiglia.L’elemento di maggior interesse in questo monumento sono i bassorilievi sui lati, dove sono scolpiti attrezzi come la squadra, la corda, il cerchio e il piccone. Si tratta infatti di simboli spesso usati nella massoneria per indicare l'equilibrio e la crescita spirituale. A confermare questa lettura vi è l’assenza di croci o altri simboli religiosi.",
+        "symbols": [
+            "acanto",
+            "alpha_omega",
+            "corda",
+            "crisma",
+            "croce",
+            "ghirlanda",
+            "papavero",
+            "stella",
+            "ulivo",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2328",
+        "nome": "Monumento Carattoli",
+        "data": "1850",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa opera si trova lungo il muro sinistro del cimitero ed è realizzata nel 1850. Gli autori sono gli scultori Raffaele Carattoli e Raffaele Omicini, i quali dedicano il lavoro al pittore Giuseppe Carattoli, padre di Raffaele, scomparso a Roma proprio in quell'anno. Il monumento presenta uno stile purista e una grande raffinatezza nelle linee, visibile soprattutto nella figura che esprime dolore. Al centro dell'opera spicca un busto a forma di medaglione, un elemento che dimostra come la tradizione neoclassica sia ancora molto sentita tra gli artisti perugini dell'epoca.",
+        "symbols": [
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2235",
+        "nome": "Busto del prof. Giovanni Santini",
+        "data": "1868",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Il professor Giovanni Santini, nato a Umbertide e vissuto a Perugia nell'Ottocento, è un ingegnere e architetto molto stimato. Insegna architettura e prospettiva alla locale Accademia di Belle Arti, dove rinnova profondamente l'insegnamento spingendo gli allievi a studiare i monumenti dal vero anziché limitarsi ai disegni e alle stampe. Tra le sue opere principali si ricordano il mattatoio di Perugia e il tempio della Madonna Auxilium Christianorum nei pressi di Spoleto.Con la sua morte, avvenuta nel 1868, lo scultore Guglielmo Ciani realizza per lui un monumento funebre che oggi si trova lungo il muro sinistro del cimitero monumentale. L'opera si distingue per un ritratto molto realistico accompagnato da simboli legati alla massoneria, molto sentita a Perugia e strumenti che indicano la sua professione tecnica.",
+        "symbols": [
+            "archipendolo",
+            "ghirlanda",
+            "palmetta",
+            "papavero"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2203",
+        "nome": "Monumento Ridolfini",
+        "data": "1894",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Terminato nel 1894 da Romano Mignini. Questa costruzione colpisce per la sua struttura che segue lo stile neogotico, molto diffuso nei cimiteri di fine secolo perché considerato adatto al raccoglimento. L'opera appare molto imponente, con un'edicola particolarmente alta e un arco trilobato. Un elemento interessante è il busto che ritrae il capofamiglia, caratterizzato da un'espressione severa e accigliata.",
+        "symbols": [
+            "acanto"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2172",
+        "nome": "Monumento Buattini",
+        "data": "1859",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "È un'opera del 1859 realizzata dallo scultore Raffaele Omicini. Rappresenta una giovane donna che scompare tragicamente proprio mentre si sta preparando per andare a una festa. L'artista sceglie di ritrarla in una posizione che richiama apertamente le antiche urne cinerarie etrusche, dove i defunti appaiono semisdraiati come se fossero a un banchetto. Tuttavia, a differenza dei modelli originali pieni di vita, qui la figura femminile esprime un senso di stanchezza e di abbandono al sonno, riflettendo quel sentimentalismo tipico della metà del diciannovesimo secolo.",
+        "symbols": [
+            "ghirlanda"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2177",
+        "nome": "Monumento Zurli",
+        "data": "1886",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Situato lungo il viale centrale sul lato sinistro, risale a circa il 1886, anno della morte di Giuseppe Zurli, che fu direttore della Clinica Psichiatrica cittadina. L'opera è firmata dallo scultore Romano Mignini. Sebbene l'insieme possa apparire quasi inquietante, i busti si distinguono per l'accuratezza con cui l'artista ha saputo rendere i lineamenti e il carattere dei soggetti. Un elemento significativo è la mancanza di simboli religiosi cristiani, segno di come la borghesia dell'epoca volesse esprimere attraverso queste opere i propri valori laici",
+        "symbols": [
+            "alpha_omega",
+            "caduceo",
+            "margherita",
+            "rosa",
+            "stella"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2189",
+        "nome": "Monumento Mattioli",
+        "data": "1893",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "L'opera è dedicata ad Anna Mattioli, scomparsa intorno al 1892, e a suo marito Luigi Mattioli, noto per essere il proprietario dello stabilimento termale di San Galigano. L'edicola è una delle prime realizzazioni portate a termine dallo scultore Romano Mignini all'interno del camposanto e segue uno stile eclettico. Dal punto di vista architettonico, il lavoro si ispira esplicitamente all'edicola Dettina, opera di Raffaele Inganni presente nel cimitero del Verano a Roma, pur riproponendo le forme in scala ridotta.",
+        "symbols": [
+            "alpha_omega",
+            "ancora",
+            "ghirlanda",
+            "palmetta",
+            "papavero"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2097",
+        "nome": "Mario Grecchi",
+        "data": null,
+        "nascita": "1926",
+        "morte": "1944",
+        "descrizione": "Mario Grecchi nasce a Milano nel 1926 ed è uno studente del Collegio Militare. Durante la Resistenza diventa il comandante della \"Brigata Leoni\", un gruppo partigiano che opera tra Bettona e Castelleone. Nel marzo del 1944, dopo un violento scontro in cui uccide un ufficiale tedesco che gli ordina di arrendersi, viene catturato e condannato a morte. Per permettere l'esecuzione il mattino seguente, i tedeschi lo sottopongono a trasfusioni di sangue forzate. Muore fucilato al poligono di tiro di Perugia insieme ad altri membri della sua brigata. Il monumento funebre realizzato in travertino presenta una struttura architettonica a forma di ara celebrativa, sormontata da un timpano decorato con festoni d'alloro e una croce fiammata. L'arca principale, recante l'iscrizione “Medaglia d'Oro Mario Grecchi”, è retta da quattro colonne posizionate sul basamento, nel quale troviamo anche un braciere decorato in bronzo.",
+        "symbols": [
+            "ghirlanda",
+            "leone"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2142",
+        "nome": "Monumento Vannoni",
+        "data": "primi anni del '900",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzato nei primi anni del Novecento dallo scultore Tito Orfei, il monumento della famiglia Vannoni è un esempio affascinante di come l’arte funeraria dell'epoca sapesse unire estetica e mistero. Si trova lungo il muro di cinta destro, appena prima della galleria, e colpisce subito per il suo stile che richiama la facciata dell'Oratorio di San Bernardino a Perugia, riproponendo la grazia e quei panneggi fluidi e leggeri che rendono le figure quasi eteree. Il bassorilievo centrale raffigura una figura femminile che stringe a sé uno scheletro avvolto in un tronco d'albero. Qui il linguaggio si fa esoterico in cui la donna rappresenta la Sophia (la Sapienza), una guida che accompagna l'anima nel momento del passaggio, trasformando il concetto di morte in un rito di trasformazione e purificazione. Lo scheletro stesso, simbolo caro anche alla tradizione massonica, indica lo spogliarsi di tutto ciò che è superfluo per arrivare all'essenza dell’essere.",
+        "symbols": [
+            "alpha_omega",
+            "papavero",
+            "teschio"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1077",
+        "nome": "Cappella della Confraternita della Misericordia",
+        "data": "1888",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La Confraternita della Misericordia risale al 1570, quando nasce con il nome di Compagnia dell’Orazione e della Morte. La sua missione principale è dare una degna sepoltura a chi non ha i mezzi, come i poveri o chi muore per strada, offrendo anche conforto spirituale ai condannati a morte nelle ore che precedono l'esecuzione. Dopo l'apertura del Cimitero Monumentale, la Confraternita costruisce la propria cappella in una posizione centrale. L’edificio fa parte delle cosiddette chiese leonine, un gruppo di luoghi di culto nati o restaurati per volontà di papa Leone XIII durante il suo lungo incarico come arcivescovo a Perugia. La costruzione avviene tra il 1874 e il 1886, seguendo i progetti degli ingegneri Nazzareno Biscarini e Alessandro Arienti.L'architettura mescola con equilibrio lo stile neogotico e quello neorinascimentale in cui il laterizio viene usato decorativamente con un gioco di colori a fasce orizzontali. Sulla facciata spiccano le statue in terracotta dei santi patroni di Perugia, Costanzo ed Ercolano, insieme ad altri busti realizzati dal laboratorio di Francesco Biscarini e Raffaele Angeletti. Anche i soffitti a cassettoni delle ali laterali sono decorati in terracotta dipinta, un dettaglio che rende la cappella uno dei monumenti più colorati e visibili di tutto il cimitero.",
+        "symbols": [
+            "vite",
+            "acanto"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1134",
+        "nome": "Luigi Bonazzi",
+        "data": null,
+        "nascita": "1811",
+        "morte": "1879",
+        "descrizione": "Il monumento funebre celebra il più importante storico della città, noto per la sua monumentale \"Storia di Perugia\". La tomba si trova lungo il muro di cinta sinistro ed è un punto di riferimento per la memoria civile perugina. Bonazzi è ricordato per il suo spirito indipendente e per aver interpretato la storia cittadina come una continua lotta per la libertà contro ogni forma di tirannia. L'architettura della sepoltura riflette i valori laici e democratici della borghesia risorgimentale, priva di eccessivi simbolismi religiosi.",
+        "symbols": [
+            "crisma"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1015",
+        "nome": "Edicola Carlo Bruschi",
+        "data": null,
+        "nascita": "1820",
+        "morte": "1879",
+        "descrizione": "L’edicola è dedicata alla memoria di Carlo Bruschi avvocato e fervente patriota che combatte per la Repubblica Romana e partecipa all'insurrezione perugina del 1859. Il monumento è caratterizzato da due medaglioni scultorei realizzati da Giuseppe Frenguelli in cui quello superiore ritrae il padre Domenico, celebre medico, mentre quello inferiore raffigura Carlo. La struttura fu voluta dal figlio di quest'ultimo, il pittore Domenico Bruschi, figura centrale dell'arte post-unitaria a Perugia e Roma. Dal punto di vista architettonico, l'edicola si inserisce nel muro perimetrale sinistro, esaltando il profilo dei defunti attraverso un verismo fisionomico molto curato.",
+        "symbols": [
+            "acanto",
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "961",
+        "nome": "Cappella Forconi Donati",
+        "data": "1937",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La struttura si sviluppa con una spiccata verticalità, cercando di riprodurre le forme di una casa moderna rappresentando un esempio significativo di architettura funeraria razionalista con influenze déco. Il progetto gioca con il contrasto tra superfici concave, convesse e piani lisci, creando un dinamismo visivo tipico dell'epoca fascista. Quattro piccole finestre sono disposte sulla facciata in modo da suggerire la forma di una croce, integrando il simbolo religioso nella geometria rigida dell'edificio. L'approccio architettonico riflette una nuova concezione della morte, meno legata alle decorazioni ottocentesche e più orientata alla pulizia delle linee.",
+        "symbols": [
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1002",
+        "nome": "Edicola Rossi Schnabl",
+        "data": "1911",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Situata in una piazzola sul lato sinistro, l'edicola viene progettata dall'architetto Tullio Passarelli e completata con le sculture di Pietro Canonica tra il 1911 e il 1925. L'impianto architettonico richiama la solennità degli archi di trionfo della Roma imperiale, conferendo alla struttura un tono monumentale e austero. Al suo interno, però, spicca per contrasto la figura femminile scolpita da Canonica, nota per la sua capacità di rendere forme leggiadre ed eleganti. Il monumento è legato alla figura di Riccardo Rossi Schnabl, critico musicale e amico intimo di Giacomo Puccini, che scelse Perugia come sua dimora.",
+        "symbols": [
+            "papavero",
+            "rosa",
+            "acanto"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "982",
+        "nome": "Cappella Urbani",
+        "data": "1920",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "La cappella, costruita nel 1920 originariamente per la famiglia Vitaletti, si distingue per la copertura superiore, dove viene sovrapposta la forma di un sarcofago che chiude visivamente l'edificio. La decorazione è estremamente ridotta, limitandosi a pochi elementi sobri che non ne intaccano la volumetria massiccia. Questa scelta stilistica comunica un senso di stabilità e chiusura, riflettendo una concezione della tomba come custode inviolabile dei resti mortali. Si trova nei pressi della piazzola centrale e rappresenta una transizione verso forme più semplificate rispetto alle cappelle eclettiche della fine dell'Ottocento.",
+        "symbols": [
+            "alpha_omega",
+            "crisma",
+            "ghirlanda"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "903",
+        "nome": "Cappella del Buon Tromboni",
+        "data": "1926",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa cappella è celebre per l’alta qualità del suo apparato scultoreo, che rappresenta uno degli esempi di stile Liberty appartenenti al cimitero; il rilievo decorativo è caratterizzato da linee ondulate, motivi fitomorfi che messe a confronto con le cappelle vicine degli anni Trenta mette in luce il cambiamento stilistico avvenuto in pochi decenni, passando dalla libertà del tratto Liberty alla rigidezza del razionalismo.",
+        "symbols": [
+            "angelo",
+            "ulivo",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1138",
+        "nome": "Monumento Purgotti",
+        "data": "1879",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Il monumento celebra la famiglia di Sebastiano Purgotti, chimico, matematico e rettore dell'Università di Perugia. La struttura si trova sul muro destro, oltre la galleria, e riflette il prestigio accademico e scientifico della stirpe. Il monumento cita anche i nipoti Luigi e Attilio, che legarono il nome dei Purgotti allo sviluppo industriale di Perugia fondando la fabbrica di fiammiferi Saffa. Dal punto di vista architettonico, l'opera mantiene un tono sobrio e celebrativo, tipico dei monumenti dedicati agli uomini illustri della scienza. Rappresenta il legame tra l'eccellenza universitaria perugina e l'innovazione tecnologica che ha segnato la storia economica della città tra Ottocento e Novecento.",
+        "symbols": [
+            "alloro",
+            "croce",
+            "ghirlanda"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "934",
+        "nome": "Cappella Biagiotti",
+        "data": "1920",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzata nel 1920 su progetto dell'architetto Ugo Tarchi è un esempio perfetto di recupero del neogotico umbro in cui si propongono elementi tipici della tradizione locale, come l'arco a sesto acuto e le decorazioni geometriche, ma li depura in una suddivisione dei parati murari molto semplice e moderna. Nella lunetta sopra l'ingresso è collocato un angelo opera dello scultore Giuseppe Frenguelli, che in quest'occasione abbandona il verismo per ispirarsi alla grazia del Rinascimento italiano. Il contrasto tra la severità dell'impianto gotico e la dolcezza della scultura crea un effetto di grande equilibrio spirituale.",
+        "symbols": [
+            "angelo",
+            "tromba"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "819",
+        "nome": "Cappella Fani",
+        "data": "1892",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzata intorno al 1892 dagli scultori Raffaele Angeletti e Francesco Biscarini, questa struttura si distingue per l’uso di una progettazione architettonica integrata. L’esterno presenta un rivestimento bicromo che richiama le fasce delle chiese romaniche, arricchito da un apparato decorativo armonico tra i diversi materiali. Al suo interno si trovano affreschi di Domenico Bruschi. La cappella lega la sua importanza storica alla figura di Cesare Fani, patriota garibaldino, parlamentare e ministro di Grazia e Giustizia.",
+        "symbols": [
+            "papavero",
+            "acanto",
+            "angelo",
+            "ghirlanda",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "780",
+        "nome": "Monumento Filippi",
+        "data": "1914",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest'opera del 1914 appartiene alla fase matura di Angelo Biscarini, nipote di Francesco e noto per la sua produzione nel laboratorio di terrecotte. Lo scultore abbandona qui i modelli quattrocenteschi per abbracciare forme più vicine alla produzione artistica europea del primo Novecento. La struttura riflette la transizione verso un gusto più moderno",
+        "symbols": [
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "775",
+        "nome": "Cappella Doneddu",
+        "data": "1907",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Costruita nel 1907, rappresenta la prima opera realizzata da Angelo Biscarini all’interno del cimitero perugino. L'edificio è interamente caratterizzato dall’uso della terracotta sia per gli elementi strutturali che per le ornamentazioni. Nella lunetta superiore spicca un altorilievo raffigurante la Madonna circondata da angeli.",
+        "symbols": [
+            "angelo"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "733",
+        "nome": "Monumento Cerulli",
+        "data": "1894",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Eseguito nel 1894 dallo scultore Giulio Tadolini, il monumento è celebre per l’imponente figura di un angelo con la tromba. La scultura rappresenta l'angelo del Giudizio Universale, colto nell'atto di annunciare la resurrezione dei morti nel giorno finale. L'opera si distingue per l'alta carica espressiva e la tensione dinamica che la sottrae alla staticità delle iconografie classiche. Collocato lungo la galleria, funge da punto di riferimento visivo per l'intera ala monumentale.",
+        "symbols": [
+            "alpha_omega",
+            "crisma",
+            "ghirlanda"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "739",
+        "nome": "Cappella Franceschini",
+        "data": "1929",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Anticamente appartenente alla famiglia Bellachioma, la cappella fu decorata dalla collaborazione tra gli scultori Angeletti e Biscarini e il pittore Domenico Bruschi. Quest'ultimo realizzò nel 1890 un importante ciclo di affreschi interni. L’architettura fonde elementi neoromanici e neorinascimentali, con inserti in mosaico e marmi colorati che creano una ricca policromia. La struttura celebra il prestigio sociale raggiunto dalla committenza borghese attraverso il recupero di stili storici.",
+        "symbols": [
+            "alpha_omega",
+            "crisma",
+            "ghirlanda"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "760",
+        "nome": "Famiglia Cesaroni",
+        "data": "1892",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzata nel 1897 dall'architetto Ulpiano Bucci, questa cappella ha le sembianze di un vero e proprio mausoleo. L’opera testimonia l'ascesa economica di Ferdinando Cesaroni, grande imprenditore ferroviario e proprietario del palazzo omonimo in centro città. Il cancello laterale in bronzo disegnato dallo stesso Bucci ed eseguito dalla fonderia Benini di Firenze è caratterizzato da molteplici dettagli.",
+        "symbols": [
+            "conchiglia",
+            "rosa",
+            "angelo",
+            "ghirlanda",
+            "palmetta",
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2377",
+        "nome": "Cappella Radicioni",
+        "data": "1909",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Originariamente di proprietà del conte Giorgio Montesperelli, passò successivamente alla famiglia Radicioni. L'opera, firmata da Angelo Biscarini nel 1909, è nota per il rilievo di angeli danzanti che attraversa tutta la facciata. I panneggi svolazzanti e le linee morbide delle figure sono mossi da un evidente stile liberty.",
+        "symbols": [
+            "acanto",
+            "stella",
+            "angelo",
+            "rosa",
+            "croce",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "666",
+        "nome": "Edicola di Maria Bonaparte Valentini",
+        "data": "1847",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzata nel 1878 dagli scultori Angeletti e Biscarini, ospita un busto realizzato nel 1847 da Luigi Pampaloni. Il monumento commemora Maria, figlia di Luciano Bonaparte e sposa del conte perugino Valentini. Storicamente, la nobildonna è la figura centrale nei moti risorgimentali, trasformando il suo salotto in un punto d'incontro per i patrioti locali. L'architettura dell'edicola svolge il ruolo di cornice neoclassica al ritratto marmoreo della principessa.",
+        "symbols": [
+            "stella",
+            "leone"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "542",
+        "nome": "Edicola Biscarini_ Angelo Biscarini",
+        "data": null,
+        "nascita": "1877",
+        "morte": "1951",
+        "descrizione": "Il termine si riferisce spesso alle opere o alla sepoltura della famiglia del celebre scultore e direttore del Laboratorio di terrecotte ornamentali. Angelo Biscarini, attivo tra fine Ottocento e metà Novecento, ha lasciato nel cimitero una traccia della sua abilità scultorea. Le sue realizzazioni uniscono spesso la tradizione accademica dell'Accademia \"Pietro Vannucci\" a nuove sensibilità simboliste. La tomba di famiglia rappresenta la sintesi del lavoro di una dinastia di artisti che ha dato forma al cimitero stesso.",
+        "symbols": [
+            "ghirlanda",
+            "corda",
+            "archipendolo"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "581",
+        "nome": "Cappella Bournens",
+        "data": "1916",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Progettata nel 1916, si caratterizza per un'originale struttura a piramide tronca. Al centro della facciata domina una figura femminile con le braccia aperte in un gesto di protezione verso i medaglioni con i ritratti dei defunti. L'effetto scenografico è rafforzato dal contrasto tra il bianco candido del marmo della scultura e la pietra della costruzione. La forma piramidale richiama simbologie esoteriche legate al cammino dell'anima verso l’aldilà in una chiave architettonica moderna.",
+        "symbols": [
+            "papavero",
+            "margherita",
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "676",
+        "nome": "Aganoor Pompilj",
+        "data": null,
+        "nascita": "1855",
+        "morte": "1910",
+        "descrizione": "Opera di Giuseppe Frenguelli, questa cappella custodisce le spoglie della poetessa Vittoria Aganoor, celebrata per la sua bellezza e profondità delle opere liriche interiori e del marito Guido Pompilj. La storia del sepolcro è legata al destino dei due sposi, morti entrambi a Roma nel 1910 a poche ore di distanza l'uno dall'altra. Il monumento riflette l'amore e l'intesa intellettuale della coppia attraverso uno stile delicato e privo di ostentazioni.",
+        "symbols": [
+            "acanto",
+            "alpha_omega",
+            "alloro"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "574",
+        "nome": "Cappella Taticchi",
+        "data": "1884",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa struttura, progettata intorno al 1884, viene realizzata da Giulio De Angelis, una figura di rilievo attiva soprattutto a Roma e nota per l'impiego pionieristico del ferro in architettura. Dal punto di vista storico, rappresenta un'importante testimonianza di committenza borghese che si affida ad autori di formazione esterna all'accademia locale. L'opera riflette il gusto eclettico dell'epoca, celebrando il prestigio familiare attraverso forme architettoniche solenni.",
+        "symbols": [
+            "papavero",
+            "acanto",
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "698",
+        "nome": "Cappella Bugiardi",
+        "data": "1915",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa cappella risale a un periodo intorno al 1915-1917. L'architettura è caratterizzata da una netta divisione orizzontale tra un basamento a bugnato semplice e una parte superiore ricca di elementi figurativi in cui spiccano quattro figure di angeli sorridenti realizzati dello scultore Giuseppe Frenguelli, che dai vertici della struttura rivolgono lo sguardo verso il cielo. Storicamente, la cappella apparteneva in origine alle famiglie Piergiovanni e Milletti prima di passare ai Bugiardi. L'effetto d'insieme invita il visitatore a un'elevazione spirituale, suggerita dalla postura dinamica delle sculture.",
+        "symbols": [
+            "angelo",
+            "ghirlanda",
+            "papavero",
+            "croce",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "525",
+        "nome": "Monumento ai caduti del XX Giu\n          gno",
+        "data": "1909",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Posto in posizione d'onore alla fine del viale principale, questo monumento è opera dello scultore Ettore Salvatori e viene inaugurato nel 1875. La struttura si presenta come un'edicola in stile neogotico che ospita la figura allegorica di \"Perugia dolente\" assistita da un genio alato. Storicamente commemora le vittime delle stragi del 1859 e i caduti del 1860, diventando il fulcro delle celebrazioni patriottiche cittadine. Ai piedi della statua principale si trovava un tempo un grifo bronzeo, simbolo della città, rimosso in seguito a un furto. Il monumento funge da sacrario, raccogliendo anche le spoglie di illustri patrioti come Domenico Lupattelli e Pompeo Danzetta. Rappresenta il principale punto di riferimento della memoria risorgimentale perugina all'interno del cimitero.",
+        "symbols": [
+            "angelo",
+            "ghirlanda",
+            "papavero",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "608",
+        "nome": "Cappella Guardabassi_ Francesco Guardabassi",
+        "data": null,
+        "nascita": "1793",
+        "morte": "1871",
+        "descrizione": "Questa sepoltura è dedicata alla memoria del patriota e senatore Francesco Guardabassi, una figura centrale del Risorgimento locale, ricordato storicamente come il \"Babbo dei perugini\" per il suo impegno civile. L'architettura della cappella riflette il prestigio e l'ascesa sociale della famiglia borghese nel periodo post-unitario testimoniando il legame profondo tra la storia politica della città e il suo spazio sepolcrale.",
+        "symbols": [
+            "alpha_omega",
+            "crisma",
+            "croce",
+            "ghirlanda",
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "657",
+        "nome": "Monumento Bastianini",
+        "data": "1927",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa cappella realizzata nel 1934 rappresenta un netto passaggio verso lo stile razionalista. L'elemento architettonico distintivo è la colonna d'angolo, tipica delle tendenze costruttive del periodo fascista. La decorazione include inserti in stile déco, come i cinque pomelli esterni che alludono simbolicamente alle sepolture interne. Dal punto di vista storico, l'opera mostra come la committenza perugina si aggiorni sulle correnti artistiche nazionali degli anni Trenta realizzando una struttura compatta e rigorosa, distanziandosi dagli eccessi decorativi dell'eclettismo ottocentesco.",
+        "symbols": [
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "637",
+        "nome": "Tomba della famiglia Penna_ Sandro Penna",
+        "data": null,
+        "nascita": "1906",
+        "morte": "1977",
+        "descrizione": "Questa sepoltura custodisce le spoglie di Sandro Penna, uno dei più grandi poeti del Novecento italiano, nato a Perugia. Architettonicamente segue lo stile sobrio e discreto tipico delle sepolture della seconda metà del secolo scorso senza gli sfarzi monumentali delle cappelle borghesi d'inizio secolo, riflettendo piuttosto una dimensione più intima e letteraria. Storicamente è una meta per i visitatori che intendono omaggiare la memoria poetica della città.",
+        "symbols": [
+            "croce",
+            "alpha_omega"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "654",
+        "nome": "Tomba del Convento di Monte Ripido_ Padre Diego Donati",
+        "data": null,
+        "nascita": "1910",
+        "morte": "2002",
+        "descrizione": "Collocata in un'area dedicata agli ordini religiosi, ospita i resti dei frati del convento di San Francesco al Monte. Tra le figure sepolte spicca Padre Diego Donati, maestro incisore e artista di fama internazionale. La struttura mantiene una semplicità formale che rispecchia la regola monastica e il voto di povertà dei Frati Minori; pertanto non presenta decorazioni scultoree ostentate evidenziando il valore spirituale e il silenzio del luogo.",
+        "symbols": [
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "1",
+        "nome": "Tempio della cremazione",
+        "data": "1884",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest edificio, realizzato dopo il 1893 e poi ricostruito dopo il 1907 a causa di un cedimento del terreno, si trova in asse con il Monumento ai Caduti. Il tempio viene realizzato grazie a Ariodante Fabretti, archeologo e senatore, le cui ceneri riposano nell'urna centrale della sala. L'architettura dell'edificio risponde a una visione laica e scientifica del culto dei morti, rappresentando l'adesione di una parte della società perugina alle pratiche igieniste e civili di fine Ottocento. L'interno è sobrio e funzionale, progettato per accogliere il rito del commiato in un ambiente raccolto. Il terreno che circonda il tempio è invece destinato allo spargimento delle ceneri, secondo le normative moderne.",
+        "symbols": [
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2939",
+        "nome": "Cappella Baldeschi",
+        "data": "1902",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest'opera rappresenta una decorazione scultorea eseguita intorno al 1902 da Romano Mignini; un esempio significativo del gusto monumentale della ricca borghesia locale dell'epoca. La scultura si distingue per la qualità dei rilievi fisionomici, dove lo si dimostra una grande abilità nel rendere i tratti dei defunti. L'architettura si fonde pertanto con l'apparato scultoreo, cercando un equilibrio tra solennità e realismo.",
+        "symbols": [
+            "angelo",
+            "edera",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2936",
+        "nome": "Monumento Tancetti",
+        "data": "1898",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "L'opera attraverso l'uso di una tenda-sipario scolpita nel marmo richiama effetti marcatamente scenografici. La figura angelica rappresentata nel monumento è colta in una posa dinamica che accentua la teatralità dell'insieme, spesso appartenente allo stile \"neo-barocco\", tipico dell'eclettismo funebre di fine secolo riflettendo la tendenza a umanizzare il dolore attraverso allegorie familiari e rassicuranti.",
+        "symbols": [
+            "angelo",
+            "corda",
+            "palmetta",
+            "stella"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2938",
+        "nome": "Monumento Ragnotti",
+        "data": "1900",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento risalente al 1900 circa ed è un opera di Romano Mignini; la caratteristica principale è il forte contrasto tra il verismo dei ritratti dei defunti e la figura angelica idealizzata. Il volto di Ercole Ragnotti, reso con estrema precisione somatica, testimonia la capacità di indagine psicologica dello scultore mentre l'architettura del monumento funge da cornice a questo dialogo tra reale e ideale.",
+        "symbols": [
+            "acanto",
+            "angelo",
+            "ulivo"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2943",
+        "nome": "Monumento Paolo Angeloni",
+        "data": "1897",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Realizzato nel 1897 da Raffaele Angeletti e Francesco Biscarini, l'opera fonde allegoria e accademismo, mostrando un angelo che si avvicina a una finta porta in segno di benedizione. Si distingue per la ricca decorazione eclettica e per l'esecuzione virtuosa del panneggio della veste. L'uso della terracotta, materiale tipico della ditta degli autori, rappresenta una sintesi efficace tra i valori cristiani e la simbologia del passaggio ultraterreno.",
+        "symbols": [
+            "acanto",
+            "angelo",
+            "giglio",
+            "margherita",
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2941",
+        "nome": "Monumento Sereni",
+        "data": "1901",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Giuseppe Frenguelli realizza questo monumento nel 1901 per ricordare l'avvocato Giovanni Battista Sereni. La composizione dell’opera è dominata da un angelo centrale su uno sfondo di marmo grigio e azzurro, protetto da un arco decorato e da una croce sommitale. La figura indossa una corazza con un piccolo putto alato scolpito sul petto, un dettaglio simbolico che serve a proteggere l'anima del defunto. Il braccio destro dell'angelo è alzato e teso verso l'alto nel gesto dell'adlocutio, un richiamo all'antica Roma usato per chiedere il silenzio prima di un annuncio solenne. Sulla mano sinistra l’angelo stringe una tromba che momentaneamente è posta a destra della scultura. Lo scultore mostra tutta la sua bravura tecnica nel lavorare il marmo, creando pieghe della veste molto dinamiche e capelli ricci definiti con estrema cura. Il volto dell'angelo resta però un po' distaccato e inespressivo, segno che l'artista si sente più a suo agio con i ritratti reali rispetto alle figure ideali. L'opera resta un esempio perfetto di come l'arte funebre di inizio secolo sappia unire con armonia la tradizione militare e quella religiosa.",
+        "symbols": [
+            "angelo",
+            "croce",
+            "ghirlanda",
+            "papavero",
+            "rosa",
+            "tromba"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2944",
+        "nome": "Monumento Masi-Frerejan",
+        "data": "1898",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Giuseppe Frenguelli realizza quest'opera nel 1898 suddividendola in una parte superiore densa di fiori attorno alla Vergine e un sarcofago più essenziale. La figura della donna dolente è considerata uno dei punti più alti dell'artista per la sua sincera espressione di dolore stanco. Storicamente, l'opera celebra l'unione di due famiglie e il dolore borghese per la perdita dei propri cari rappresentando un esempio di scultura che mira a commuovere e coinvolgere emotivamente il visitatore.",
+        "symbols": [
+            "angelo",
+            "palmetta",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2945",
+        "nome": "Cappella Fiorini-Pacioselli",
+        "data": "1908",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Romano Mignini realizza quest'opera nel 1908 creando una solenne monumentalità di elementi decorativi che seguono i canoni dell'eclettismo. La cura nei dettagli architettonici e nelle opere scultoree come i leoni posti ai margini dell’opera, la rendono una delle cappelle più eleganti dell'ala sinistra.",
+        "symbols": [
+            "leone",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2946",
+        "nome": "Monumento Rizzoli-Ticchioni",
+        "data": "1893",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Presentato nel 1893, è situato nella galleria sinistra ed è opera degli scultori Angeletti e Biscarini. Un angelo orante sovrasta una base poligonale dove sono inseriti i ritratti dei defunti in abiti sia contemporanei che antichi. Storicamente, il progetto originario portava la firma di Angeletti, ma i ritratti potrebbero essere di un altro autore. Questo monumento è un chiaro esempio di eclettismo scultoreo che mescola epoche e stili diversi.",
+        "symbols": [
+            "alpha_omega",
+            "angelo",
+            "croce"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2947",
+        "nome": "Monumento Americo Calderini",
+        "data": "1891",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Giuseppe Frenguelli realizza quest'opera nel 1891 distinguendosi per l'accuratezza dei particolari. L'iconografia del monumento risente dell'influenza dei grandi modelli funerari di Staglieno a Genova in cui lo sfondo presenta decorazioni pittoriche d'impronta medievale e scritte in stile semi-etrusco. Storicamente rappresenta l'omaggio alla famiglia di Americo Calderini, in un clima di revival degli stili del passato. L'opera fonde elementi rinascimentali nel bassorilievo con un realismo nel ritratto principale.",
+        "symbols": [
+            "angelo",
+            "croce",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2952",
+        "nome": "Monumento Vicarelli",
+        "data": "1895",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Giuseppe Frenguelli realizza quest'opera nel 1895 con interventi pittorici di Ulisse Ribustini. In primo piano spicca l'Angelo del Silenzio, una figura malinconica, seduta, che con l'indice sulle labbra chiede raccoglimento a chi osserva. Sopra l’angelo i due coniugi sono ritratti in un momento di intimità domestica con abiti curati nei minimi dettagli che riflettendo la volontà della famiglia di sottolineare i propri successi e il proprio status sociale. Sullo sfondo si individuano una serie di oggetti simbolici come il fucile, che richiama la passione per la caccia o la carriera militare; i grappoli d'uva, segno di benessere economico e prosperità; e infine una cetra, simbolo di una vita colta e raffinata. Tutto l'insieme, arricchito dai residui cromatici delle decorazioni di Ribustini, trasforma la tomba in un palcoscenico dove i valori e le passioni dei defunti continuano a vivere oltre il tempo.",
+        "symbols": [
+            "angelo",
+            "lira",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2955",
+        "nome": "Monumento Sebastiani già Cosatti",
+        "data": "1901",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest’opera realizzata da Romano Mignini nel 1901 mostra un primo avvicinamento allo stile Liberty, visibile nell'andamento dei capelli della figura allegorica segnando la transizione del gusto borghese verso forme più moderne ed eleganti. I ramoscelli d'edera scolpiti simboleggiano l'immortalità e la durata dei legami affettivi oltre la morte, mentre la ghirlanda rappresenta simbolicamente la vittoria della luce sulle tenebre.",
+        "symbols": [
+            "croce",
+            "edera",
+            "ghirlanda",
+            "margherita",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2957",
+        "nome": "Cappella Ricciarelli",
+        "data": "1898",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questa cappella presenta decorazioni scultoree di Romano Mignini eseguite nel 1894 che tramite la rappresentazione dell’angelo pensatore e l’utilizzo di decorazioni fitomorfe trasforma la cappella in un esempio tipico del gusto eclettico che domina la sezione monumentale progettata da Alessandro Arienti.",
+        "symbols": [
+            "angelo",
+            "trifoglio"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2958",
+        "nome": "Monumento Degli Oddi",
+        "data": "1892",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento viene realizzato a Roma nel 1892 dallo scultore Giuseppe Luchetti. Nonostante la data tarda, l'opera segue influssi puristi con superfici bianche, nitide e prive di decorazioni articolate, gli elementi che spiccano maggiormente sono i ritratti dei tre consanguinei rappresentati in bassorilievo, sottolineando l'eleganza aristocratica della famiglia.",
+        "symbols": [
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2105",
+        "nome": "Cippo di Santina Calderini",
+        "data": null,
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento è dedicato alla famiglia dell'illustre architetto Guglielmo Calderini, autore del Palazzo di Giustizia a Roma. Storicamente rappresenta l'omaggio della città a uno dei suoi più grandi architetti dell'Ottocento caratterizzando il cippo da una sobria eleganza che evita lo sfarzo eccessivo per puntare sul valore storico.",
+        "symbols": [
+            "angelo",
+            "croce",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2907",
+        "nome": "Edicola Biscarini",
+        "data": null,
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest’opera datata 1859 è opera dello scultore Raffaele Omicini, il quale rappresenta una figura femminile distesa che richiama l'iconografia delle urne cinerarie etrusche comuni nel territorio. Storicamente è una delle sepolture più antiche del cimitero a presentare caratteri di monumentalità artistica.",
+        "symbols": [
+            "lampada",
+            "vite"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2908",
+        "nome": "Monumento Moscioni",
+        "data": "1892",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest’opera è una creazione di Giuseppe Frenguelli che risale al 1896. La scena principale mostra un angelo che con un gesto delicato posa una corona di fiori sopra il medaglione con il ritratto del defunto. L’architettura del monumento segue uno schema classico ma arricchito da dettagli decorativi molto curati nei particolari. La scultura si fa notare per il panneggio della veste dell’angelo, che cade morbido e realistico; il contrasto che si crea tra il marmo bianco e la scultura crea un effetto di profondità che attira l’attenzione del passante.",
+        "symbols": [
+            "angelo",
+            "crisma",
+            "croce",
+            "rosa",
+            "torcia",
+            "ulivo"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2922",
+        "nome": "Monumento Milletti",
+        "data": "1904",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento si colloca lungo il muro destro del cimitero ed è datato intorno al 1915. Giuseppe Frenguelli, che realizza una figura angelica di grande impatto visivo in posa di protezione e accoglienza verso l'anima del defunto. La cura nei tratti del volto dell'angelo, mostra il superamento dei modelli accademici rigidi mostrando un forte contrasto tra la terracotta utilizzata per l’angelo e il materiale dello sfondo, ottenendo diverse rifrazioni di luce e rendendo la scena dinamica. L’architettura della base è solida e squadrata, fornendo un supporto monumentale alla parte figurativa superiore.",
+        "symbols": [
+            "acanto",
+            "angelo"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2914",
+        "nome": "Monumento Benincasa",
+        "data": "1906",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Romano Mignini realizza questo monumento nel 1900, situando all'interno della galleria sinistra. La struttura si concentra su due tondi dal fondo dorato, che ospitano i busti in altorilievo dei defunti. Il contrasto tra il candore del marmo bianco e la lucentezza dell’oro dei medaglioni conferisce una forte gerarchia visiva, portando l'attenzione immediata sui ritratti, eseguiti con un forte realismo. A coronamento dell'intera opera troviamo un elemento rialzato ornato da una ghirlanda di rose scolpite con estrema delicatezza, che ammorbidisce le linee architettoniche rigide sottostanti. I fianchi della nicchia sono invece impreziositi da motivi geometrici a traforo.",
+        "symbols": [
+            "crisantemo",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2916",
+        "nome": "Monumento Pernossi",
+        "data": "1909",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Situato nella galleria sinistra, questo monumento è un’opera di Romano Mignini completata nel 1893. La composizione scultorea è dominata dall’angelo del Giudizio, colto nel suonare la tromba per annunciare la resurrezione. L’architettura del monumento sostiene questa figura dinamica con linee forti che enfatizzano il messaggio spirituale della scena. Storicamente, La cura anatomica dell’angelo rivela una conoscenza profonda della scultura classica reinterpretata in chiave ottocentesca. L’uso dei materiali accentua il senso di eternità e di attesa del momento finale della storia umana.",
+        "symbols": [
+            "angelo",
+            "margherita",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2917",
+        "nome": "Monumento Rossini",
+        "data": "1905",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Il Monumento Rossini, realizzato da Giuseppe Frenguelli tra il 1905 e il 1907 è un chiaro esempio di stile Liberty. Al centro della composizione spicca un medaglione con il volto di Cristo, incorniciato dall'iscrizione \"FAMIGLIA ROSSINI\" che segue la curva dell'arco marmoreo. Quattro angeli oranti e musicanti si dispongono in modo scenografico attorno al medaglione centrale che grazie a un uso sapiente dei volumi si muovono liberamente nello spazio. Ogni angelo svolge una funzione specifica all'interno del gruppo. In alto, una figura con le ali spiegate suona un liuto. Subito sotto, un secondo angelo resta in atteggiamento di ascolto e preghiera con la testa inclinata. In basso a destra, un altro angelo avvolto in vesti dinamiche tiene un tamburello e sembra leggere uno spartito. Sul lato sinistro si trova l'Angelo dell'Omaggio, che solleva una ghirlanda di fiori verso il volto di Cristo e porta due flauti appesi alla veste. Questa gestione dello spazio e del movimento mostra la capacità di Frenguelli di interpretare le nuove sensibilità del primo Novecento, richiamando per qualità opere celebri come il Volo d'Angeli di Ernesto Bazzaro a Milano.",
+        "symbols": [
+            "angelo",
+            "ghirlanda",
+            "liuto",
+            "margherita",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2918",
+        "nome": "Monumento Mammalucchi",
+        "data": "1912",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Quest’opera del 1927 è firmata da Angelo Biscarini e si trova lungo la galleria sinistra del cimitero. La sua architettura, concentrandosi su pochi elementi simbolici di grande efficacia comunicativa attraverso geometrie semplici e volumi definiti, richiama il gusto déco del periodo esaltando la qualità della pietra scelta per la costruzione. La parte centrale ospita invece ritratti e scritte che celebrano la memoria dei defunti della famiglia Mammalucchi.",
+        "symbols": [
+            "cero",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2920",
+        "nome": "Monumento Pisinicca-Laparelli",
+        "data": "1903",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Romano Mignini esegue questo lavoro nel 1899. Il monumento unisce due famiglie attraverso un'unica struttura architettonica che simboleggia i legami sociali e di parentela. Al centro si trova una figura allegorica che veglia sui ritratti dei defunti, eseguiti con il tipico verismo dell'autore. L'architettura di base è classica, con modanature che riprendono gli stili dell'antichità reinterpretati per fini funebri; il contrasto tra la morbidezza delle carni scolpite e la durezza della pietra crea un gioco di consistenze. Ogni elemento decorativo è posto in modo simmetrico per infondere un senso di ordine e di equilibrio.",
+        "symbols": [
+            "palmetta"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2928",
+        "nome": "Monumento Tiriduzi-Bavicchi",
+        "data": "1910",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento, collocato nella Galleria destra del Cimitero Monumentale di Perugia e realizzato nel 1910 da Romano Mignini insieme al figlio Venusto, rappresenta una delle testimonianze più eleganti del passaggio verso lo stile Secessione. L'opera si distingue per un'architettura essenziale, dove un'arcata in marmo bianco fa da cornice a un apparato scultoreo in bronzo, creando un gioco di contrasti cromatici molto moderno per l'epoca. Al centro spicca un altorilievo della Pietà, caratterizzato da una sintesi formale che rinuncia ai decorativismi eccessivi del passato, mentre ai lati sono incastonati due medaglioni circolari con i ritratti dei defunti. Questa composizione, che unisce la solennità della pietra alla plasticità del metallo, riflette chiaramente l'influenza della Secessione viennese e segna il definitivo superamento delle allegorie ottocentesche.",
+        "symbols": [
+            "edera",
+            "lampada",
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2911",
+        "nome": "Monumento Bonacci Brunamonti",
+        "data": "1914",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento celebra la figura di Alinda Bonacci Brunamonti, celebre poetessa e intellettuale perugina, insieme al marito Pietro. La scultura principale è opera di Valmore Gemignani e risale al 1910, anno della scomparsa della donna. Storicamente, Alinda è una figura centrale della cultura umbra, nota per la sua poesia civile e religiosa di grande spessore. L'architettura del monumento ospita un busto della poetessa che ne cattura l'intensità espressiva e la nobiltà d'animo. Si trova in una posizione di rilievo, a testimonianza del grande rispetto che la città nutre per la sua memoria. Il sito della Memoria Digitale ne ricorda l'importanza come voce letteraria capace di unire fede e amor di patria. La tomba è un luogo di pellegrinaggio per chi ama le lettere e la storia della cultura locale. La semplicità della struttura esalta la forza del ritratto, ponendo l'accento sulla statura morale della defunta. È un monumento che parla della forza delle idee che sopravvivono alla carne.",
+        "symbols": [
+            "alloro",
+            "arpia",
+            "croce",
+            "papavero"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "960",
+        "nome": "Edicola prof. Giovanni Pennacchi",
+        "data": null,
+        "nascita": "1811",
+        "morte": "1883",
+        "descrizione": "L'edicola dedicata al professor Giovanni Pennacchi si presenta con una struttura slanciata a sesto acuto, costruita con una sapiente alternanza tra mattoni rossi e blocchi di pietra chiara. Al centro della composizione, incorniciata dall'arco marmoreo, si trova una grande lastra rettangolare che ospita nella parte superiore un medaglione circolare. Questo elemento scultoreo, realizzato da Giuseppe Frenguelli, ritrae con tratti realistici e delicati i volti di due figure, conferendo una nota di intimità umana alla solennità del monumento.Al centro esatto della lastra marmorea spicca una piccola croce in rilievo, mentre la base del monumento accoglie un bassorilievo raffigurante una lira tra rami di alloro. Questo simbolo celebra la figura di Pennacchi come uomo di cultura, insegnante e patriota, ricordando il suo ruolo di segretario della Repubblica Romana e la sua vita dedicata allo studio e alla libertà civile.",
+        "symbols": [
+            "croce",
+            "lira"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "762",
+        "nome": "Famiglia Rufini",
+        "data": "1938",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento celebra la memoria della famiglia Rufini attraverso un complesso monumentale di rara intensità espressiva. La scultura principale raffigura un angelo custode dalle ampie ali, la cui figura si fonde organicamente con un'intricata composizione di fiori e vegetazione scolpita. Questa complessa forma vegetale avvolge e presenta un medaglione centrale con i ritratti di un uomo e una donna, uniti dalla ghirlanda in un abbraccio ideale che simboleggia l'unione familiare oltre la morte. Ai lati, due stele commemorative in pietra grezza, recanti incisi i nomi e le date di molteplici generazioni tra cui Arnoldo, Marinella e Marco, completano la composizione. È un'opera che parla del legame indissolubile tra la vita e la memoria, ponendo l'accento sulla continuità della stirpe.",
+        "symbols": [
+            "rosa",
+            "angelo",
+            "margherita"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2910",
+        "nome": "Monumento Marinelli",
+        "data": "1922",
+        "nascita": null,
+        "morte": null,
+        "descrizione": "Questo monumento viene realizzato da Giuseppe Scardovi nel 1922. Si presenta come un'edicola funeraria inserita in un arco a sesto acuto, con una struttura in muratura a bicromia di mattoni e pietra chiara. Al vertice dell'arco è posta una piccola croce. All'interno della nicchia, il grande rilievo scultoreo in marmo raffigura un gruppo di tre angeli in volo. Al centro della composizione risalta un medaglione circolare con i ritratti a mezzobusto di profilo di due coniugi.",
+        "symbols": [
+            "angelo",
+            "ghirlanda",
+            "margherita",
+            "pigna",
+            "rosa"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
+    },
+    {
+        "id": "2541",
+        "nome": "Paolina Burattini",
+        "data": "1900",
+        "nascita": null,
+        "morte": null,
+        "descrizione": null,
+        "symbols": [
+            "torcia"
+        ],
+        "images": [
+            "media/1.jpg",
+            "media/2.jpg"
+        ]
     }
 ]

@@ -3,13 +3,10 @@ import { MapCanvas } from './map/MapCanvas'
 import { MapDetails } from './map/MapDetails'
 import { MapFilters } from './map/MapFilters'
 import type { MapDataBundle, MapPathOption, MapTomb } from '../types/map'
-import { resolveAssetUrl } from '../lib/assetUrls'
 
 type InteractiveMapProps = {
   data: MapDataBundle
 }
-
-const MAP_EDITORIAL_IMAGE = resolveAssetUrl('media/3.jpg', import.meta.env.BASE_URL) ?? 'media/3.jpg'
 
 function findPathOption(paths: MapPathOption[], id: string | null) {
   if (!id) {
@@ -45,7 +42,6 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
   const activeTombIds = activeSymbol?.targets ?? activePath?.targets ?? []
   const focusedTombIds = activeSymbol?.targets ?? []
   const selectedTomb = findTombById(data.tombs, selectedTombId)
-  const featuredTomb = findTombById(data.tombs, data.featuredTombId ?? null) ?? data.tombs[0] ?? null
 
   useEffect(() => {
     const visibleTombIds = activeSymbol?.targets ?? activePath?.targets ?? []
@@ -68,14 +64,17 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
     setSelectedTombId(null)
   }
 
-  function handleResetFilters() {
-    setSelectedPathId(null)
+  function handleClearSymbolSelection() {
     setSelectedSymbolId(null)
     setSelectedTombId(null)
   }
 
   function handleSelectTomb(tombId: string) {
     setSelectedTombId(tombId)
+  }
+
+  function handleCloseTombModal() {
+    setSelectedTombId(null)
   }
 
   return (
@@ -92,6 +91,16 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
       </div>
 
       <div className="story-map__stage-shell">
+        <MapFilters
+          mode="symbols"
+          title="Simboli"
+          symbols={activePath?.symbols ?? []}
+          selectedSymbolId={selectedSymbolId}
+          onSelectSymbol={handleSelectSymbol}
+          onReset={handleClearSymbolSelection}
+          emptyState="Seleziona un percorso per vedere la famiglia di simboli associata."
+        />
+
         <div className="story-map__viewer">
           <MapCanvas
             svgSrc={data.svg}
@@ -104,23 +113,12 @@ export function InteractiveMap({ data }: InteractiveMapProps) {
           />
         </div>
 
-        <div className="story-map__selection">
-          <MapFilters
-            mode="symbols"
-            title="Simboli"
-            symbols={activePath?.symbols ?? []}
-            selectedSymbolId={selectedSymbolId}
-            onSelectSymbol={handleSelectSymbol}
-            onReset={handleResetFilters}
-            emptyState="Seleziona un percorso per vedere la famiglia di simboli associata."
-          />
-
+        <div className="story-map__details">
           <MapDetails
             activePath={activePath}
             activeSymbol={activeSymbol}
             selectedTomb={selectedTomb}
-            featuredTomb={featuredTomb}
-            editorialImageSrc={MAP_EDITORIAL_IMAGE}
+            onCloseSelectedTomb={handleCloseTombModal}
           />
         </div>
       </div>

@@ -1,12 +1,14 @@
-import { AssetImage } from '../AssetImage'
-import type { MapPathOption, MapSymbolOption, MapTomb, MapTombSymbolRef } from '../../types/map'
+import { useEffect } from 'react'
+import { ImageCarousel } from '../ImageCarousel'
+import { resolveSymbolIconUrl } from '../../lib/assetUrls'
+import { SymbolIcon } from './SymbolIcon'
+import type { MapPathOption, MapSymbolOption, MapTomb } from '../../types/map'
 
 type MapDetailsProps = {
   activePath: MapPathOption | null
   activeSymbol: MapSymbolOption | null
   selectedTomb: MapTomb | null
-  featuredTomb: MapTomb | null
-  editorialImageSrc: string
+  onCloseSelectedTomb: () => void
 }
 
 function getTombLabel(tomb: MapTomb | null, tombId: string) {
@@ -18,6 +20,14 @@ function buildSymbolSummary(pathOption: MapPathOption | null, symbolOption: MapS
     return 'Seleziona uno dei fili invisibili per attivare i simboli presenti nella planimetria.'
   }
 
+  if (symbolOption?.description) {
+    return symbolOption.description
+  }
+
+  if (pathOption.description) {
+    return pathOption.description
+  }
+
   if (!symbolOption) {
     return `${pathOption.label} raccoglie ${pathOption.symbols.length} simboli catalogati e ${pathOption.targets.length} sepolture evidenziabili sulla mappa.`
   }
@@ -26,98 +36,156 @@ function buildSymbolSummary(pathOption: MapPathOption | null, symbolOption: MapS
   return `${symbolOption.label} appartiene al percorso ${pathOption.label} ed e presente in ${tombCount} ${tombCount === 1 ? 'tomba' : 'tombe'} catalogate.`
 }
 
-function buildTombNarrative(tomb: MapTomb | null, visibleSymbols: MapTombSymbolRef[], isFallback: boolean) {
+function buildTombDateLabel(tomb: MapTomb | null) {
+  if (!tomb) {
+    return null
+  }
+
+  if (tomb.nascita || tomb.morte) {
+    if (tomb.nascita && tomb.morte) {
+      return `${tomb.nascita}-${tomb.morte}`
+    }
+
+    if (tomb.nascita) {
+      return `n. ${tomb.nascita}`
+    }
+
+    if (tomb.morte) {
+      return `m. ${tomb.morte}`
+    }
+  }
+
+  return tomb.data ?? null
+}
+
+function buildTombNarrative(tomb: MapTomb | null) {
   if (!tomb) {
     return 'Seleziona una tomba evidenziata nella planimetria per aprire la sua scheda di dettaglio.'
   }
-
-  const facts = [tomb.data ? `datata ${tomb.data}` : null, tomb.morte ? `legata alla memoria del ${tomb.morte}` : null]
-    .filter(Boolean)
-    .join(', ')
 
   if (tomb.descrizione) {
     return tomb.descrizione
   }
 
-  if (visibleSymbols.length > 0) {
-    return `${isFallback ? 'Scheda di riferimento' : 'Scheda selezionata'} per ${getTombLabel(tomb, tomb.id)}${facts ? `, ${facts}` : ''}. Simboli collegati: ${visibleSymbols
-      .map((symbol) => symbol.symbolLabel)
-      .join(', ')}.`
+  const dateLabel = buildTombDateLabel(tomb)
+
+  if (dateLabel) {
+    return `Scheda selezionata per ${getTombLabel(tomb, tomb.id)}, ${dateLabel}.`
   }
 
-  return `${isFallback ? 'Scheda di riferimento' : 'Scheda selezionata'} per ${getTombLabel(tomb, tomb.id)}${facts ? `, ${facts}` : ''}.`
+  return `Scheda selezionata per ${getTombLabel(tomb, tomb.id)}.`
 }
 
 export function MapDetails({
   activePath,
   activeSymbol,
   selectedTomb,
-  featuredTomb,
-  editorialImageSrc,
+  onCloseSelectedTomb,
 }: MapDetailsProps) {
-  const displayedTomb = selectedTomb ?? featuredTomb
-  const visibleSymbols = displayedTomb
-    ? displayedTomb.symbols.filter((symbol) => {
-        if (activeSymbol) {
-          return symbol.symbolId === activeSymbol.id
-        }
+  const renderedSymbols = selectedTomb?.symbols ?? []
+  const tombDateLabel = buildTombDateLabel(selectedTomb)
+  const modalSlides = (selectedTomb?.images ?? []).map((src, index) => ({
+    src,
+    alt: `${getTombLabel(selectedTomb, selectedTomb?.id ?? String(index + 1))} - immagine ${index + 1}`,
+  }))
 
-        if (activePath) {
-          return symbol.pathId === activePath.id
-        }
+  useEffect(() => {
+    if (!selectedTomb) {
+      return
+    }
 
-        return true
-      })
-    : []
-  const renderedSymbols = visibleSymbols.length > 0 ? visibleSymbols : displayedTomb?.symbols ?? []
-  const isFallback = displayedTomb !== null && displayedTomb.id !== selectedTomb?.id
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onCloseSelectedTomb()
+      }
+    }
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onCloseSelectedTomb, selectedTomb])
 
   return (
     <>
       <div className="story-map__selection-copy">
         <article className="story-map__info-card">
-          <span className="story-map__section-label">Percorso attivo</span>
-          <h3>{activeSymbol?.label ?? activePath?.label ?? 'Percorsi tematici'}</h3>
+          <span className="story-map__section-label">Percorso</span>
+          <div className="story-map__active-symbol-row">
+            {activeSymbol && (
+              <div className="story-map__active-symbol" aria-hidden="true">
+                <SymbolIcon
+                  className="story-map__active-symbol-icon"
+                  src={resolveSymbolIconUrl(activeSymbol.id, import.meta.env.BASE_URL)}
+                />
+              </div>
+            )}
+            <h3>{activeSymbol?.label ?? activePath?.label ?? 'Percorsi tematici'}</h3>
+          </div>
           <p>{buildSymbolSummary(activePath, activeSymbol)}</p>
-        </article>
-
-        <article className="story-map__info-card story-map__info-card--tomb">
-          <span className="story-map__section-label">
-            {selectedTomb ? 'Tomba selezionata' : 'Scheda in evidenza'}
-          </span>
-          <h3>{displayedTomb ? getTombLabel(displayedTomb, displayedTomb.id) : 'Nessuna tomba selezionata'}</h3>
-          {displayedTomb && <p className="story-map__tomb-id">Tomba {displayedTomb.id}</p>}
-          <p>{buildTombNarrative(displayedTomb, renderedSymbols, isFallback)}</p>
-
-          {displayedTomb && (
-            <div className="story-map__facts">
-              {displayedTomb.data && <span>Data {displayedTomb.data}</span>}
-              {displayedTomb.nascita && <span>Nascita {displayedTomb.nascita}</span>}
-              {displayedTomb.morte && <span>Morte {displayedTomb.morte}</span>}
-            </div>
-          )}
-
-          {renderedSymbols.length > 0 && (
-            <div className="story-map__tag-list">
-              {renderedSymbols.map((symbol) => (
-                <span className="story-map__tag" key={`${displayedTomb?.id}-${symbol.symbolId}`}>
-                  {symbol.symbolLabel}
-                </span>
-              ))}
-            </div>
-          )}
         </article>
       </div>
 
-      <figure className="story-map__editorial">
-        <AssetImage
-          className="story-map__editorial-image"
-          src={editorialImageSrc}
-          alt="Dettaglio monumentale del Cimitero Monumentale di Perugia"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
+      {selectedTomb && (
+        <div className="story-map__modal-backdrop" onClick={onCloseSelectedTomb}>
+          <div
+            className="story-map__modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="story-map-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="story-map__modal-close"
+              onClick={onCloseSelectedTomb}
+              aria-label="Chiudi scheda tomba"
+            >
+              &times;
+            </button>
+
+            <div className="story-map__modal-header">
+              <h3 id="story-map-modal-title">{getTombLabel(selectedTomb, selectedTomb.id)}</h3>
+              {tombDateLabel && <p className="story-map__modal-date">{tombDateLabel}</p>}
+            </div>
+
+            {renderedSymbols.length > 0 && (
+              <div className="story-map__modal-symbol-list" aria-label="Simboli associati alla tomba">
+                {renderedSymbols.map((symbol) => (
+                  <span
+                    className="story-map__modal-symbol"
+                    key={`${selectedTomb.id}-${symbol.symbolId}`}
+                    title={symbol.symbolLabel}
+                    aria-label={symbol.symbolLabel}
+                    role="img"
+                  >
+                    <SymbolIcon
+                      className="story-map__modal-symbol-icon"
+                      src={resolveSymbolIconUrl(symbol.symbolId, import.meta.env.BASE_URL)}
+                    />
+                  </span>
+                ))}
+              </div>
+            )}
+
+            <p className="story-map__modal-description">{buildTombNarrative(selectedTomb)}</p>
+
+            {modalSlides.length > 0 && (
+              <div className="story-map__modal-carousel">
+                <ImageCarousel
+                  slides={modalSlides}
+                  autoPlayMs={4800}
+                  ariaLabel={`Immagini associate a ${getTombLabel(selectedTomb, selectedTomb.id)}`}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </>
   )
 }

@@ -11,6 +11,7 @@ import type {
 type SymbolDefinition = {
   id: string
   label: string
+  description?: string
   pathId: string
   pathLabel: string
   pathColor: string
@@ -21,16 +22,6 @@ function normalizeOptionalText(value: string | null | undefined) {
   return normalized ? normalized : undefined
 }
 
-function normalizeMergedIds(value: unknown) {
-  if (!Array.isArray(value)) {
-    return []
-  }
-
-  return value
-    .map((entry) => (typeof entry === 'string' ? entry.trim() : ''))
-    .filter(Boolean)
-}
-
 function normalizeSymbolIds(value: string[] | null | undefined) {
   if (!Array.isArray(value)) {
     return []
@@ -39,6 +30,16 @@ function normalizeSymbolIds(value: string[] | null | undefined) {
   return value
     .map((entry) => entry.trim())
     .filter(Boolean)
+}
+
+function normalizeImageUrls(value: string[] | null | undefined, baseUrl: string) {
+  if (!Array.isArray(value)) {
+    return []
+  }
+
+  return value
+    .map((entry) => (typeof entry === 'string' ? resolveAssetUrl(entry.trim(), baseUrl) : undefined))
+    .filter((entry): entry is string => Boolean(entry))
 }
 
 export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapTomb[], baseUrl: string): MapDataBundle {
@@ -53,6 +54,7 @@ export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapT
       symbolDefinitions.set(symbol.id, {
         id: symbol.id,
         label: symbol.label,
+        description: normalizeOptionalText(symbol.description),
         pathId: path.id,
         pathLabel: path.label,
         pathColor: path.color,
@@ -88,7 +90,7 @@ export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapT
       nascita: normalizeOptionalText(rawTomb.nascita),
       morte: normalizeOptionalText(rawTomb.morte),
       descrizione: normalizeOptionalText(rawTomb.descrizione),
-      mergedIds: normalizeMergedIds(rawTomb.mergedIds),
+      images: normalizeImageUrls(rawTomb.images, baseUrl),
       symbols,
     }
   })
@@ -112,10 +114,12 @@ export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapT
     id: path.id,
     label: path.label,
     color: path.color,
+    description: normalizeOptionalText(path.description),
     targets: Array.from(pathTargets.get(path.id) ?? []),
     symbols: path.symbols.map((symbol) => ({
       id: symbol.id,
       label: symbol.label,
+      description: normalizeOptionalText(symbol.description),
       targets: Array.from(symbolTargets.get(symbol.id) ?? []),
     })),
   }))

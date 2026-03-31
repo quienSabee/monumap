@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story title="Monumap" subtitle="Cinque itinerari per riscoprire il Cimitero Monumentale di Perugia">
+  <hero id="hero" kicker="Cimitero Monumentale di Perugia" title="Fili invisibili"
+    subtitle="Sara Forgione" background="media/hero-cemetery.jpg" />
+  <sidecar id="intro" align="left">
+    <eyebrow></eyebrow>
+    <title>Fili Invisibili</title>
+    <text>Il progetto <strong>Fili Invisibili</strong> trasforma lo spazio del cimitero in un luogo
+      di esplorazione emotiva e connessione attiva. L'idea centrale si sviluppa attraverso cinque
+      percorsi tematici che guidano il visitatore a interagire con i simboli scolpiti sulle tombe
+      del Cimitero Monumentale di Perugia che sorge a nord-est della città, in un'area storicamente
+      utilizzata come necropoli fin dall'epoca antica. La sua origine risale ai primi
+      dell'Ottocento, quando le norme napoleoniche impongono di spostare i luoghi di sepoltura fuori
+      dai centri abitati per ragioni igieniche.</text>
+  </sidecar>
+  <sidecar id="storia" align="left">
+    <eyebrow></eyebrow>
+    <title>La storia del Cimitero Monumentale di Perugia</title>
+    <text>Il progetto iniziale del complesso cimiteriale avviene nel 1837 con la trasformazione di
+      una casa colonica preesistente nell'ingresso principale e l’adattamento del recinto murato
+      alla pendenza naturale del terreno collinare.
+      L'inaugurazione avviene nel 1849 ma ben presto, l'edificio originale si rivela insufficiente e
+      nel 1874 inizia un importante ampliamento. L'intervento espande il cimitero in lunghezza
+      attraverso dei terrazzamenti, introducendo un nuovo ingresso monumentale in stile neo-gotico e
+      due imponenti gallerie porticate. Questi spazi ospitano i monumenti delle famiglie facoltose e
+      si arricchiscono di opere di scultori locali, mentre nei sotterranei trovano posto le
+      sepolture dei ceti meno abbienti, diffondendo l'uso delle lapidi individuali. Nel corso del
+      tempo, la planimetria include sezioni dedicate ad altre fedi, come il cimitero Ebraico e
+      quello Islamico.
+      Oggi, il complesso si estende inglobando l'area di Monterone ed è oggetto di interventi di
+      riqualificazione per preservarne l'identità architettonica, garantire la sicurezza dei
+      percorsi e migliorarne l'accessibilità come parco cimiteriale moderno.
+    </text>
+  </sidecar>
+  <sidecar id="itinerari" align="left">
+    <eyebrow></eyebrow>
+    <title>I Cinque Itinerari</title>
+    <text>L'obiettivo di questo progetto è scardinare la visione tradizionale e dolorosa della morte, allontanandola dal concetto di fine assoluta per restituirle un significato di continuità. Il progetto dà una forma concreta e spaziale ai legami affettivi, rendendo tangibile quel filo indissolubile che unisce ogni persona ai propri antenati. Questo legame, come gli elementi scultorei, resiste al tempo, non si spezza con il lutto e permette di restare ancorati a chi non c'è più, percependone la presenza e riallacciando il rapporto in forme nuove.
+Per decodificare questo linguaggio antico, gli itinerari si dividono in cinque categorie. 
+- Il primo percorso esplora le decorazioni fitomorfe, legato agli elementi vegetali, come la rosa, il papavero e la foglia d'acanto. 
+-  Il secondo è basato sulle decorazioni zoomorfe, svelando il ruolo simbolico degli animali scolpiti nella pietra. 
+-  Il terzo itinerario si concentra sulle decorazioni allegoriche, ovvero quelle sculture che traducono idee astratte e invisibili in immagini concrete come ad esempio la clessidra alata che indica lo scorrere inesorabile del tempo.
+- Il quarto tracciato segue i simboli religiosi, legati alla fede e alla spiritualità.
+-  Il quinto si chiude con gli strumenti musicali, che evocano armonia e consolazione ultraterrena.
+Percorrendo questi tracciati, il cittadino impara a vivere il recinto sacro come un vero e proprio strumento di canalizzazione emotiva in cui i simboli funerari diventano i fili che legano la memoria dell’individuo con il passato, aiutandolo  a rielaborare il lutto e a riscoprire il cimitero come uno spazio culturale sereno e integrato nella vita della città.
+    </text>
+  </sidecar>
+  <map id="planimetria" title="Esplora la planimetria"
+    description="Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione."
+    svg="plan.svg" defaultTargets="">
+    <paths title="Percorsi tematici">
+      <path id="decorazioni_fitomorfe" label="Decorazioni fitomorfe" color="#42B5E8">
+        <symbol id="rosa" label="Rosa" />
+        <symbol id="palmetta" label="Palmetta" />
+        <symbol id="margherita" label="Margherita" />
+        <symbol id="acanto" label="Acanto" />
+        <symbol id="papavero" label="Papavero" />
+        <symbol id="vite" label="Vite" />
+        <symbol id="trifoglio" label="Trifoglio" />
+        <symbol id="ulivo" label="Ulivo" />
+        <symbol id="ghirlanda" label="Ghirlanda" />
+        <symbol id="giglio" label="Giglio" />
+        <symbol id="alloro" label="Alloro" />
+        <symbol id="crisantemo" label="Crisantemo" />
+        <symbol id="pigna" label="Pigna" />
+        <symbol id="edera" label="Edera" />
+      </path>
+      <path id="decorazioni_zoomorfe" label="Decorazioni zoomorfe" color="#E96A1D">
+        <symbol id="uroboro" label="Uroboro" />
+        <symbol id="arpia" label="Arpia" />
+        <symbol id="leone" label="Leone" />
+        <symbol id="conchiglia" label="Conchiglia" />
+      </path>
+      <path id="decorazioni_allegoriche" label="Decorazioni allegoriche" color="#245E8A">
+        <symbol id="caduceo" label="Caduceo" />
+        <symbol id="lampada" label="lampada" />
+        <symbol id="archipendolo" label="Archipendolo" />
+        <symbol id="torcia" label="Torcia" />
+        <symbol id="clessidra_alata" label="Clessidra alata" />
+        <symbol id="stella" label="Stella" />
+        <symbol id="ruota_della_fortuna" label="Ruota della fortuna" />
+        <symbol id="cero" label="Cero" />
+        <symbol id="ancora" label="Ancora" />
+        <symbol id="corda" label="Corda" />
+        <symbol id="teschio" label="Teschio" />
+      </path>
+      <path id="simboli_religiosi" label="Simboli religiosi" color="#F7C325">
+        <symbol id="alpha_omega" label="Alpha Omega" />
+        <symbol id="crisma" label="Crisma" />
+        <symbol id="croce" label="Croce" />
+        <symbol id="angelo" label="Angelo" />
+      </path>
+      <path id="strumenti_musicali" label="Strumenti musicali" color="#8E1B52">
+        <symbol id="tromba" label="Tromba" />
+        <symbol id="lira" label="Lira" />
+        <symbol id="liuto" label="Liuto" />
+      </path>
+    </paths>
+    <tombs>
+      <tomb id="2858" mergedIds="2863;2865;2858;2859">
+        <nome>Edicola Bonfanti Casini</nome>
+        <data>1894</data>
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2879">
+        <nome>Annibale Vecchi</nome>
+        <data>1901</data>
+        <nascita>1819</nascita>
+        <morte>1880</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2816">
+        <nome>Passerotti</nome>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="conchiglia" />
+        <symbolRef symbol="lampada" />
+      </tomb>
+      <tomb id="2811" mergedIds="2818;2811">
+        <nome>Cappella Pagni-Schinardi</nome>
+        <data>1901</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2798" mergedIds="2802;2798">
+        <nome>Cappella Calzoni</nome>
+        <data>1935</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="lampada" />
+      </tomb>
+      <tomb id="2825">
+        <nome>Massini</nome>
+        <data>1858</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2773" mergedIds="2776;2773">
+        <nome>Pagnotta</nome>
+        <data>1915</data>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="2745" mergedIds="2748;2745">
+        <nome>Cappella Luchetti</nome>
+        <nascita>1823</nascita>
+        <morte>1907</morte>
+        <symbolRef symbol="archipendolo" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2716">
+        <nome>Giuseppe Porta</nome>
+        <morte>1917</morte>
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2664" mergedIds="2670;2664">
+        <nome>Cappella Cesare Agostini</nome>
+        <nascita>1864</nascita>
+        <morte>1942</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="2500">
+        <nome>Famiglia Carboni</nome>
+        <data>1886</data>
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2510">
+        <nome>Famiglia Cecconi e Ranucci</nome>
+        <data>1953</data>
+        <symbolRef symbol="giglio" />
+      </tomb>
+      <tomb id="2476">
+        <nome>Famiglia Maragoni</nome>
+        <data>1984</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="clessidra_alata" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2391">
+        <nome>Famiglia Gambelunghe</nome>
+        <data>1956</data>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="uroboro" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2293">
+        <nome>Monumento Bianchi</nome>
+        <data>1869</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="ulivo" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2328">
+        <nome>Monumento Carattoli</nome>
+        <data>1850</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2235">
+        <nome>Busto del prof. Giovanni Santini</nome>
+        <data>1868</data>
+        <symbolRef symbol="archipendolo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2203" mergedIds="2203;2204">
+        <nome>Monumento Ridolfini</nome>
+        <data>1894</data>
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="2172">
+        <nome>Monumento Buattini</nome>
+        <data>1859</data>
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="2177">
+        <nome>Monumento Zurli</nome>
+        <data>1886</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="caduceo" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="stella" />
+      </tomb>
+      <tomb id="2189">
+        <nome>Monumento Mattioli</nome>
+        <data>1893</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="ancora" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="2097">
+        <nome>Mario Grecchi</nome>
+        <nascita>1926</nascita>
+        <morte>1944</morte>
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="leone" />
+      </tomb>
+      <tomb id="2142">
+        <nome>Monumento Vannoni</nome>
+        <data>primi anni del '900</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="teschio" />
+      </tomb>
+      <tomb id="1077" mergedIds="1166;1165;1092;1078;1077;1091;1087;1079">
+        <nome>Cappella della Confraternita della Misericordia</nome>
+        <data>1888</data>
+        <symbolRef symbol="vite" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="1134">
+        <nome>Luigi Bonazzi</nome>
+        <nascita>1811</nascita>
+        <morte>1879</morte>
+        <symbolRef symbol="crisma" />
+      </tomb>
+      <tomb id="1015">
+        <nome>Edicola Carlo Bruschi</nome>
+        <nascita>1820</nascita>
+        <morte>1879</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="961" mergedIds="973;963;961;985">
+        <nome>Cappella Forconi Donati</nome>
+        <data>1937</data>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="1002" mergedIds="1013;1002">
+        <nome>Edicola Rossi Schnabl</nome>
+        <data>1911</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="acanto" />
+      </tomb>
+      <tomb id="982" mergedIds="982;983">
+        <nome>Cappella Urbani</nome>
+        <data>1920</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="903" mergedIds="917;903">
+        <nome>Cappella del Buon Tromboni</nome>
+        <data>1926</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ulivo" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="1138">
+        <nome>Monumento Purgotti</nome>
+        <data>1879</data>
+        <symbolRef symbol="alloro" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="934" mergedIds="934;935">
+        <nome>Cappella Biagiotti</nome>
+        <data>1920</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="tromba" />
+      </tomb>
+      <tomb id="819" mergedIds="843;839;833;819;832;821;840;841">
+        <nome>Cappella Fani</nome>
+        <data>1892</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="780">
+        <nome>Monumento Filippi</nome>
+        <data>1914</data>
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="775" mergedIds="775;784">
+        <nome>Cappella Doneddu</nome>
+        <data>1907</data>
+        <symbolRef symbol="angelo" />
+      </tomb>
+      <tomb id="733">
+        <nome>Monumento Cerulli</nome>
+        <data>1894</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="739" mergedIds="739;740">
+        <nome>Cappella Franceschini</nome>
+        <data>1929</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="ghirlanda" />
+      </tomb>
+      <tomb id="760">
+        <nome>Famiglia Cesaroni</nome>
+        <data>1892</data>
+        <symbolRef symbol="conchiglia" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2377">
+        <nome>Cappella Radicioni</nome>
+        <data>1909</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="666">
+        <nome>Edicola di Maria Bonaparte Valentini</nome>
+        <data>1847</data>
+        <symbolRef symbol="stella" />
+        <symbolRef symbol="leone" />
+      </tomb>
+      <tomb id="542">
+        <nome>Edicola Biscarini_ Angelo Biscarini</nome>
+        <nascita>1877</nascita>
+        <morte>1951</morte>
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="archipendolo" />
+      </tomb>
+      <tomb id="581" mergedIds="596;581">
+        <nome>Cappella Bournens</nome>
+        <data>1916</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="676" mergedIds="683;676">
+        <nome>Aganoor Pompilj</nome>
+        <nascita>1855</nascita>
+        <morte>1910</morte>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="alloro" />
+      </tomb>
+      <tomb id="574" mergedIds="575;574">
+        <nome>Cappella Taticchi</nome>
+        <data>1884</data>
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="698">
+        <nome>Cappella Bugiardi</nome>
+        <data>1915</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="525">
+        <nome>Monumento ai caduti del XX Giu
+          gno</nome>
+        <data>1909</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="608">
+        <nome>Cappella Guardabassi_ Francesco Guardabassi</nome>
+        <nascita>1793</nascita>
+        <morte>1871</morte>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="657">
+        <nome>Monumento Bastianini</nome>
+        <data>1927</data>
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="637">
+        <nome>Tomba della famiglia Penna_ Sandro Penna</nome>
+        <nascita>1906</nascita>
+        <morte>1977</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="alpha_omega" />
+      </tomb>
+      <tomb id="654">
+        <nome>Tomba del Convento di Monte Ripido_ Padre Diego Donati</nome>
+        <nascita>1910</nascita>
+        <morte>2002</morte>
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="1" mergedIds="1;2">
+        <nome>Tempio della cremazione</nome>
+        <data>1884</data>
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2939">
+        <nome>Cappella Baldeschi</nome>
+        <data>1902</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2936">
+        <nome>Monumento Tancetti</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="corda" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="stella" />
+      </tomb>
+      <tomb id="2938">
+        <nome>Monumento Ragnotti</nome>
+        <data>1900</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ulivo" />
+      </tomb>
+      <tomb id="2943">
+        <nome>Monumento Paolo Angeloni</nome>
+        <data>1897</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="giglio" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2941">
+        <nome>Monumento Sereni</nome>
+        <data>1901</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="papavero" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="tromba" />
+      </tomb>
+      <tomb id="2944">
+        <nome>Monumento Masi-Frerejan</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="palmetta" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2945">
+        <nome>Cappella Fiorini-Pacioselli</nome>
+        <data>1908</data>
+        <symbolRef symbol="leone" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2946">
+        <nome>Monumento Rizzoli-Ticchioni</nome>
+        <data>1893</data>
+        <symbolRef symbol="alpha_omega" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+      </tomb>
+      <tomb id="2947">
+        <nome>Monumento Americo Calderini</nome>
+        <data>1891</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2952">
+        <nome>Monumento Vicarelli</nome>
+        <data>1895</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="lira" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2955">
+        <nome>Monumento Sebastiani già Cosatti</nome>
+        <data>1901</data>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2957">
+        <nome>Cappella Ricciarelli</nome>
+        <data>1898</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="trifoglio" />
+      </tomb>
+      <tomb id="2958">
+        <nome>Monumento Degli Oddi</nome>
+        <data>1892</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2105">
+        <nome>Cippo di Santina Calderini</nome>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2907">
+        <nome>Edicola Biscarini</nome>
+        <symbolRef symbol="lampada" />
+        <symbolRef symbol="vite" />
+      </tomb>
+      <tomb id="2908">
+        <nome>Monumento Moscioni</nome>
+        <data>1892</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="crisma" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="torcia" />
+        <symbolRef symbol="ulivo" />
+      </tomb>
+      <tomb id="2922">
+        <nome>Monumento Milletti</nome>
+        <data>1904</data>
+        <symbolRef symbol="acanto" />
+        <symbolRef symbol="angelo" />
+      </tomb>
+      <tomb id="2914">
+        <nome>Monumento Benincasa</nome>
+        <data>1906</data>
+        <symbolRef symbol="crisantemo" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2916">
+        <nome>Monumento Pernossi</nome>
+        <data>1909</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2917">
+        <nome>Monumento Rossini</nome>
+        <data>1905</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="liuto" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2918">
+        <nome>Monumento Mammalucchi</nome>
+        <data>1912</data>
+        <symbolRef symbol="cero" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2920">
+        <nome>Monumento Pisinicca-Laparelli</nome>
+        <data>1903</data>
+        <symbolRef symbol="palmetta" />
+      </tomb>
+      <tomb id="2928">
+        <nome>Monumento Tiriduzi-Bavicchi</nome>
+        <data>1910</data>
+        <symbolRef symbol="edera" />
+        <symbolRef symbol="lampada" />
+        <symbolRef symbol="torcia" />
+      </tomb>
+      <tomb id="2911">
+        <nome>Monumento Bonacci Brunamonti</nome>
+        <data>1914</data>
+        <symbolRef symbol="alloro" />
+        <symbolRef symbol="arpia" />
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="papavero" />
+      </tomb>
+      <tomb id="960">
+        <nome>Edicola prof. Giovanni Pennacchi</nome>
+        <nascita>1811</nascita>
+        <morte>1883</morte>
+        <symbolRef symbol="croce" />
+        <symbolRef symbol="lira" />
+      </tomb>
+      <tomb id="762">
+        <nome>Famiglia Rufini</nome>
+        <data>1938</data>
+        <symbolRef symbol="rosa" />
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="margherita" />
+      </tomb>
+      <tomb id="2910">
+        <nome>Monumento Marinelli</nome>
+        <data>1922</data>
+        <symbolRef symbol="angelo" />
+        <symbolRef symbol="ghirlanda" />
+        <symbolRef symbol="margherita" />
+        <symbolRef symbol="pigna" />
+        <symbolRef symbol="rosa" />
+      </tomb>
+      <tomb id="2541">
+        <nome>Paolina Burattini</nome>
+        <data>1900</data>
+        <symbolRef symbol="torcia" />
+      </tomb>
+    </tombs>
+  </map>
+</story>

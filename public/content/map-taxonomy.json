@@ -1,189 +1,230 @@
 ﻿{
-    "title":  "Esplora la planimetria",
-    "description":  "Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l\u0027id SVG e seleziona un percorso per attivare le schede di catalogazione.",
-    "svg":  "plan.svg",
-    "viewBox":  "1.1 0 3370.44 843.68",
-    "featuredTombId":  "2858",
-    "pathsTitle":  "Percorsi tematici",
-    "paths":  [
-                  {
-                      "id":  "decorazioni_fitomorfe",
-                      "label":  "Decorazioni fitomorfe",
-                      "color":  "#42B5E8",
-                      "symbols":  [
-                                      {
-                                          "id":  "rosa",
-                                          "label":  "Rosa"
-                                      },
-                                      {
-                                          "id":  "palmetta",
-                                          "label":  "Palmetta"
-                                      },
-                                      {
-                                          "id":  "margherita",
-                                          "label":  "Margherita"
-                                      },
-                                      {
-                                          "id":  "acanto",
-                                          "label":  "Acanto"
-                                      },
-                                      {
-                                          "id":  "papavero",
-                                          "label":  "Papavero"
-                                      },
-                                      {
-                                          "id":  "vite",
-                                          "label":  "Vite"
-                                      },
-                                      {
-                                          "id":  "trifoglio",
-                                          "label":  "Trifoglio"
-                                      },
-                                      {
-                                          "id":  "ulivo",
-                                          "label":  "Ulivo"
-                                      },
-                                      {
-                                          "id":  "ghirlanda",
-                                          "label":  "Ghirlanda"
-                                      },
-                                      {
-                                          "id":  "giglio",
-                                          "label":  "Giglio"
-                                      },
-                                      {
-                                          "id":  "alloro",
-                                          "label":  "Alloro"
-                                      },
-                                      {
-                                          "id":  "crisantemo",
-                                          "label":  "Crisantemo"
-                                      },
-                                      {
-                                          "id":  "pigna",
-                                          "label":  "Pigna"
-                                      },
-                                      {
-                                          "id":  "edera",
-                                          "label":  "Edera"
-                                      }
-                                  ]
-                  },
-                  {
-                      "id":  "decorazioni_zoomorfe",
-                      "label":  "Decorazioni zoomorfe",
-                      "color":  "#E96A1D",
-                      "symbols":  [
-                                      {
-                                          "id":  "uroboro",
-                                          "label":  "Uroboro"
-                                      },
-                                      {
-                                          "id":  "arpia",
-                                          "label":  "Arpia"
-                                      },
-                                      {
-                                          "id":  "leone",
-                                          "label":  "Leone"
-                                      },
-                                      {
-                                          "id":  "conchiglia",
-                                          "label":  "Conchiglia"
-                                      }
-                                  ]
-                  },
-                  {
-                      "id":  "decorazioni_allegoriche",
-                      "label":  "Decorazioni allegoriche",
-                      "color":  "#245E8A",
-                      "symbols":  [
-                                      {
-                                          "id":  "caduceo",
-                                          "label":  "Caduceo"
-                                      },
-                                      {
-                                          "id":  "lampada",
-                                          "label":  "lampada"
-                                      },
-                                      {
-                                          "id":  "archipendolo",
-                                          "label":  "Archipendolo"
-                                      },
-                                      {
-                                          "id":  "torcia",
-                                          "label":  "Torcia"
-                                      },
-                                      {
-                                          "id":  "clessidra_alata",
-                                          "label":  "Clessidra alata"
-                                      },
-                                      {
-                                          "id":  "stella",
-                                          "label":  "Stella"
-                                      },
-                                      {
-                                          "id":  "ruota_della_fortuna",
-                                          "label":  "Ruota della fortuna"
-                                      },
-                                      {
-                                          "id":  "cero",
-                                          "label":  "Cero"
-                                      },
-                                      {
-                                          "id":  "ancora",
-                                          "label":  "Ancora"
-                                      },
-                                      {
-                                          "id":  "corda",
-                                          "label":  "Corda"
-                                      },
-                                      {
-                                          "id":  "teschio",
-                                          "label":  "Teschio"
-                                      }
-                                  ]
-                  },
-                  {
-                      "id":  "simboli_religiosi",
-                      "label":  "Simboli religiosi",
-                      "color":  "#F7C325",
-                      "symbols":  [
-                                      {
-                                          "id":  "alpha_omega",
-                                          "label":  "Alpha Omega"
-                                      },
-                                      {
-                                          "id":  "crisma",
-                                          "label":  "Crisma"
-                                      },
-                                      {
-                                          "id":  "croce",
-                                          "label":  "Croce"
-                                      },
-                                      {
-                                          "id":  "angelo",
-                                          "label":  "Angelo"
-                                      }
-                                  ]
-                  },
-                  {
-                      "id":  "strumenti_musicali",
-                      "label":  "Strumenti musicali",
-                      "color":  "#8E1B52",
-                      "symbols":  [
-                                      {
-                                          "id":  "tromba",
-                                          "label":  "Tromba"
-                                      },
-                                      {
-                                          "id":  "lira",
-                                          "label":  "Lira"
-                                      },
-                                      {
-                                          "id":  "liuto",
-                                          "label":  "Liuto"
-                                      }
-                                  ]
-                  }
-              ]
+    "title": "Esplora la planimetria",
+    "description": "Cinque percorsi tematici organizzano un primo catalogo di tombe e simboli. Passa il cursore su una tomba per leggerne l'id SVG e seleziona un percorso per attivare le schede di catalogazione.",
+    "svg": "plan.svg",
+    "viewBox": "1.1 0 3370.44 843.68",
+    "featuredTombId": "2858",
+    "pathsTitle": "Percorsi tematici",
+    "paths": [
+        {
+            "id": "decorazioni_fitomorfe",
+            "label": "Decorazioni fitomorfe",
+            "color": "#42B5E8",
+            "symbols": [
+                {
+                    "id": "rosa",
+                    "label": "Rosa",
+                    "description": "Motivo floreale ricorrente, usato come elemento ornamentale all'interno del repertorio fitomorfo."
+                },
+                {
+                    "id": "palmetta",
+                    "label": "Palmetta",
+                    "description": "Decorazione vegetale stilizzata che organizza superfici, cornici e dettagli architettonici."
+                },
+                {
+                    "id": "margherita",
+                    "label": "Margherita",
+                    "description": "Fiore semplice e riconoscibile, presente come ornamento scolpito in vari monumenti."
+                },
+                {
+                    "id": "acanto",
+                    "label": "Acanto",
+                    "description": "Foglia ornamentale di lunga tradizione classica, impiegata nei dettagli scultorei e decorativi."
+                },
+                {
+                    "id": "papavero",
+                    "label": "Papavero",
+                    "description": "Elemento floreale del repertorio vegetale, reso in forma naturale o stilizzata."
+                },
+                {
+                    "id": "vite",
+                    "label": "Vite",
+                    "description": "Tralci, foglie e grappoli che traducono il motivo della vite in chiave ornamentale."
+                },
+                {
+                    "id": "trifoglio",
+                    "label": "Trifoglio",
+                    "description": "Modulo vegetale compatto, usato come segno decorativo all'interno della composizione."
+                },
+                {
+                    "id": "ulivo",
+                    "label": "Ulivo",
+                    "description": "Ramo e fogliame dell'ulivo impiegati come motivo fitomorfo riconoscibile."
+                },
+                {
+                    "id": "ghirlanda",
+                    "label": "Ghirlanda",
+                    "description": "Corona vegetale che incornicia nomi, ritratti e iscrizioni funebri."
+                },
+                {
+                    "id": "giglio",
+                    "label": "Giglio",
+                    "description": "Fiore stilizzato che compare come dettaglio ornamentale in rilievi e decorazioni."
+                },
+                {
+                    "id": "alloro",
+                    "label": "Alloro",
+                    "description": "Foglie e corone di alloro riprese come motivo vegetale all'interno del monumento."
+                },
+                {
+                    "id": "crisantemo",
+                    "label": "Crisantemo",
+                    "description": "Presenza floreale scolpita che arricchisce il repertorio fitomorfo della tomba."
+                },
+                {
+                    "id": "pigna",
+                    "label": "Pigna",
+                    "description": "Elemento vegetale e architettonico usato come dettaglio terminale o decorativo."
+                },
+                {
+                    "id": "edera",
+                    "label": "Edera",
+                    "description": "Tralci e foglie rampicanti che si inseriscono nelle decorazioni della sepoltura."
+                }
+            ],
+            "description": "Un percorso dedicato ai motivi vegetali e floreali scolpiti sulle tombe, tra corolle, foglie, ghirlande e frutti."
+        },
+        {
+            "id": "decorazioni_zoomorfe",
+            "label": "Decorazioni zoomorfe",
+            "color": "#E96A1D",
+            "symbols": [
+                {
+                    "id": "uroboro",
+                    "label": "Uroboro",
+                    "description": "Figura animale circolare che introduce un motivo zoomorfo di forte riconoscibilit? visiva."
+                },
+                {
+                    "id": "arpia",
+                    "label": "Arpia",
+                    "description": "Creatura ibrida del repertorio figurativo, impiegata come presenza zoomorfa scolpita."
+                },
+                {
+                    "id": "leone",
+                    "label": "Leone",
+                    "description": "Animale monumentale usato come figura di guardia, sostegno o dettaglio ornamentale."
+                },
+                {
+                    "id": "conchiglia",
+                    "label": "Conchiglia",
+                    "description": "Forma naturale legata al mondo animale marino, tradotta in chiave scultorea."
+                }
+            ],
+            "description": "Un itinerario che raccoglie figure animali e ibride, usate come presenze simboliche o ornamentali nella scultura funeraria."
+        },
+        {
+            "id": "decorazioni_allegoriche",
+            "label": "Decorazioni allegoriche",
+            "color": "#245E8A",
+            "symbols": [
+                {
+                    "id": "caduceo",
+                    "label": "Caduceo",
+                    "description": "Segno allegorico che compare come attributo figurato all'interno del monumento."
+                },
+                {
+                    "id": "lampada",
+                    "label": "lampada",
+                    "description": "Oggetto simbolico e decorativo che accompagna il lessico funerario della tomba."
+                },
+                {
+                    "id": "archipendolo",
+                    "label": "Archipendolo",
+                    "description": "Elemento allegorico raro, reso come dettaglio distintivo del monumento."
+                },
+                {
+                    "id": "torcia",
+                    "label": "Torcia",
+                    "description": "Oggetto figurato ricorrente, scolpito come segno funerario e commemorativo."
+                },
+                {
+                    "id": "clessidra_alata",
+                    "label": "Clessidra alata",
+                    "description": "Motivo allegorico che combina la misura del tempo con il dinamismo della forma."
+                },
+                {
+                    "id": "stella",
+                    "label": "Stella",
+                    "description": "Segno geometrico e luminoso inserito tra gli elementi allegorici della composizione."
+                },
+                {
+                    "id": "ruota_della_fortuna",
+                    "label": "Ruota della fortuna",
+                    "description": "Motivo figurato che introduce un elemento allegorico di forte sintesi visiva."
+                },
+                {
+                    "id": "cero",
+                    "label": "Cero",
+                    "description": "Candela scolpita o evocata come segno allegorico del rito e della memoria."
+                },
+                {
+                    "id": "ancora",
+                    "label": "Ancora",
+                    "description": "Oggetto figurato isolato o inserito in rilievi come elemento allegorico del repertorio funerario."
+                },
+                {
+                    "id": "corda",
+                    "label": "Corda",
+                    "description": "Motivo lineare e plastico usato come dettaglio allegorico o ornamentale."
+                },
+                {
+                    "id": "teschio",
+                    "label": "Teschio",
+                    "description": "Figura anatomica ridotta a segno, usata come elemento allegorico nella decorazione."
+                }
+            ],
+            "description": "Un repertorio di oggetti e segni figurati che trasforma la tomba in un racconto visivo tra memoria, tempo e passaggio."
+        },
+        {
+            "id": "simboli_religiosi",
+            "label": "Simboli religiosi",
+            "color": "#F7C325",
+            "symbols": [
+                {
+                    "id": "alpha_omega",
+                    "label": "Alpha Omega",
+                    "description": "Monogramma alfabetico cristiano presente tra i segni religiosi della sepoltura."
+                },
+                {
+                    "id": "crisma",
+                    "label": "Crisma",
+                    "description": "Monogramma di Cristo impiegato come simbolo religioso all'interno del monumento."
+                },
+                {
+                    "id": "croce",
+                    "label": "Croce",
+                    "description": "Segno religioso essenziale, declinato in molte varianti formali."
+                },
+                {
+                    "id": "angelo",
+                    "label": "Angelo",
+                    "description": "Figura celeste scolpita come presenza religiosa e monumentale."
+                }
+            ],
+            "description": "Il filo che mette a fuoco i segni della fede cristiana, dalle croci ai monogrammi fino alle figure angeliche."
+        },
+        {
+            "id": "strumenti_musicali",
+            "label": "Strumenti musicali",
+            "color": "#8E1B52",
+            "symbols": [
+                {
+                    "id": "tromba",
+                    "label": "Tromba",
+                    "description": "Strumento musicale scolpito come dettaglio figurativo o attributo di figure angeliche."
+                },
+                {
+                    "id": "lira",
+                    "label": "Lira",
+                    "description": "Strumento a corde che introduce il tema musicale nella decorazione funeraria."
+                },
+                {
+                    "id": "liuto",
+                    "label": "Liuto",
+                    "description": "Strumento musicale rappresentato nei rilievi e nelle figure ornamentali."
+                }
+            ],
+            "description": "Un percorso che segue strumenti e richiami sonori scolpiti nei monumenti, tra musica, rito e commemorazione."
+        }
+    ]
 }

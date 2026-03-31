@@ -1,12 +1,14 @@
 export type MapTaxonomySymbol = {
   id: string
   label: string
+  description?: string
 }
 
 export type MapTaxonomyPath = {
   id: string
   label: string
   color: string
+  description?: string
   symbols: MapTaxonomySymbol[]
 }
 
@@ -27,7 +29,7 @@ export type RawMapTomb = {
   nascita?: string | null
   morte?: string | null
   descrizione?: string | null
-  mergedIds?: unknown
+  images?: string[] | null
   symbols?: string[] | null
 }
 
@@ -46,13 +48,14 @@ export type MapTomb = {
   nascita?: string
   morte?: string
   descrizione?: string
-  mergedIds: string[]
+  images: string[]
   symbols: MapTombSymbolRef[]
 }
 
 export type MapSymbolOption = {
   id: string
   label: string
+  description?: string
   targets: string[]
 }
 
@@ -60,6 +63,7 @@ export type MapPathOption = {
   id: string
   label: string
   color: string
+  description?: string
   targets: string[]
   symbols: MapSymbolOption[]
 }

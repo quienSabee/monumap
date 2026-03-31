@@ -41,9 +41,8 @@ const ACTIVE_TOMB_FILL = '#7A1145'
 const ACTIVE_TOMB_STROKE = '#662345'
 const ACTIVE_TOMB_STROKE_HOVER = '#5A1639'
 const ACTIVE_TOMB_AURA = '#7A1145'
-const TOMB_FILTER_FOCUSED_ID = 'monumap-tomb-glow-focused'
-const TOMB_FILTER_SELECTED_ID = 'monumap-tomb-glow-selected'
-const TOMB_FILTER_HOVERED_ID = 'monumap-tomb-glow-hovered'
+const TOMB_AURA_FILTER_ID = 'monumap-tomb-aura-blur'
+const TOMB_SELECTION_LAYER_ID = 'monumap-selection-overlay'
 const MIN_ZOOM_RATIO = 0.08
 const ZOOM_EPSILON = 0.0001
 const MOBILE_LAYOUT_QUERY = '(max-width: 900px)'
@@ -144,52 +143,114 @@ function supportsStrokeOverride(node: SVGElement, originalStyle: string) {
   return Boolean(strokeValue && strokeValue.toLowerCase() !== 'none')
 }
 
-function getTombAuraFilter(isActive: boolean, isFocused: boolean, isHovered: boolean, isSelected: boolean) {
-  if (!isActive) {
-    return 'none'
-  }
-
-  if (isHovered) {
-    return `url(#${TOMB_FILTER_HOVERED_ID})`
-  }
-
-  if (isSelected) {
-    return `url(#${TOMB_FILTER_SELECTED_ID})`
-  }
-
-  if (isFocused) {
-    return `url(#${TOMB_FILTER_FOCUSED_ID})`
-  }
-
-  return 'none'
-}
-
 function createInteractionDefs() {
   return [
     `<defs>`,
-    `<filter id="${TOMB_FILTER_FOCUSED_ID}" x="-120%" y="-120%" width="340%" height="340%" color-interpolation-filters="sRGB">`,
-    `<feGaussianBlur in="SourceAlpha" stdDeviation="1.9" result="blurred" />`,
-    `<feFlood flood-color="${ACTIVE_TOMB_AURA}" flood-opacity="0.2" result="glowColor" />`,
-    `<feComposite in="glowColor" in2="blurred" operator="in" result="glowMask" />`,
-    `<feComposite in="glowMask" in2="SourceAlpha" operator="out" result="outerGlow" />`,
-    `<feMerge><feMergeNode in="outerGlow" /><feMergeNode in="SourceGraphic" /></feMerge>`,
-    `</filter>`,
-    `<filter id="${TOMB_FILTER_SELECTED_ID}" x="-140%" y="-140%" width="380%" height="380%" color-interpolation-filters="sRGB">`,
-    `<feGaussianBlur in="SourceAlpha" stdDeviation="2.8" result="blurred" />`,
-    `<feFlood flood-color="${ACTIVE_TOMB_AURA}" flood-opacity="0.28" result="glowColor" />`,
-    `<feComposite in="glowColor" in2="blurred" operator="in" result="glowMask" />`,
-    `<feComposite in="glowMask" in2="SourceAlpha" operator="out" result="outerGlow" />`,
-    `<feMerge><feMergeNode in="outerGlow" /><feMergeNode in="SourceGraphic" /></feMerge>`,
-    `</filter>`,
-    `<filter id="${TOMB_FILTER_HOVERED_ID}" x="-160%" y="-160%" width="420%" height="420%" color-interpolation-filters="sRGB">`,
-    `<feGaussianBlur in="SourceAlpha" stdDeviation="3.2" result="blurred" />`,
-    `<feFlood flood-color="${ACTIVE_TOMB_AURA}" flood-opacity="0.34" result="glowColor" />`,
-    `<feComposite in="glowColor" in2="blurred" operator="in" result="glowMask" />`,
-    `<feComposite in="glowMask" in2="SourceAlpha" operator="out" result="outerGlow" />`,
-    `<feMerge><feMergeNode in="outerGlow" /><feMergeNode in="SourceGraphic" /></feMerge>`,
+    `<filter id="${TOMB_AURA_FILTER_ID}" x="-220%" y="-220%" width="540%" height="540%" color-interpolation-filters="sRGB">`,
+    `<feGaussianBlur in="SourceGraphic" stdDeviation="4.8" result="blurred" />`,
+    `<feComponentTransfer in="blurred" result="softened">`,
+    `<feFuncA type="gamma" amplitude="0.9" exponent="0.8" offset="0" />`,
+    `</feComponentTransfer>`,
+    `<feMerge><feMergeNode in="softened" /></feMerge>`,
     `</filter>`,
     `</defs>`,
   ].join('')
+}
+
+function createSelectionOverlayMarkup() {
+  return `<g id="${TOMB_SELECTION_LAYER_ID}" pointer-events="none"></g>`
+}
+
+function getTombStyledNodes(node: SVGElement) {
+  return node.tagName.toLowerCase() === 'g'
+    ? Array.from(node.querySelectorAll(GRAPHIC_SELECTOR)).filter(
+        (child): child is SVGElement => child instanceof SVGElement && !child.closest('defs'),
+      )
+    : [node]
+}
+
+function clearTombAuraClones(svg: SVGSVGElement) {
+  svg.querySelectorAll('[data-monumap-aura-clone="true"]').forEach((clone) => clone.remove())
+}
+
+function createTombAuraClone(node: SVGElement) {
+  const clone = node.cloneNode(true)
+
+  if (!(clone instanceof SVGElement)) {
+    return null
+  }
+
+  clone.removeAttribute('class')
+  clone.removeAttribute('tabindex')
+  clone.removeAttribute('role')
+  clone.removeAttribute('aria-label')
+  clone.setAttribute('data-monumap-aura-clone', 'true')
+  clone.setAttribute(
+    'style',
+    `pointer-events:none;filter:url(#${TOMB_AURA_FILTER_ID});opacity:1;`,
+  )
+
+  getTombStyledNodes(clone).forEach((styledNode) => {
+    const originalStyle = styledNode.getAttribute('style') ?? ''
+    const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
+    const canOverrideFill = supportsFillOverride(styledNode, originalStyle)
+    const auraStyle = [
+      'pointer-events:none',
+      canOverrideFill ? `fill:${ACTIVE_TOMB_AURA}` : null,
+      canOverrideFill ? 'fill-opacity:0.42' : null,
+      `stroke:${ACTIVE_TOMB_AURA}`,
+      'stroke-opacity:0.58',
+      'stroke-width:4px',
+      'stroke-linejoin:round',
+      'stroke-linecap:round',
+      'vector-effect:non-scaling-stroke',
+    ]
+      .filter(Boolean)
+      .join(';')
+
+    styledNode.setAttribute('style', `${originalStyle}${separator}${auraStyle};`)
+  })
+
+  return clone
+}
+
+function createSelectedTombClone(node: SVGElement) {
+  const clone = node.cloneNode(true)
+
+  if (!(clone instanceof SVGElement)) {
+    return null
+  }
+
+  clone.removeAttribute('class')
+  clone.removeAttribute('tabindex')
+  clone.removeAttribute('role')
+  clone.removeAttribute('aria-label')
+  clone.setAttribute('data-monumap-aura-clone', 'true')
+
+  const rootStyle = clone.getAttribute('style') ?? ''
+  const rootSeparator = rootStyle && !rootStyle.trim().endsWith(';') ? ';' : ''
+  clone.setAttribute('style', `${rootStyle}${rootSeparator}pointer-events:none;filter:none;opacity:1;`)
+
+  getTombStyledNodes(clone).forEach((styledNode) => {
+    const originalStyle = styledNode.getAttribute('style') ?? ''
+    const separator = originalStyle && !originalStyle.trim().endsWith(';') ? ';' : ''
+    const canOverrideFill = supportsFillOverride(styledNode, originalStyle)
+    const canOverrideStroke = supportsStrokeOverride(styledNode, originalStyle)
+    const cloneStyle = [
+      'pointer-events:none',
+      'transition:none',
+      canOverrideFill ? `fill:${ACTIVE_TOMB_FILL}` : null,
+      canOverrideStroke
+        ? `stroke:${ACTIVE_TOMB_STROKE};stroke-opacity:0.88;vector-effect:non-scaling-stroke`
+        : null,
+    ]
+      .filter(Boolean)
+      .join(';')
+
+    styledNode.setAttribute('style', `${originalStyle}${separator}${cloneStyle};`)
+  })
+
+  return clone
 }
 
 function resolveTombIdFromTarget(target: EventTarget | null) {
@@ -272,8 +333,9 @@ function applyTombBindings(
   hoveredTombId: string | null,
 ) {
   const activeSet = new Set(activeTombIds)
-  const focusedSet = new Set(focusedTombIds)
-  const hasFocusedObjects = focusedSet.size > 0
+  void focusedTombIds
+  const selectionOverlay = svg.querySelector(`#${TOMB_SELECTION_LAYER_ID}`)
+  clearTombAuraClones(svg)
 
   svg.querySelectorAll('.tomb').forEach((node) => {
     if (!(node instanceof SVGElement) || node.closest('defs')) {
@@ -286,26 +348,15 @@ function applyTombBindings(
       return
     }
 
-    const styledNodes =
-      node.tagName.toLowerCase() === 'g'
-        ? Array.from(node.querySelectorAll(GRAPHIC_SELECTOR)).filter(
-            (child): child is SVGElement => child instanceof SVGElement && !child.closest('defs'),
-          )
-        : [node]
+    const styledNodes = getTombStyledNodes(node)
 
     const isActive = activeSet.has(tombId)
     const isHovered = tombId === hoveredTombId
-    const isFocused = hasFocusedObjects ? focusedSet.has(tombId) : false
     const isSelected = tombId === selectedTombId
     const tomb = findTombById(tombs, tombId)
     const nodeOriginalStyle = node.getAttribute('data-monumap-original-style') ?? node.getAttribute('style') ?? ''
     const nodeSeparator = nodeOriginalStyle && !nodeOriginalStyle.trim().endsWith(';') ? ';' : ''
-    const nodeRuntimeAugment = `pointer-events:all;cursor:${isActive ? 'pointer' : 'default'};opacity:1;filter:${getTombAuraFilter(
-      isActive,
-      isFocused,
-      isHovered,
-      isSelected,
-    )};transition:filter 140ms ease, opacity 140ms ease;`
+    const nodeRuntimeAugment = `pointer-events:all;cursor:${isActive ? 'pointer' : 'default'};opacity:1;filter:none;transition:opacity 140ms ease;`
 
     if (!node.hasAttribute('data-monumap-original-style')) {
       node.setAttribute('data-monumap-original-style', nodeOriginalStyle)
@@ -313,6 +364,19 @@ function applyTombBindings(
 
     if (node.tagName.toLowerCase() === 'g') {
       node.setAttribute('style', `${nodeOriginalStyle}${nodeSeparator}${nodeRuntimeAugment}`)
+    }
+
+    if (isSelected && selectionOverlay instanceof SVGElement) {
+      const auraClone = createTombAuraClone(node)
+      const selectedClone = createSelectedTombClone(node)
+
+      if (auraClone) {
+        selectionOverlay.appendChild(auraClone)
+      }
+
+      if (selectedClone) {
+        selectionOverlay.appendChild(selectedClone)
+      }
     }
 
     styledNodes.forEach((styledNode) => {
@@ -415,11 +479,12 @@ export function MapCanvas({
   const boundsWidth = bounds?.width ?? null
   const boundsHeight = bounds?.height ?? null
   const interactionDefs = createInteractionDefs()
+  const selectionOverlayMarkup = createSelectionOverlayMarkup()
   const svgMarkup =
     svgMarkupParts && sourceBox
       ? isMobileLayout
-        ? `${svgMarkupParts.staticMarkup}${interactionDefs}<g transform="${buildMobileTransform(sourceBox)}">${svgMarkupParts.contentMarkup}</g>`
-        : `${svgMarkupParts.staticMarkup}${interactionDefs}${svgMarkupParts.contentMarkup}`
+        ? `${svgMarkupParts.staticMarkup}${interactionDefs}<g transform="${buildMobileTransform(sourceBox)}">${svgMarkupParts.contentMarkup}${selectionOverlayMarkup}</g>`
+        : `${svgMarkupParts.staticMarkup}${interactionDefs}${svgMarkupParts.contentMarkup}${selectionOverlayMarkup}`
       : ''
 
   useEffect(() => {

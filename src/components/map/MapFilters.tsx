@@ -1,6 +1,6 @@
 import { resolveSymbolIconUrl } from '../../lib/assetUrls'
 import type { MapPathOption, MapSymbolOption } from '../../types/map'
-import { AssetImage } from '../AssetImage'
+import { SymbolIcon } from './SymbolIcon'
 
 type MapFiltersProps =
   | {
@@ -51,7 +51,7 @@ export function MapFilters(props: MapFiltersProps) {
       <div className="story-map__selection-header">
         <span className="story-map__section-label">{props.title}</span>
         <button type="button" className="story-map__reset" onClick={props.onReset}>
-          Scegli un nuovo filo
+          Tutti
         </button>
       </div>
 
@@ -68,13 +68,9 @@ export function MapFilters(props: MapFiltersProps) {
                 onClick={() => props.onSelectSymbol(symbol.id)}
                 aria-label={symbol.label}
               >
-                <AssetImage
+                <SymbolIcon
                   className="story-map__symbol-icon"
                   src={resolveSymbolIconUrl(symbol.id, import.meta.env.BASE_URL)}
-                  alt=""
-                  aria-hidden="true"
-                  loading="eager"
-                  decoding="async"
                 />
                 <span>{symbol.label}</span>
               </button>
