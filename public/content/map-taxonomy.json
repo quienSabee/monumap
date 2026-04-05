@@ -19,70 +19,70 @@
                 {
                     "id": "palmetta",
                     "label": "Palmetta",
-                    "description": "Decorazione vegetale stilizzata che organizza superfici, cornici e dettagli architettonici."
+                    "description": "Il ramo di palma onora il defunto per aver affrontato e superato con grande giustizia, lealtà e rettitudine le prove della vita. Indica la vittoria definitiva sulla morte fisica e la conquista meritata della pace e della beatitudine nell'aldilà. Sulle tombe, trasmette un senso di trionfo solenne che celebra un'esistenza vissuta in modo retto e premiata giustamente con l'immortalità dell'anima. Questo simbolo dichiara che il sacrificio e la fatica umana non vengono sprecati, ma riconosciuti dal cielo. La sua eleganza flessibile ricorda a chi guarda che lo spirito resiste a ogni carico e a ogni avversità"
                 },
                 {
                     "id": "margherita",
                     "label": "Margherita",
-                    "description": "Fiore semplice e riconoscibile, presente come ornamento scolpito in vari monumenti."
+                    "description": "Questo fiore semplice e spontaneo incarna l'innocenza, la purezza d'animo e la profonda umiltà dell'individuo. Sulle sepolture viene scolpita con grande frequenza per onorare la memoria dei fanciulli, delle giovani donne o di persone che hanno vissuto una vita priva di malizia. La sua natura botanica, che la porta ad aprirsi in base al sole, la rende la metafora del compimento rapido del ciclo umano. Questo simbolo offre alla famiglia un ricordo che l'anima del defunto ha attraversato il mondo mantenendo intatta la propria semplicità con la speranza di portare un  risveglio luminoso al defunto nell'eternità, proprio come il fiore che attende paziente la nuova luce del mattino."
                 },
                 {
                     "id": "acanto",
                     "label": "Acanto",
-                    "description": "Foglia ornamentale di lunga tradizione classica, impiegata nei dettagli scultorei e decorativi."
+                    "description": "L'acanto è una pianta perenne caratterizzata da foglie ampie, eleganti e profondamente frastagliate. Nel contesto funerario, la sua natura vigorosa e la sua capacità di resistere alle intemperie e rinascere la rendono un potente simbolo di immortalità e di trionfo della vita sulla morte. Nel linguaggio dei fiori si traduce in un emblema di affetto puro e inalterabile. Oltre all'impiego strutturale, questa foglia si afferma infine come il simbolo per eccellenza del culto per le belle arti, celebrando la bellezza e la creatività che sopravvivono al tempo."
                 },
                 {
                     "id": "papavero",
                     "label": "Papavero",
-                    "description": "Elemento floreale del repertorio vegetale, reso in forma naturale o stilizzata."
+                    "description": "Nel linguaggio cimiteriale scultoreo, il papavero assume un ruolo di profonda consolazione. Fin dall'antichità, grazie alle sue note proprietà narcotiche, questo fiore diventa l'emblema per eccellenza del sonno eterno e della pace assoluta. Rappresentarlo figurativamente nelle tombe simboleggia che la fine della vita non viene vista come una rottura violenta, ma come un riposo tranquillo e un dolce oblio. La scultura lo lega spesso alla figura di Morfeo, il dio dei sogni, suggerendo che il trapasso sia semplicemente un addormentarsi profondo. Spesso gli artisti lo ritraggono con lo stelo piegato o con i petali appassiti, proprio per indicare l'abbandono naturale delle forze. "
                 },
                 {
                     "id": "vite",
                     "label": "Vite",
-                    "description": "Tralci, foglie e grappoli che traducono il motivo della vite in chiave ornamentale."
+                    "description": "Nel contesto funerario ottocentesco la vite assume un profondo significato cristiano, diventando la rappresentazione diretta di Cristo e della fede. I tralci e i grappoli evocano infatti l'Eucarestia e il sangue del sacrificio, promessa di salvezza. Nell'arte cimiteriale, questa pianta possiede anche una forte valenza legata ai sentimenti terreni e ai legami umani; quando è avvolta intorno a un sostegno, ad esempio, simboleggia l'amicizia sincera e l'amore coniugale. Infine, il singolo tralcio di vite racchiude un messaggio intimo e profondo basato su una richiesta di fedeltà e un invito a tornare dalla persona amata."
                 },
                 {
                     "id": "trifoglio",
                     "label": "Trifoglio",
-                    "description": "Modulo vegetale compatto, usato come segno decorativo all'interno della composizione."
+                    "description": "Il trifoglio sulle sepolture, indica la speranza incrollabile nella resurrezione e la fiducia assoluta nel mistero della Trinità cristiana. Le sue tre foglie perfettamente unite ed equilibrate su un unico stelo esprimono l'armonia tra la fede, la speranza e l'amore che scortano il defunto nell'aldilà. Rappresenta in modo tangibile la ciclicità inesauribile del tempo e il rinnovamento costante, offrendo una solida rassicurazione sulla continuità della vita oltre la morte. La semplicità delle forme dei petali ricorda al pellegrino che i principi fondamentali dell'esistenza sono semplici e radicati in una fede pura e inalterabile."
                 },
                 {
                     "id": "ulivo",
                     "label": "Ulivo",
-                    "description": "Ramo e fogliame dell'ulivo impiegati come motivo fitomorfo riconoscibile."
+                    "description": "Questo ramo sacro, segna in modo inequivocabile la pace definitiva trovata da chi riposa e la vittoria assoluta sulle sofferenze, le malattie o le inquietudini del corpo. Nei secoli, la mitologia antica e la spiritualità cristiana, associano la consacrazione a divinità quali Minerva e Giove con il solenne ricordo della Passione nell'Orto degli Ulivi. La fronda incisa nel marmo assume il valore di castità e rievoca il prestigio delle corone intrecciate dei pacificatori romani."
                 },
                 {
                     "id": "ghirlanda",
                     "label": "Ghirlanda",
-                    "description": "Corona vegetale che incornicia nomi, ritratti e iscrizioni funebri."
+                    "description": "Sulle tombe antiche la ghirlanda ha sempre una forma tonda e chiusa, un modo semplice per indicare che l'anima vivente in eterno. Questo cerchio perfetto rappresenta una vita ultraterrena che non si interrompe mai ; le foglie scolpite sono quasi sempre di piante sempreverdi, un dettaglio che serve a mostrare come il ricordo superi il tempo e il decadimento fisico. Spesso si nota la presenza dell'alloro per sottolineare i successi e il prestigio che il defunto ha raggiunto mentre era in vita. I nastri di pietra che legano i rami raffigurano i sentimenti e i legami invisibili ma fortissimi tra i vivi e chi non c'è più. Vedere questa corona di foglie sulle urne significa celebrare la vittoria dello spirito sulla fine del corpo. "
                 },
                 {
                     "id": "giglio",
                     "label": "Giglio",
-                    "description": "Fiore stilizzato che compare come dettaglio ornamentale in rilievi e decorazioni."
+                    "description": "Il giglio rappresenta l'innocenza e la purezza d'animo che accompagna le giovani vite spezzate; a partire dal Medioevo gli si attribuisce il dono di svelare il futuro, diventando con il cristianesimo Il giglio bianco simbolo di castità per eccellenza, legato alla Vergine Maria, a Sant'Antonio e a San Giuseppe. La sua raffigurazione richiama i "gigli del campo" dei Vangeli, invita chi resta ad affidarsi serenamente a Dio e porta con sé una profonda speranza di rinascita. Oltre alla fede, la sua eleganza ispira da secoli poeti come Shakespeare e Shelley, che ne fanno uso per esaltare la bellezza e decorare gli altari e le lapidi. Infine, la sua forma lo rende un emblema di regalità utilizzato dai sovrani di Francia fino allo storico stemma della città di Firenze."
                 },
                 {
                     "id": "alloro",
                     "label": "Alloro",
-                    "description": "Foglie e corone di alloro riprese come motivo vegetale all'interno del monumento."
+                    "description": "L'alloro è una pianta sempreverde che corona le tombe per indicare l'immortalità, la virtù pura e la gloria. Sulle lapidi, l'arbusto offre un tributo perenne grazie alle sue foglie che non appassiscono mai con il cambio delle stagioni mantenendo un verde costante. Questo elemento testimonia una memoria indelebile, trasformando la tomba in un monumento di pace. La composizione vegetale scolpita trasforma lo spazio del lutto in un monumento dedicato all'eccellenza umana e alla gloria ottenuta durante l'esistenza. L'opera in pietra fissa così il ricordo di un'integrità assoluta e consegna il defunto a una memoria collettiva che non svanisce mai nel tempo."
                 },
                 {
                     "id": "crisantemo",
                     "label": "Crisantemo",
-                    "description": "Presenza floreale scolpita che arricchisce il repertorio fitomorfo della tomba."
+                    "description": "Il crisantemo è un fiore originario dell'Asia e dell'Estremo Oriente, in cui viene venerato come simbolo di consolazione, vita, longevità e felicità. Una leggenda giapponese racconta che nasce direttamente dall'unione tra la terra e una stella. Non a caso, lo stemma imperiale del Giappone raffigura proprio un crisantemo indico con sedici petali alternati, otto bianchi e otto viola.In Italia è il fiore del lutto e serve a onorare la memoria dei defunti. Dal punto di vista religioso, questo fiore fa da ponte e promette una continuità tra la vita e la morte, trasformandosi in un simbolo di speranza e di rinascita."
                 },
                 {
                     "id": "pigna",
                     "label": "Pigna",
-                    "description": "Elemento vegetale e architettonico usato come dettaglio terminale o decorativo."
+                    "description": "La pigna rappresenta da sempre un richiamo diretto alla fertilità, alla forza vitale e all'immortalità.  Essendo i frutti, detti “strobili” dei pini, alberi che non perdono mai la chioma durante l'anno, questo elemento visivo indica l'eternità e il rinnovamento continuo. Custodisce al suo interno una grande quantità di semi, descrivendo l'immagine perfetta dell'abbondanza e della naturale capacità di creare nuova vita.In ambito spirituale, molte tradizioni accostano la forma della pigna alla ghiandola pineale, conosciuta anche come "terzo occhio", considerandola il vero e proprio rifugio dell'anima e un segno di profonda elevazione interiore.Nel mondo greco si lega alla figura di Dioniso, la divinità che governa i misteri del trapasso, della rigenerazione e della resurrezione."
                 },
                 {
                     "id": "edera",
                     "label": "Edera",
-                    "description": "Tralci e foglie rampicanti che si inseriscono nelle decorazioni della sepoltura."
+                    "description": "Il crisantemo è un fiore originario dell'Asia e dell'Estremo Oriente, in cui viene venerato come simbolo di consolazione, vita, longevità e felicità. Una leggenda giapponese racconta che nasce direttamente dall'unione tra la terra e una stella. Non a caso, lo stemma imperiale del Giappone raffigura proprio un crisantemo indico con sedici petali alternati, otto bianchi e otto viola.In Italia è il fiore del lutto e serve a onorare la memoria dei defunti. Dal punto di vista religioso, questo fiore fa da ponte e promette una continuità tra la vita e la morte, trasformandosi in un simbolo di speranza e di rinascita."
                 }
             ],
-            "description": "Un percorso dedicato ai motivi vegetali e floreali scolpiti sulle tombe, tra corolle, foglie, ghirlande e frutti."
+            "description": "Il progetto di analisi parte dalle decorazioni fitomorfe, che risultano essere le più presenti e diffuse nell'intero cimitero perugino. All'interno di questo grande gruppo botanico, la ricerca isola 14 simboli specifici: il papavero, la rosa, la palmetta, la margherita, il trifoglio, l'ulivo, il giglio, la ghirlanda, l'alloro, il crisantemo, l'acanto, la vite, la pigna e l'edera. Ognuno di questi elementi racchiude un messaggio preciso e peculiare. Per comprendere a fondo il loro ruolo all'interno del cimitero, ogni fiore, ramo o elemento decorativo di questo elenco viene pertanto studiato e analizzato singolarmente."
         },
         {
             "id": "decorazioni_zoomorfe",
@@ -92,25 +92,25 @@
                 {
                     "id": "uroboro",
                     "label": "Uroboro",
-                    "description": "Figura animale circolare che introduce un motivo zoomorfo di forte riconoscibilit? visiva."
+                    "description": "Il simbolo raffigura un serpente che si morde la coda fino a chiudersi in un cerchio perfetto. Questa figura esprime visivamente l'eternità e l'infinito, tracciando una linea continua che rappresenta l'inesauribile ciclicità dell'universo, mostrando come ogni fine si trasformi inevitabilmente nel principio di una nuova esistenza. All'interno del contesto funerario, questo emblema assume un significato profondo e consolatorio alludendo all'immortalità dell'anima e alla continuità della vita che supera la barriera della morte fisica rappresentando l'eternità e il ciclo infinito dell'esistenza. Questo simbolo rappresenta quindi un legame profonde che unisce il mondo dei vivi con il mondo dei morti."
                 },
                 {
                     "id": "arpia",
                     "label": "Arpia",
-                    "description": "Creatura ibrida del repertorio figurativo, impiegata come presenza zoomorfa scolpita."
+                    "description": "Il simbolo dell'arpia raffigura una creatura ibrida, caratterizzata da un volto femminile unito al corpo e agli artigli di un uccello rapace. All'interno del contesto funerario, questa figura incarna il destino inevitabile dell’individuo, che viene all'improvviso sottratto della propria vita. L'arpia rappresenta il vento tempestoso che rapisce l'anima per trasportarla verso l'oltretomba, segnando un passaggio rapido e definitivo dal mondo terreno all'aldilà. I suoi artigli affilati esprimono la forza inflessibile del destino, a cui nessun essere umano può in alcun modo sottrarsi. Allo stesso tempo, richiama il concetto di tormento spirituale e rimorso, ricordando le passioni e i vizi terreni da cui il defunto si deve liberare. Sulle sepolture, la sua presenza sottolinea la profonda fragilità dell'esistenza umana."
                 },
                 {
                     "id": "leone",
                     "label": "Leone",
-                    "description": "Animale monumentale usato come figura di guardia, sostegno o dettaglio ornamentale."
+                    "description": "Il leone è uno dei simboli più antichi dell'arte funeraria, spesso viene scolpito a coppie, per intero o limitato a teste e zampe, la sua rappresentazione serve ad allontanare gli spiriti maligni e difendere il riposo del defunto guidando l'anima nell'oltretomba. Nel mondo cristiano medievale  rappresenta la resurrezione, dettata da un'antica credenza in cui i cuccioli che nascano morti vengono risvegliati al terzo giorno dal soffio del padre, proprio come il Cristo risorto. Gli antichi bestiari ricordano inoltre che il leone riposa sempre con gli occhi aperti, continuando a vegliare perennemente sulla tomba"
                 },
                 {
                     "id": "conchiglia",
                     "label": "Conchiglia",
-                    "description": "Forma naturale legata al mondo animale marino, tradotta in chiave scultorea."
+                    "description": "La conchiglia incarna il principio della vita e della fecondità, legandosi all'acqua da cui ogni cosa ha origine. La sua forma evoca il grembo materno e celebra la creazione cosmica, un concetto visibile fin dall'antichità con la dea Venere che emerge perfetta dalle sue valve. Nel cammino cristiano, questo elemento naturale assume una profonda valenza di purificazione e rinascita spirituale; all'interno dell'arte funeraria, nei monumenti romani e nelle sepolture cristiane, la conchiglia trasmette un potente messaggio di speranza, in cui il suo guscio rappresenta la tomba stessa che racchiude l'uomo nell'oscurità della morte, preparandolo al risveglio e alla resurrezione."
                 }
             ],
-            "description": "Un itinerario che raccoglie figure animali e ibride, usate come presenze simboliche o ornamentali nella scultura funeraria."
+            "description": "Proseguendo nell'indagine, lo studio si concentra sulle decorazioni zoomorfe, figure che popolano i monumenti funerari con forti richiami mitologici e naturali. All'interno di questa specifica categoria si individuano quattro simboli principali: il leone, l'uroboro, la conchiglia e l'arpia. Ognuna di queste raffigurazioni trasmette un significato profondo legato al ciclo dell'esistenza, alla forza o al mistero del trapasso. Per cogliere pienamente la loro funzione nei complessi scultorei, ogni creatura o forma animale individuata viene analizzata e descritta nel dettaglio."
         },
         {
             "id": "decorazioni_allegoriche",
@@ -120,60 +120,60 @@
                 {
                     "id": "caduceo",
                     "label": "Caduceo",
-                    "description": "Segno allegorico che compare come attributo figurato all'interno del monumento."
+                    "description": "Il caduceo si compone di un bastone centrale attorno al quale si intrecciano simmetricamente due serpenti, spesso sormontato da un paio di ali. La sua presenza in ambito cimiteriale e simbolico è legata alla funzione di guida delle anime verso l'oltretomba, facilitando il delicato e misterioso passaggio dal mondo dei vivi a quello dei morti. I due serpenti contrapposti raffigurano l'equilibrio universale delle forze opposte, come la luce e l'oscurità, il bene e il male che trovano la loro perfetta sintesi nell'asse vitale. Oltre al significato legato al viaggio ultraterreno, il caduceo richiama antiche sapienze legate alla trasformazione profonda della materia e dello spirito. La sua diffusione nelle opere scultoree è anche connessa alla medicina, suggerendo una guarigione spirituale definitiva e la conquista totale dell’armonia dopo il tumulto della vita."
                 },
                 {
                     "id": "lampada",
                     "label": "lampada",
-                    "description": "Oggetto simbolico e decorativo che accompagna il lessico funerario della tomba."
+                    "description": "La lampada accesa rappresenta la luce dell'intelletto e la scintilla vitale che anima l'essere umano. Nel contesto funerario, la sua presenza evoca il concetto di luce perpetua e il ricordo inestinguibile che sopravvive alla morte fisica, mantenendo vivo il legame tra chi resta e chi è andato oltre. Spesso viene associata alla fede e alla devozione, richiama l'immagine di un'anima pura e sempre pronta al passaggio verso una nuova dimensione, in costante attesa vigile. Quando la fiamma viene ritratta spenta o fumante, il significato si ribalta completamente, indicando il respiro che si arresta e la fine inevitabile dell'esistenza terrena. Rimane comunque un elemento rassicurante, offrendo una visione di continuità e speranza oltre la soglia dell'oscurità tombale."
                 },
                 {
                     "id": "archipendolo",
                     "label": "Archipendolo",
-                    "description": "Elemento allegorico raro, reso come dettaglio distintivo del monumento."
+                    "description": "L'archipendolo, è uno strumento costituito da una squadra con un filo a piombo, e simboleggoa la rettitudine, l'equilibrio e il rigore morale. Essendo uno strumento utile a verificare l’orizzontalità di un piano, rappresenta per estensione simbolica l'uguaglianza di tutti gli esseri umani di fronte alla morte, annullando ogni disparità sociale ed economica. Indica il lavoro continuo che l'individuo deve compiere su se stesso, levigando i propri difetti per costruire un carattere solido e in armonia con le leggi universali. La linea verticale del filo a piombo suggerisce un asse di collegamento diretto tra la terra e il cielo, invitando a mantenere una condotta di vita retta e inflessibile. Sulle tombe, l'archipendolo celebra tipicamente le virtù di un uomo giusto, la cui vita è stata edificata su basi solide di onestà e integrità."
                 },
                 {
                     "id": "torcia",
                     "label": "Torcia",
-                    "description": "Oggetto figurato ricorrente, scolpito come segno funerario e commemorativo."
+                    "description": "La torcia è uno dei simboli più diffusi nell'arte monumentale e cimiteriale legata al concetto del tempo in cui la luce della vita dell'anima continua a brillare, opponendosi alle tenebre della morte. Quando è rivolta verso l'alto con la fiamma accesa, fa riferimento all'antica tradizione, in particolare quella del mondo romano, in cui i cortei funebri e le sepolture si svolgono durante le ore notturne utilizzando la luce dalla torcia per illuminare l'oscurità, diventando l'immagine dell'anima immortale. Quando invece viene scolpita capovolta, con la fiamma rivolta verso il basso o nell'atto di spegnersi, simboleggia il lutto e la fine della vita terrena."
                 },
                 {
                     "id": "clessidra_alata",
                     "label": "Clessidra alata",
-                    "description": "Motivo allegorico che combina la misura del tempo con il dinamismo della forma."
+                    "description": "La clessidra alata rappresenta lo scorrere rapido e inesorabile del tempo, un ricordo alla naturale transitorietà dell'esistenza umana. La sabbia che scivola da un'ampolla all'altra misura gli istanti che ci separano dalla fine, rendendo tangibile e concreta la fragilità della vita. L'aggiunta delle ali accentua questa percezione di fugacità; spesso sono raffigurate in modo asimmetrico, ad esempio con un'ala di uccello diurno e una di pipistrello, per rappresentare l'alternarsi ininterrotto del giorno e della notte. Sulle lapidi, la clessidra invita a riflettere sul valore del momento presente e sulla totale vanità delle ambizioni puramente terrene, destinate inevitabilmente a dissolversi nella polvere del tempo. È un richiamo diretto alla consapevolezza della propria mortalità di fronte al compiersi del destino."
                 },
                 {
                     "id": "stella",
                     "label": "Stella",
-                    "description": "Segno geometrico e luminoso inserito tra gli elementi allegorici della composizione."
+                    "description": "La stella rappresenta  il destino e il desiderio profondo dell'animo umano ed è un significato universale di luce, speranza e guida spirituale. Nell'arte e nell'architettura, dalle volte gotiche fino al Rinascimento i cieli stellati decorano i soffitti delle chiese per evocare il paradiso, l'armonia dell'universo e la protezione celeste.In base al numero delle punte cambia il proprio significato simbolico:Una stella a cinque punte: indica la perfezione umana e la protezione contro le influenze negative. In ambito militare rappresenta onore e valore.Stella a sei punte: è il simbolo dell'identità e della religione ebraica e identifica le relative sepolture. Stella a otto punte: richiama la rinascita e l'ottavo giorno, ovvero la resurrezione."
                 },
                 {
                     "id": "ruota_della_fortuna",
                     "label": "Ruota della fortuna",
-                    "description": "Motivo figurato che introduce un elemento allegorico di forte sintesi visiva."
+                    "description": "La ruota della fortuna incarna l'essenza dell'instabilità umana e la natura mutevole e del tutto imprevedibile del destino. Questo simbolo descrive il ciclo continuo della vita, dove periodi di prosperità si alternano inevitabilmente a momenti di caduta e rovina, in un movimento rotatorio senza sosta, sottolineando una totale imparzialità della sorte rispetto ai meriti o alle colpe dei singoli individui. Il mozzo centrale, unico punto immobile, rappresenta invece l'eternità e la saldezza spirituale, un rifugio emotivo dalle difficoltà della vita."
                 },
                 {
                     "id": "cero",
                     "label": "Cero",
-                    "description": "Candela scolpita o evocata come segno allegorico del rito e della memoria."
+                    "description": "Il cero condivide con la lampada la simbologia della luce e della fede, ma introduce un elemento legato alla sua natura consumabile; la cera che si scioglie lentamente sotto l'azione della fiamma rappresenta la vita stessa che si consuma col passare dei giorni. Un cero acceso simboleggia la preghiera costante e l'anima che arde di amore divino, opponendosi all'oscurità dell'oblio. Nelle sculture cimiteriali, incontrare un cero spezzato o una torcia capovolta è un segnale inequivocabile di una vita interrotta prematuramente prima che potesse consumarsi naturalmente fino alla fine, diventando in questo modo una metafora del tempo concesso a ciascun individuo sulla terra."
                 },
                 {
                     "id": "ancora",
                     "label": "Ancora",
-                    "description": "Oggetto figurato isolato o inserito in rilievi come elemento allegorico del repertorio funerario."
+                    "description": "L'ancora è lo strumento nautico che garantisce equilibrio e stabilità alle navi durante le tempeste. Per questo motivo rappresenta in modo diretto la fermezza, la sicurezza e la capacità di rimanere saldi di fronte alle avversità.Fin dalle epoche più antiche, specialmente nelle catacombe paleocristiane, diventa un simbolo di speranza e di fede incrollabile. Oltre all'ambito religioso, l'ancora indica un unione figurativa del mondo marino, legato alle emozioni, a quello terrestre, simbolo di concretezza. In ambito cimiteriale evoca la tranquillità dell'anima che ha finalmente trovato il suo porto sicuro. Nelle arti grafiche e in filologia, un'ancora dritta indica trionfo e nobili ideali, mentre un'ancora capovolta suggerisce idee vili e inconcludenti."
                 },
                 {
                     "id": "corda",
                     "label": "Corda",
-                    "description": "Motivo lineare e plastico usato come dettaglio allegorico o ornamentale."
+                    "description": "La corda essendo legata all'idea di unione, di vincolo e di continuità, ma anche di rottura definitiva e dolorosa viene rappresentata tradizionalmente come il legame indissolubile degli affetti familiari e dell'amore che continua a unire i viventi a coloro che hanno lasciato questo mondo, un filo invisibile che la morte non riesce a recidere. In ambito mistico, si fa spesso riferimento al filo vitale che trattiene l'anima ancorata al corpo fisico, la cui recisione segna il distacco definitivo e il trapasso verso l'eternità. La corda annodata può inoltre indicare voti religiosi o  penitenza. "
                 },
                 {
                     "id": "teschio",
                     "label": "Teschio",
-                    "description": "Figura anatomica ridotta a segno, usata come elemento allegorico nella decorazione."
+                    "description": "Il teschio rappresenta l'immagine più cruda e diretta della morte fisica. Spogliato di ogni tratto individuale, riduce l'essere umano alla sua essenza più spoglia e universale, ricordando che la medesima sorte accomuna ogni essere umano a prescindere dal ceto sociale. Questo simbolo spinge l'osservatore a riflettere sulla superficialità dei piaceri mondani e sull'inutilità dell'attaccamento ai beni terreni, spronandolo a coltivare virtù e valori destinati a sopravvivere alla corruzione della carne. Un dettaglio di profonda importanza si nota quando il cranio è scolpito alla base di una croce: in questo caso specifico allude ad Adamo, trasformando l'emblema del disfacimento corporeo in un potente simbolo di redenzione e salvezza. Dominando le architetture cimiteriali, esorta ad abbandonare l'attaccamento ai beni materiali per abbracciare la consapevolezza che la vita fisica è solo una fase di passaggio."
                 }
             ],
-            "description": "Un repertorio di oggetti e segni figurati che trasforma la tomba in un racconto visivo tra memoria, tempo e passaggio."
+            "description": "Un'ulteriore analisi è dedicata alle decorazioni allegoriche, elementi visivi fondamentali per interpretare i valori morali e spirituali del defunto. Il progetto seleziona undici elementi specifici: il caduceo, l'archipendolo, il teschio, il cero, l'ancora, la stella, la clessidra alata, la ruota, la corda, la lampada e la torcia."
         },
         {
             "id": "simboli_religiosi",
@@ -183,25 +183,25 @@
                 {
                     "id": "alpha_omega",
                     "label": "Alpha Omega",
-                    "description": "Monogramma alfabetico cristiano presente tra i segni religiosi della sepoltura."
+                    "description": "L'Alfa e l'Omega sono rispettivamente la prima e l'ultima lettera dell'alfabeto greco classico. Nel linguaggio simbolico funerario, queste due lettere descrivono il principio e la fine di tutte le cose appartenenti all’universo. All’interno della bibbia nel capitolo dell'Apocalisse, il divino si definisce come l'inizio e il compimento assoluto della storia, pertanto incidere queste lettere sulle lapidi significa affermare che l'esistenza terrena parte da Dio e ritorna a Lui al termine del percorso vitale. La presenza simultanea dell'Alfa e dell'Omega integrata dal crisma rafforza il messaggio di totalità. La loro rappresentazione offre una rassicurazione di continuità oltre la morte fisica che diventa la naturale conclusione di un ciclo; trasformando il simbolo in un richiamo visivo al ciclo eterno della creazione e del riposo."
                 },
                 {
                     "id": "crisma",
                     "label": "Crisma",
-                    "description": "Monogramma di Cristo impiegato come simbolo religioso all'interno del monumento."
+                    "description": "Il crisma è uno dei simboli cristiani più antichi e diffusi all'interno dell'arte funeraria. Si forma dall'incrocio e dalla sovrapposizione di due lettere dell'alfabeto greco, la X (chi) e la P (rho), ovvero le prime due lettere della parola "Christòs". Molto spesso il simbolo viene racchiuso all'interno di un cerchio, una forma geometrica senza inizio e senza fine che simboleggia la perfezione e l'eternità. In altre raffigurazioni, il crisma si trova circondato da una corona di alloro o di palma. Questa specifica associazione trasforma il monogramma in un forte segno di vittoria nei confronti della morte. Fin dalle prime sepolture antiche, questo segno dichiara apertamente la fede della persona scomparsa rassicurandola sulla salvezza dell'anima e testimoniando la speranza incrollabile nella resurrezione finale. "
                 },
                 {
                     "id": "croce",
                     "label": "Croce",
-                    "description": "Segno religioso essenziale, declinato in molte varianti formali."
+                    "description": "La croce è un simbolo universale il cui punto d’incontro tra l'asse orizzontale e quello verticale rappresenta l'unione profonda tra la materia e lo spirito. Fin dalle antiche civiltà, incarna l'ordine cosmico, i quattro elementi naturali e il principio stesso della vita. Nel contesto funerario è l'emblema supremo della passione, della morte e della resurrezione di Cristo. Posata sulle sepolture, si trasforma in una promessa di salvezza e di immortalità per l'anima. Questo segno geometrico diventa il ponte diretto che collega l'essere umano al divino, offrendo conforto e speranza nella continuità dell'esistenza. L'arte cimiteriale e l'araldica la declinano in innumerevoli varianti visive: dalla croce greca a bracci uguali a quella latina, fino alle eleganti versioni trifogliate, gigliate o a forma di "Tau"."
                 },
                 {
                     "id": "angelo",
                     "label": "Angelo",
-                    "description": "Figura celeste scolpita come presenza religiosa e monumentale."
+                    "description": "Nel contesto funerario, questa figura assume il ruolo di guida e protettore dell'anima durante il suo viaggio verso l'aldilà, rappresentando  il ponte spirituale che unisce la dimensione terrena a quella celeste. Le rappresentazioni degli angeli variano in base al messaggio visivo che si vuole trasmettere: un angelo con lo sguardo rivolto verso l'alto o con un braccio alzato indica la via verso il paradiso e la futura resurrezione; l’atteggiamento di preghiera o di profondo dolore esprime cordoglio e la partecipazione umana al lutto. Spesso portano con sé oggetti come la tromba, per annunciare il Giudizio Universale, la corona a indicare il premio celeste, o la fiaccola rovesciata, per lo spegnersi della vita. In ogni forma, l'angelo vigila sulla tomba trasmettendo purezza, innocenza e la presenza della luce divina nel momento del passaggio."
                 }
             ],
-            "description": "Il filo che mette a fuoco i segni della fede cristiana, dalle croci ai monogrammi fino alle figure angeliche."
+            "description": "L'itinerario dei simboli religiosi individua presenze costanti che testimoniano la fede e la speranza nella salvezza ultraterrena. In questo ambito strettamente legato alla sacralità, l'indagine si focalizza su quattro segni distintivi: la croce, l'alfa e omega, l'angelo e il crisma. Ciascuno di questi elementi rappresenta un pilastro della devozione cristiana e offre un messaggio di conforto a chi visita il luogo di sepoltura."
         },
         {
             "id": "strumenti_musicali",
@@ -211,20 +211,20 @@
                 {
                     "id": "tromba",
                     "label": "Tromba",
-                    "description": "Strumento musicale scolpito come dettaglio figurativo o attributo di figure angeliche."
+                    "description": "La tromba, viene utilizzata come simbolo militare, scolpito per onorare il coraggio e le virtù guerriere di chi dedica la propria vita al servizio della patria. Oltre a celebrare i soldati, questo strumento si lega alla figura allegorica della Fama, rappresentata come una fanciulla alata che lo utilizza per diffondere ovunque il nome e le gesta della persona scomparsa. Il suo suono ha il compito di sconfiggere l’oblio, mantenendo immortale il ricordo del defunto tra i vivi. All’interno della dimensione cristiana, invece, lo strumento assume un significato sacro e compare tra le mani degli angeli. In questo contesto spirituale, annuncia l’arrivo del Giudizio Universale, risvegliando le anime dal loro lungo sonno terreno per chiamarle definitivamente alla vita eterna."
                 },
                 {
                     "id": "lira",
                     "label": "Lira",
-                    "description": "Strumento a corde che introduce il tema musicale nella decorazione funeraria."
+                    "description": "La lira è un antico strumento che nasce nella mitologia greca, dove rappresenta l'emblema sacro del dio Apollo e incarna l'essenza della poesia e della musica il cui suono melodioso si lega alla leggenda di Orfeo, una divinità capace con le sue note di addomesticare le bestie feroci. Quando viene scolpita sui monumenti funebri, rappresenta l'anima della persona scomparsa, celebrando una sua spiccata passione terrena per le arti o esprimendo la speranza di ritrovare una perfetta armonia celeste nella vita ultraterrena. "
                 },
                 {
                     "id": "liuto",
                     "label": "Liuto",
-                    "description": "Strumento musicale rappresentato nei rilievi e nelle figure ornamentali."
+                    "description": "ll liuto è un antico strumento a corde che racchiude un intenso messaggio allegorico. Quando compare nei monumenti funebri o nelle rappresentazioni legate alla caducità rappresenta una melodia nascente, che vibra nell'aria e poi si dissolve rapidamente nel vuoto. Il liuto si afferma come un perfetto simbolo di vanità che invita a riflettere sulla reale natura delle ricchezze e dei successi materiali che cessano nel momento della morte. Le melodite create dallo strumento che cessano con il defunto permettono all'anima di abbandonare le passioni umane per ricongiungersi all'armonia invisibile e perfetta dell'oltretomba."
                 }
             ],
-            "description": "Un percorso che segue strumenti e richiami sonori scolpiti nei monumenti, tra musica, rito e commemorazione."
+            "description": "Infine, il percorso di studio definisce un itinerario tematico dedicato agli strumenti musicali, oggetti che evocano l'armonia celeste. L'attenzione ricade su tre soggetti precisi: la lira, il liuto e la tromba. Ogni strumento racchiude una precisa metafora, legata al richiamo divino o al puro talento artistico. "
         }
     ]
 }
