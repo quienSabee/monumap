@@ -315,7 +315,7 @@ button {
   position: relative;
   height: clamp(22rem, 30vw, 32rem);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.6);
+  background: transparent;
   box-shadow: var(--shadow);
 }
 
@@ -711,8 +711,8 @@ button {
 
 .story-map__modal {
   position: relative;
-  width: min(100%, 42rem);
-  max-height: min(42rem, calc(100svh - 2.5rem));
+  width: min(100%, 54rem);
+  max-height: min(48rem, calc(100svh - 2rem));
   overflow: auto;
   padding: 1.35rem 1.25rem 1.2rem;
   border: 1px solid rgba(122, 17, 69, 0.18);
@@ -794,7 +794,7 @@ button {
 }
 
 .story-map__modal .image-carousel__viewport {
-  height: clamp(14rem, 45vw, 20rem);
+  height: clamp(18rem, 48vw, 25rem);
   box-shadow: none;
 }
 
