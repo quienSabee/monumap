@@ -1,9 +1,4 @@
 import type { ReactNode } from 'react'
-import { resolveAssetUrl } from '../lib/assetUrls'
-
-function resolvePageAsset(path: string) {
-  return resolveAssetUrl(path, import.meta.env.BASE_URL) ?? path
-}
 
 export type IntroBlockContent = {
   id: string
@@ -23,7 +18,7 @@ export const heroContent = {
   title: 'FILI INVISIBILI',
   subtitle: 'cinque itinerari per riscoprire il cimitero monumentale di perugia',
   authorName: 'Sara Forgione',
-  background: resolvePageAsset('media/hero-cemetery.jpg'),
+  background: 'media/hero-cemetery.jpg',
 }
 
 export const introBlocks: IntroBlockContent[] = [
@@ -109,25 +104,21 @@ export const introBlocks: IntroBlockContent[] = [
 
 export const carouselSlides: CarouselSlideContent[] = [
   {
-    src: resolvePageAsset('media/galleria_sinistra.jpg'),
+    src: 'media/galleria_sinistra.jpg',
     alt: 'Galleria a sinistra',
     subtitle: 'Galleria a sinistra',
     description: '',
   },
   {
-    src: resolvePageAsset('media/campo_comune.jpg'),
+    src: 'media/campo_comune.jpg',
     alt: 'Campo comune',
     subtitle: 'Campo comune',
     description: '',
   },
   {
-    src: resolvePageAsset('media/cappella_confraternita.jpg'),
+    src: 'media/cappella_confraternita.jpg',
     alt: 'Cappella della Confraternita della Misericordia',
     subtitle: 'Cappella della Confraternita della Misericordia',
     description: '',
   },
 ]
-
-export function getPagePreloadUrls() {
-  return [heroContent.background, ...carouselSlides.map((slide) => slide.src)]
-}

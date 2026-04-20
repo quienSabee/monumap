@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AssetImage } from './AssetImage'
+import { warmResponsiveImage } from '../lib/responsiveImages'
 
 export type ImageCarouselSlide = {
   src: string
@@ -19,6 +20,7 @@ export function ImageCarousel({
   autoPlayMs = 5000,
   ariaLabel = 'Carousel immagini',
 }: ImageCarouselProps) {
+  const carouselImageSizes = '(max-width: 960px) 100vw, 55vw'
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
@@ -42,6 +44,36 @@ export function ImageCarousel({
       window.clearTimeout(timeoutId)
     }
   }, [activeIndex, autoPlayMs, slides.length])
+
+  useEffect(() => {
+    if (slides.length <= 1) {
+      return
+    }
+
+    const nextSlide = slides[(activeIndex + 1) % slides.length]
+    const runtimeWindow = window as Window & {
+      requestIdleCallback?: (callback: (deadline: { didTimeout: boolean; timeRemaining: () => number }) => void) => number
+      cancelIdleCallback?: (handle: number) => void
+    }
+
+    if (runtimeWindow.requestIdleCallback) {
+      const idleHandle = runtimeWindow.requestIdleCallback(() => {
+        warmResponsiveImage(nextSlide.src, import.meta.env.BASE_URL, carouselImageSizes)
+      })
+
+      return () => {
+        runtimeWindow.cancelIdleCallback?.(idleHandle)
+      }
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      warmResponsiveImage(nextSlide.src, import.meta.env.BASE_URL, carouselImageSizes)
+    }, 250)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+    }
+  }, [activeIndex, carouselImageSizes, slides])
 
   function showPrevious() {
     setActiveIndex((current) => (current - 1 + slides.length) % slides.length)
@@ -69,9 +101,10 @@ export function ImageCarousel({
             className="image-carousel__image"
             src={activeSlide.src}
             alt={activeSlide.alt}
-            loading="eager"
+            loading={activeIndex === 0 ? 'eager' : 'lazy'}
             decoding="async"
-            fetchPriority="high"
+            fetchPriority={activeIndex === 0 ? 'high' : 'auto'}
+            sizes={carouselImageSizes}
           />
         </div>
 

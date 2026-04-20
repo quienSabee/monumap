@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { StoryRenderer } from './components/StoryRenderer'
-import { getPagePreloadUrls } from './data/pageContent'
-import { preloadImageAssets } from './lib/imageAssets'
-import { collectMapPreloadUrls, normalizeMapData } from './lib/mapData'
+import { normalizeMapData } from './lib/mapData'
 import type { MapDataBundle, MapTaxonomyData, RawMapTomb } from './types/map'
 
 const TOMBS_URL = `${import.meta.env.BASE_URL}content/tombs.json`
@@ -11,10 +9,6 @@ const MAP_TAXONOMY_URL = `${import.meta.env.BASE_URL}content/map-taxonomy.json`
 function App() {
   const [mapData, setMapData] = useState<MapDataBundle | null>(null)
   const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    void preloadImageAssets(getPagePreloadUrls())
-  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -58,14 +52,6 @@ function App() {
       cancelled = true
     }
   }, [])
-
-  useEffect(() => {
-    if (!mapData) {
-      return
-    }
-
-    void preloadImageAssets(collectMapPreloadUrls(mapData, import.meta.env.BASE_URL))
-  }, [mapData])
 
   if (error) {
     return (

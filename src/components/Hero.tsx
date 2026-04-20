@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
-import { useImageAsset } from '../lib/imageAssets'
+import { AssetImage } from './AssetImage'
 
 export type HeroProps = {
   id?: string
@@ -15,7 +15,6 @@ function clamp(value: number, min: number, max: number) {
 }
 
 export function Hero({ id, kicker, title, subtitle, background, authorName }: HeroProps) {
-  const { isLoaded } = useImageAsset(background)
   const titleRef = useRef<HTMLHeadingElement | null>(null)
   const subtitleMeasureRef = useRef<HTMLSpanElement | null>(null)
   const [subtitleFontSize, setSubtitleFontSize] = useState<number | null>(null)
@@ -83,17 +82,20 @@ export function Hero({ id, kicker, title, subtitle, background, authorName }: He
   }, [subtitle, title])
 
   return (
-    <section
-      className={isLoaded ? 'story-block story-hero is-loaded' : 'story-block story-hero'}
-      id={id}
-      style={
-        background
-          ? ({
-              '--hero-background-image': `url(${background})`,
-            } as CSSProperties)
-          : undefined
-      }
-    >
+    <section className="story-block story-hero" id={id}>
+      {background && (
+        <AssetImage
+          className="story-hero__background"
+          src={background}
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          sizes="100vw"
+        />
+      )}
+
       <div className="story-hero__content">
         {kicker && <span className="story-hero__eyebrow">{kicker}</span>}
         <h1 ref={titleRef}>{title}</h1>

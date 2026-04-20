@@ -1,4 +1,4 @@
-import { resolveAssetUrl, resolveSymbolIconUrl } from './assetUrls'
+import { resolveAssetUrl } from './assetUrls'
 import type {
   MapDataBundle,
   MapPathOption,
@@ -32,13 +32,13 @@ function normalizeSymbolIds(value: string[] | null | undefined) {
     .filter(Boolean)
 }
 
-function normalizeImageUrls(value: string[] | null | undefined, baseUrl: string) {
+function normalizeImageUrls(value: string[] | null | undefined) {
   if (!Array.isArray(value)) {
     return []
   }
 
   return value
-    .map((entry) => (typeof entry === 'string' ? resolveAssetUrl(entry.trim(), baseUrl) : undefined))
+    .map((entry) => (typeof entry === 'string' ? entry.trim() : ''))
     .filter((entry): entry is string => Boolean(entry))
 }
 
@@ -90,7 +90,7 @@ export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapT
       nascita: normalizeOptionalText(rawTomb.nascita),
       morte: normalizeOptionalText(rawTomb.morte),
       descrizione: normalizeOptionalText(rawTomb.descrizione),
-      images: normalizeImageUrls(rawTomb.images, baseUrl),
+      images: normalizeImageUrls(rawTomb.images),
       symbols,
     }
   })
@@ -134,14 +134,4 @@ export function normalizeMapData(rawTaxonomy: MapTaxonomyData, rawTombs: RawMapT
     paths,
     tombs,
   }
-}
-
-export function collectMapPreloadUrls(mapData: MapDataBundle, baseUrl: string) {
-  const urls = new Set<string>()
-
-  mapData.paths.forEach((path) => {
-    path.symbols.forEach((symbol) => urls.add(resolveSymbolIconUrl(symbol.id, baseUrl)))
-  })
-
-  return Array.from(urls)
 }

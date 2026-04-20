@@ -102,24 +102,7 @@ button {
   padding: clamp(1.25rem, 3vw, 2.5rem);
   isolation: isolate;
   overflow: clip;
-}
-
-.story-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-color: #4f4651;
-  background-image: var(--hero-background-image, linear-gradient(120deg, #4b3a4a, #998067));
-  background-position: center;
-  background-size: cover;
-  opacity: 0;
-  transform: scale(1.03);
-  filter: blur(22px);
-  transition:
-    opacity 220ms ease,
-    transform 420ms ease,
-    filter 420ms ease;
+  background: #4f4651;
 }
 
 .story-hero::after {
@@ -132,7 +115,28 @@ button {
     radial-gradient(circle at 24% 40%, rgba(255, 255, 255, 0.06), transparent 42%);
 }
 
-.story-hero.is-loaded::before {
+.story-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.story-hero__background.asset-image {
+  opacity: 0;
+  transform: scale(1.03);
+  filter: blur(22px);
+  transition:
+    opacity 220ms ease,
+    transform 420ms ease,
+    filter 420ms ease;
+}
+
+.story-hero__background.asset-image.is-loaded {
   opacity: 1;
   transform: none;
   filter: none;
@@ -887,6 +891,9 @@ button {
   opacity: 0;
   filter: blur(var(--asset-blur, 12px));
   transform: var(--asset-transform, scale(1.02));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition:
     opacity 180ms ease,
     filter 420ms ease,
