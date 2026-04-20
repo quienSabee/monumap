@@ -240,6 +240,11 @@ button {
   width: 100%;
 }
 
+.story-lead .image-carousel__viewport {
+  background: transparent;
+  box-shadow: none;
+}
+
 .sticky-box {
   position: sticky;
 }
