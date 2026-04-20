@@ -109,19 +109,19 @@ export const introBlocks: IntroBlockContent[] = [
 
 export const carouselSlides: CarouselSlideContent[] = [
   {
-    src: resolvePageAsset('media/5.jpg'),
+    src: resolvePageAsset('media/galleria_sinstra.jpg'),
     alt: 'Galleria a sinistra',
     subtitle: 'Galleria a sinistra',
     description: '',
   },
   {
-    src: resolvePageAsset('media/4.jpg'),
+    src: resolvePageAsset('media/campo_comune.jpg'),
     alt: 'Campo comune',
     subtitle: 'Campo comune',
     description: '',
   },
   {
-    src: resolvePageAsset('media/6.jpg'),
+    src: resolvePageAsset('media/cappella_confraternita.jpg'),
     alt: 'Cappella della Confraternita della Misericordia',
     subtitle: 'Cappella della Confraternita della Misericordia',
     description: '',
