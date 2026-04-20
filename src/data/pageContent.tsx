@@ -109,7 +109,7 @@ export const introBlocks: IntroBlockContent[] = [
 
 export const carouselSlides: CarouselSlideContent[] = [
   {
-    src: resolvePageAsset('media/galleria_sinstra.jpg'),
+    src: resolvePageAsset('media/galleria_sinistra.jpg'),
     alt: 'Galleria a sinistra',
     subtitle: 'Galleria a sinistra',
     description: '',
